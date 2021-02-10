@@ -22,13 +22,13 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-MyApp.getInitialProps = async (ctx) => {
-  // Calls page's `getInitialProps` and fills `appProps.pageProps`
-  const appProps = await App.getInitialProps(ctx);
-  // Fetch global site settings from Strapi
-  const global = await fetchAPI("/global");
-  // Pass the data to our page via props
-  return { ...appProps, pageProps: { global } };
-};
+// MyApp.getInitialProps = async (ctx) => {
+//   // Calls page's `getInitialProps` and fills `appProps.pageProps`
+//   const appProps = await App.getInitialProps(ctx);
+//   // Fetch global site settings from Strapi
+//   const global = await fetchAPI("/global");
+//   // Pass the data to our page via props
+//   return { ...appProps, pageProps: { global } };
+// };
 
 export default MyApp;

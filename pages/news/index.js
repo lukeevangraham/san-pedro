@@ -1,13 +1,15 @@
-import { getSortedNewsData } from "../../lib/api";
+import { getSortedNewsData, fetchAPI } from "../../lib/api";
 import Layout from "../../hoc/Layout/Layout"
 import Link from "next/link";
 
 export async function getStaticProps() {
   const allNewsData = await getSortedNewsData();
+  const global = await fetchAPI("/global");
 
   return {
     props: {
       allNewsData,
+      global
     },
   };
 }

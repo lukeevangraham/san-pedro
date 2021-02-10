@@ -11,11 +11,13 @@ import { render } from "react-dom";
 
 export async function getStaticProps() {
   const homeData = await fetchAPI("/home");
+  const global = await fetchAPI("/global");
   return {
     props: {
       homeData,
+      global
     },
-    revalidate: 1,
+    // revalidate: 1,
   };
 }
 

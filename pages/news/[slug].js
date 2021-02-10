@@ -1,5 +1,5 @@
 import Layout from "../../hoc/Layout/Layout";
-import { getAllNewsSlugs, getNewsData } from "../../lib/api";
+import { getAllNewsSlugs, getNewsData, fetchAPI } from "../../lib/api";
 import Head from "next/head";
 
 export async function getStaticPaths() {
@@ -13,9 +13,11 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const newsData = await getNewsData(params.slug);
+  const global = await fetchAPI("/global");
   return {
     props: {
       newsData,
+      global
     },
   };
 }
