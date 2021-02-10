@@ -11,6 +11,7 @@ export async function getStaticProps() {
       allNewsData,
       global
     },
+    revalidate: 1,
   };
 }
 

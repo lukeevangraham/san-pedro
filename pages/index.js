@@ -17,7 +17,7 @@ export async function getStaticProps() {
       homeData,
       global
     },
-    // revalidate: 1,
+    revalidate: 1,
   };
 }
 
