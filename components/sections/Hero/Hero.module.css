@@ -1,3 +1,33 @@
 .main {
     flex-grow: 3;
 }
+
+.label {
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: .025em;
+}
+
+.whiteText {
+    color: #fff;
+}
+
+.title {
+    font-size: 240%;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin: .5rem 0;
+}
+
+.description {
+    font-size: 133%;
+}
+
+.buttonRow {
+    margin: 1rem 0;
+}
+
+.smallText {
+    font-size: 90%;
+}

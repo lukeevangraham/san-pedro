@@ -13,7 +13,7 @@
 
 .NavigationItem a:hover,
 .NavigationItem a:active {
-  color: #90291D;
+  color: #DB3D2C;
   transition: color 0.2s;
 }
 
@@ -39,6 +39,6 @@
 
   .NavigationItem a:hover,
   .NavigationItem a:active {
-    border-bottom: 2px solid #90291D;
+    border-bottom: 2px solid #DB3D2C;
   }
 }

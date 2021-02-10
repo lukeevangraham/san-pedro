@@ -9,7 +9,6 @@ import classNames from "classnames";
 
 const Toolbar = (props) => {
   let attachedClasses = [classes.innerToolbar, "row"];
-  console.log("props: ", props);
   return (
     <header
       className={

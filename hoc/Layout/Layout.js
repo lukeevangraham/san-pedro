@@ -43,8 +43,8 @@ const Layout = (props) => {
             className={classes.homeHeader}
             style={{
               backgroundImage: `linear-gradient(
-      rgba(0, 0, 0, 0.33),
-      rgba(255, 255, 255, 0.33)
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
     ),
     url(https://sanpedroadmin.lukegraham.us${props.heroBg})`,
             }}
