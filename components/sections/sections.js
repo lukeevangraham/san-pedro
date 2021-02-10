@@ -58,10 +58,10 @@ const PreviewModeBanner = () => {
 };
 
 // Display the list of sections
-const Sections = ({ sections, preview }) => {
+const Sections = ({ sections, preview, home }) => {
   // console.log("Sections: ", sections)
   return (
-    <div className={classNames("flex flex-col", classes.home)}>
+    <div className={classNames("flex flex-col", { [classes.home] : home })}>
       {/* Show a banner if preview mode is on */}
       {preview && <PreviewModeBanner />}
       {/* Show the actual sections */}
