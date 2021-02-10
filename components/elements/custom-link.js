@@ -2,18 +2,21 @@ import Link from "next/link";
 // import PropTypes from "prop-types";
 // import { linkPropTypes } from "utils/types";
 
-const CustomLink = ({ link, children }) => {
-  const isInternalLink = link.url.startsWith('/')
+const CustomLink = ({ link, children, fromButton }) => {
+  const isInternalLink = link.url.startsWith("/");
+
 
   // For internal links, use the Next.js Link component
   if (isInternalLink) {
     return (
       <Link href="/[[...slug]]" as={link.url}>
-        <a>
-          {children}
-        </a>
+        {fromButton ? (
+          <a style={{ borderBottom: "none" }}>{children}</a>
+        ) : (
+          <a>{children}</a>
+        )}
       </Link>
-    )
+    );
   }
 
   // Plain <a> tags for external links
@@ -26,8 +29,8 @@ const CustomLink = ({ link, children }) => {
     >
       {children}
     </a>
-  );  
-}
+  );
+};
 
 CustomLink.propTypes = {
   // link: linkPropTypes,

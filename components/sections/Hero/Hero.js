@@ -1,5 +1,5 @@
 import Markdown from "react-markdown";
-import ButtonLink from "../../elements/button-link";
+import Button from "../../UI/Button/Button";
 import Image from "../../elements/image";
 // import { getButtonAppearance } from "utils/button";
 
@@ -24,7 +24,7 @@ const Hero = ({ data }) => {
           {/* THE LINE BELOW WAS A PROP OF THE BUTTON LINK IN THE MAP BELOW */}
               {/* appearance={getButtonAppearance(button.type, "light")} */}
           {data.buttons.map((button) => (
-            <ButtonLink
+            <Button
               button={button}
               key={button.id}
             />

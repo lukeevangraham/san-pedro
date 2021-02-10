@@ -21,8 +21,6 @@ export async function getStaticProps() {
 export default function Home(props) {
   const { metadata } = props.global;
 
-  console.log("homeData", props.homeData);
-
   let renderSections = props.homeData.contentSections ? (
     <Sections sections={props.homeData.contentSections} preview={null} />
   ) : (

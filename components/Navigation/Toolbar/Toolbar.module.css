@@ -40,6 +40,11 @@
   background: linear-gradient(to bottom right, #4f1610f6, #90281df6);
 }
 
+.toolbarRight {
+  display: flex;
+  align-items: center;
+}
+
 @keyframes moveDown {
   from {
     transform: translateY(-5rem);

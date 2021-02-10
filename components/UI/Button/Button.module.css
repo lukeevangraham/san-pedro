@@ -1,0 +1,35 @@
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  font-weight: 300;
+  text-decoration: none;
+  border-radius: 200px;
+  transition: all 0.2s;
+}
+
+.btnFull {
+  background-image: linear-gradient(to right bottom, #db3d2c, #9c2c1f);
+  border: none;
+  color: #fff;
+  margin-right: 15px;
+}
+
+.btnGhost {
+  border: 1px solid #db3d2c;
+  color: #fff;
+  padding: 9px 29px;
+}
+
+.btn:hover,
+.btn:active {
+  transform: scale(1.05);
+}
+
+/* .btnFull:hover, .btnFull:active {} */
+
+.btnGhost:hover,
+.btnGhost:active {
+  /* border: none; */
+  color: #fff;
+  background-image: linear-gradient(to right bottom, #db3d2c, #9c2c1f);
+}
