@@ -9,7 +9,6 @@ export async function getStaticPaths() {
     paths,
     fallback: false,
   };
-  revalidate: 1,
 }
 
 export async function getStaticProps({ params }) {
@@ -20,6 +19,7 @@ export async function getStaticProps({ params }) {
       newsData,
       global
     },
+    revalidate: 1,
   };
 }
 
