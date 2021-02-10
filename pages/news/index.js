@@ -14,7 +14,7 @@ export async function getStaticProps() {
 
 const News = ({ allNewsData, global }) => (
   <Layout global={global}>
-    Here are the news pages:
+    <h2>Here are the news pages:</h2>
     <div>
       {allNewsData.map((article) => (
         <div key={article.id}>

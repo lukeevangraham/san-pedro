@@ -1,5 +1,6 @@
 import "../styles/globals.css";
 import "../styles/grid.css";
+import "../styles/queries.css";
 
 import App from "next/app";
 import { createContext } from "react";

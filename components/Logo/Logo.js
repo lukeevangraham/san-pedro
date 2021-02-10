@@ -3,18 +3,27 @@ import classes from "./Logo.module.css";
 import Link from "next/link";
 
 const Logo = (props) => {
-  let attachedClasses = [classes.Logo, props.sticky ? classes.StickyLogo : classes.UnstickyLogo ]
+  let attachedClasses = [
+    classes.Logo,
+    props.sticky ? classes.StickyLogo : classes.UnstickyLogo,
+  ];
+
+  let renderLogo = props.logo ? (
+    <img
+      src={`https://sanpedroadmin.lukegraham.us${props.logo.url}`}
+      alt={props.logo.alternativeText}
+    />
+  ) : (
+    <div>Loading...</div>
+  );
+
   return (
-  <div className={attachedClasses.join(" ")}>
-    <Link href="/">
-      <a>
-        <img
-          src="/images/san-pedro-logo.png"
-          alt="San Pedro Presbyterian Church Logo"
-        />
-      </a>
-    </Link>
-  </div>
-)}
+    <div className={attachedClasses.join(" ")}>
+      <Link href="/">
+        <a>{renderLogo}</a>
+      </Link>
+    </div>
+  );
+};
 
 export default Logo;

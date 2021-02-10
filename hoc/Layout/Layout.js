@@ -7,6 +7,7 @@ import NotificationBanner from "../../components/UI/NotificationBanner/Notificat
 import Toolbar from "../../components/Navigation/Toolbar/Toolbar";
 import SideDrawer from "../../components/Navigation/SideDrawer/SideDrawer";
 import Footer from "../../components/Footer/Footer";
+import Sections from "../../components/sections/sections";
 
 const Layout = (props) => {
   const { navbar, notificationBanner } = props.global;
@@ -54,6 +55,7 @@ const Layout = (props) => {
               navData={navbar}
               home={true}
             />
+            <Sections sections={[props.heroData]} home />
           </div>
         ) : (
           <div>

@@ -2,13 +2,15 @@ import Head from "next/head";
 import { DefaultSeo } from "next-seo";
 import Layout from "../hoc/Layout/Layout";
 import HomePage from "../components/HomePage/HomePage";
+import Sections from "../components/sections/sections";
 import { getStrapiMedia } from "../lib/media";
 import { fetchAPI } from "../lib/api";
+import { render } from "react-dom";
 
 // import styles from '../styles/Home.module.css'
 
 export async function getStaticProps() {
-  const homeData = await fetchAPI("/pages");
+  const homeData = await fetchAPI("/home");
   return {
     props: {
       homeData,
@@ -18,6 +20,14 @@ export async function getStaticProps() {
 
 export default function Home(props) {
   const { metadata } = props.global;
+
+  console.log("homeData", props.homeData);
+
+  let renderSections = props.homeData.contentSections ? (
+    <Sections sections={props.homeData.contentSections} preview={null} />
+  ) : (
+    <div>Loading...</div>
+  );
 
   return (
     <div>
@@ -43,8 +53,14 @@ export default function Home(props) {
         }}
       />
 
-      <Layout home global={props.global} heroBg={props.homeData[0].contentSections[0].picture.url}>
+      <Layout
+        home
+        global={props.global}
+        heroBg={props.homeData.contentSections[0].picture.url}
+        heroData={props.homeData.contentSections[0]}
+      >
         <HomePage />
+        {renderSections}
       </Layout>
 
       {/* <main className={styles.main}>
