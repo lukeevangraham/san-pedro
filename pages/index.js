@@ -19,8 +19,6 @@ export async function getStaticProps() {
 export default function Home(props) {
   const { metadata } = props.global;
 
-  console.log("PROPS: ", props)
-
   return (
     <div>
       <Head>

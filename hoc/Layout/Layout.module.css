@@ -1,11 +1,6 @@
 .homeHeader {
   height: 80vh;
   width: 100%;
-  background-image: linear-gradient(
-      rgba(0, 0, 0, 0.33),
-      rgba(255, 255, 255, 0.33)
-    ),
-    url(http://sanpedroadmin.lukegraham.us/uploads/home_Hero_5241e16bd5.jpg);
   background-size: cover !important;
   background-position: center;
   background-attachment: fixed;

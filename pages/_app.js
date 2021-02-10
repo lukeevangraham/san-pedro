@@ -1,6 +1,5 @@
 import "../styles/globals.css";
 import "../styles/grid.css";
-import "@ionic/react/css/core.css";
 
 import App from "next/app";
 import { createContext } from "react";

@@ -1,0 +1,31 @@
+.bg {
+    background-image: linear-gradient(to right bottom, #DB3D2C, #9C2C1F);;
+}
+
+.inside {
+    display: flex;
+    align-items: center;
+    padding: .5rem 0;
+    color: rgb(238, 238, 238);
+}
+
+.text {
+    flex-grow: 1;
+    
+}
+
+.button {
+    padding: .12rem 0;
+    background-color: transparent;
+    border: none;
+}
+
+.button :hover {
+    cursor: pointer;
+}
+
+.icon {
+    height: 30px;
+    width: auto;
+    color: rgb(238, 238, 238);
+}

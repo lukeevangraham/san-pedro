@@ -1,6 +1,6 @@
 .Toolbar {
   /* background-color: rgba(20, 90, 20, 0); */
-  padding: 0 20px;
+  /* padding: 0 20px; */
   height: 120px;
   width: 100%;
 }
@@ -34,6 +34,10 @@
 .Logo {
   margin-top: 20px;
   flex-grow: 1;
+}
+
+.notHome {
+  background: linear-gradient(to bottom right, #4f1610f6, #90281df6);
 }
 
 @keyframes moveDown {
