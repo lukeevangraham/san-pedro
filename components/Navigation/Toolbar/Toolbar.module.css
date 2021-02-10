@@ -3,6 +3,8 @@
   /* padding: 0 20px; */
   height: 120px;
   width: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .innerToolbar {
@@ -11,6 +13,8 @@
   justify-content: flex-start;
   align-items: center;
   /* height: 100%; */
+  flex-grow: 2;
+  padding: 0;
 }
 
 .Sticky {
@@ -32,7 +36,7 @@
 }
 
 .Logo {
-  margin-top: 20px;
+  /* margin-top: 20px; */
   flex-grow: 1;
 }
 

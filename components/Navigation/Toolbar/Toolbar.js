@@ -23,7 +23,7 @@ const Toolbar = (props) => {
         <div className={classes.Logo}>
           <Logo
             sticky={props.sticky}
-            logo={props.navData.logo}
+            logo={props.sticky ? props.navData.logo : props.navData.logoWhite}
             logoWhite={props.navData.logoWhite}
           />
         </div>
