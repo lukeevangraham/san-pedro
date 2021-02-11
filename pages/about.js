@@ -14,7 +14,7 @@ import { fetchAPI } from "../lib/api";
 const About = ({ global }) => {
   return (
     <>
-      <h2>Here is the About page</h2>
+      <h2>Here is the About page!!!</h2>
     </>
   );
 };
