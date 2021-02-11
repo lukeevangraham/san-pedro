@@ -11,19 +11,17 @@ const Toolbar = (props) => {
   let attachedClasses = [classes.innerToolbar, "row"];
   return (
     <header
-      className={
-        props.sticky
-          ? classes.Sticky
-          : props.home
-          ? classes.Toolbar
-          : [classes.notHome, classes.Toolbar].join(" ")
-      }
+      className={classNames(
+        classes.Toolbar,
+        { [classes.Sticky]: props.sticky },
+        { [classes.notHome]: !props.home }
+      )}
     >
       <div className={attachedClasses.join(" ")}>
         <div className={classes.Logo}>
           <Logo
             sticky={props.sticky}
-            logo={props.sticky ? props.navData.logo : props.navData.logoWhite}
+            logo={props.navData.logo}
             logoWhite={props.navData.logoWhite}
           />
         </div>
@@ -33,9 +31,11 @@ const Toolbar = (props) => {
         />
         <nav className={classNames(classes.DesktopOnly, classes.toolbarRight)}>
           <NavigationItems sticky={props.sticky} navData={props.navData} />
-          {props.navData.button && (<div style={{ marginLeft: "40px" }}>
-            <Button button={props.navData.button} />
-          </div>)}
+          {props.navData.button && (
+            <div style={{ marginLeft: "40px" }}>
+              <Button button={props.navData.button} />
+            </div>
+          )}
         </nav>
       </div>
     </header>

@@ -10,7 +10,7 @@ const Logo = (props) => {
 
   let renderLogo = props.logo ? (
     <img
-      src={`https://sanpedroadmin.lukegraham.us${props.logo.url}`}
+      src={ props.sticky ? `https://sanpedroadmin.lukegraham.us${props.logo.url}` : `https://sanpedroadmin.lukegraham.us${props.logoWhite.url}`}
       alt={props.logo.alternativeText}
     />
   ) : (

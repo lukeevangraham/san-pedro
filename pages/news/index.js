@@ -11,7 +11,7 @@ export async function getStaticProps() {
       allNewsData,
       global
     },
-    revalidate: 1,
+    // revalidate: 1,
   };
 }
 

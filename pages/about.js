@@ -7,7 +7,7 @@ export async function getStaticProps() {
     props: {
       global,
     },
-    revalidate: 1,
+    // revalidate: 1,
   };
 }
 
