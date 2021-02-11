@@ -25,9 +25,9 @@ export async function getStaticProps({ params }) {
 
 export default function News(props) {
   return (
-    <Layout global={props.global}>
+    <>
       <div>{props.newsData.title}</div>
       {console.log("props: ", props)}
-    </Layout>
+    </>
   );
 }

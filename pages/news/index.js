@@ -1,5 +1,5 @@
 import { getSortedNewsData, fetchAPI } from "../../lib/api";
-import Layout from "../../hoc/Layout/Layout"
+import Layout from "../../hoc/Layout/Layout";
 import Link from "next/link";
 
 export async function getStaticProps() {
@@ -16,7 +16,7 @@ export async function getStaticProps() {
 }
 
 const News = ({ allNewsData, global }) => (
-  <Layout global={global}>
+  <>
     <h2>Here are the news pages:</h2>
     <div>
       {allNewsData.map((article) => (
@@ -28,7 +28,7 @@ const News = ({ allNewsData, global }) => (
         </div>
       ))}
     </div>
-  </Layout>
+  </>
 );
 
 export default News;

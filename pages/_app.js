@@ -3,9 +3,11 @@ import "../styles/grid.css";
 import "../styles/queries.css";
 
 import App from "next/app";
+import Layout from "../hoc/Layout/Layout";
 import { createContext } from "react";
 import { getStrapiMedia } from "../lib/media";
 import { fetchAPI } from "../lib/api";
+import { useRouter } from "next/router"
 
 // Store Strapi Global object in context
 export const GlobalContext = createContext({});
@@ -13,11 +15,14 @@ export const GlobalContext = createContext({});
 function MyApp({ Component, pageProps }) {
   const { global } = pageProps;
 
-  
+  console.log(useRouter().pathname)
+
   return (
     <GlobalContext.Provider value={global}>
-      {/* {console.log("GLOBAL: ", global)} */}
-      <Component {...pageProps} />
+      <Layout global={global} home={useRouter().pathname === '/'}>
+        {/* {console.log("GLOBAL: ", global)} */}
+        <Component {...pageProps} />
+      </Layout>
     </GlobalContext.Provider>
   );
 }

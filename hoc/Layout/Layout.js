@@ -12,6 +12,8 @@ import Sections from "../../components/sections/sections";
 const Layout = (props) => {
   const { navbar, notificationBanner } = props.global;
 
+  console.log("props: ", props)
+
   const [showSideDrawer, setShowSideDrawer] = useState(false);
   const [makeNavSticky, setMakeNavSticky] = useState(false);
   const [bannerIsShown, setBannerIsShown] = useState(true);
@@ -46,16 +48,17 @@ const Layout = (props) => {
       rgba(0, 0, 0, 0.4),
       rgba(0, 0, 0, 0.4)
     ),
-    url(https://sanpedroadmin.lukegraham.us${props.heroBg})`,
+    url(https://sanpedroadmin.lukegraham.us${props.children.props.homeData.contentSections[0].picture.url})`,
             }}
           >
+          {console.log("props: ", props.children.props.homeData.contentSections[0])}
             <Toolbar
               sticky={makeNavSticky}
               drawerToggleClicked={sideDrawerToggleHandler}
               navData={navbar}
               home={true}
             />
-            <Sections sections={[props.heroData]} home />
+            <Sections sections={[props.children.props.homeData.contentSections[0]]} home />
           </div>
         ) : (
           <div>

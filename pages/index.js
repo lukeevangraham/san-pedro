@@ -54,15 +54,15 @@ export default function Home(props) {
         }}
       />
 
-      <Layout
+      {/* <Layout
         home
         global={props.global}
         heroBg={props.homeData.contentSections[0].picture.url}
         heroData={props.homeData.contentSections[0]}
-      >
+      > */}
         <HomePage />
         {renderSections}
-      </Layout>
+      {/* </Layout> */}
 
       {/* <main className={styles.main}>
         <h1 className={styles.title}>
