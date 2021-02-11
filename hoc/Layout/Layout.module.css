@@ -1,8 +1,8 @@
 .homeHeader {
-  height: 80vh;
-  width: 100%;
   background-size: cover !important;
   background-position: center;
+  height: 80vh;
+  width: 100%;
   background-attachment: fixed;
   display: flex;
   flex-direction: column;
