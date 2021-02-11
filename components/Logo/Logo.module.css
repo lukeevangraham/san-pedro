@@ -3,7 +3,7 @@
 }
 
 .StickyLogo {
-  width: 78px;
+  width: 98px;
 }
 
 .UnstickyLogo {
@@ -18,4 +18,10 @@
 .Logo a:link,
 .Logo a:visited {
   border-bottom: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .UnstickyLogo {
+    width: 134px;
+  }
 }

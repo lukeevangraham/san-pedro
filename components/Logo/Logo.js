@@ -8,9 +8,15 @@ const Logo = (props) => {
     props.sticky ? classes.StickyLogo : classes.UnstickyLogo,
   ];
 
+  console.log("logoSticky: ", props.sticky);
+
   let renderLogo = props.logo ? (
     <img
-      src={ props.sticky ? `https://sanpedroadmin.lukegraham.us${props.logo.url}` : `https://sanpedroadmin.lukegraham.us${props.logoWhite.url}`}
+      src={
+        props.sticky
+          ? `https://sanpedroadmin.lukegraham.us${props.logo.url}`
+          : `https://sanpedroadmin.lukegraham.us${props.logoWhite.url}`
+      }
       alt={props.logo.alternativeText}
     />
   ) : (
