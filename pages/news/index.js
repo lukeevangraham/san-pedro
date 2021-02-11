@@ -4,12 +4,12 @@ import Link from "next/link";
 
 export async function getStaticProps() {
   const allNewsData = await getSortedNewsData();
-  const global = await fetchAPI("/global");
+  // const global = await fetchAPI("/global");
 
   return {
     props: {
       allNewsData,
-      global
+      // global
     },
     revalidate: 1,
   };

@@ -13,11 +13,11 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const newsData = await getNewsData(params.slug);
-  const global = await fetchAPI("/global");
+  // const global = await fetchAPI("/global");
   return {
     props: {
       newsData,
-      global
+      // global
     },
     revalidate: 1,
   };
