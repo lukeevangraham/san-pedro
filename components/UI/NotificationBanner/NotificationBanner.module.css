@@ -30,3 +30,13 @@
     width: auto;
     color: rgb(238, 238, 238);
 }
+
+.text a:link, .text a:visited {
+    color: #4F1610;
+    /* border-bottom: 1px solid #4F1610; */
+}
+
+.text a:hover, .text a:active {
+    color: #270b08;
+    /* border-bottom: 1px solid transparent; */
+}
