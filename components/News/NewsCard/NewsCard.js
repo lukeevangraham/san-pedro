@@ -15,7 +15,7 @@ const NewsCard = ({ article }) => {
   };
 
   return (
-    <>
+    <div className={classes.newsCard}>
       {console.log("article: ", article)}
       <Link href={`/news/${article.slug}`}>
         <a>
@@ -43,7 +43,7 @@ const NewsCard = ({ article }) => {
           })}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
