@@ -17,10 +17,11 @@ export async function getStaticProps() {
 
 const News = ({ allNewsData, global }) => (
   <>
-    <h2>Here are the news pages:</h2>
-    <div>
+  <h1>Here are the news pages:</h1>
+    {/* <h2>Here are the news pages:</h2> */}
+    <div className="row">
       {allNewsData.map((article) => (
-        <div key={article.id}>
+        <div key={article.id} className="col col3 span-1-of-3">
           {" "}
           <Link href={`/news/${article.slug}`}>
             <a>{article.title}</a>

@@ -32,6 +32,9 @@
 
 .col:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
 
+/* CUSTOM CODED BY LUKE */
+.col3:nth-child(3n+1) { margin-left: 0; }
+
 
 /*  REMOVE MARGINS AS ALL GO FULL WIDTH AT 480 PIXELS */
 
