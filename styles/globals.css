@@ -67,8 +67,8 @@ h1, h2, h3 {
 }
 
 h1 {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   /* color: #fff; */
   font-size: 200%;
   text-align: center;
@@ -115,7 +115,7 @@ h2:after {
 /* LINKS */
 
 a:link, a:visited {
-  color: #e67e22;
+  color: #DB3D2C;
   text-decoration: none;
   padding-bottom: 1px;
   /* border-bottom: 1px solid #e67e22; */

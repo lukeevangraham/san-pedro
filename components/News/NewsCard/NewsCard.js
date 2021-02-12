@@ -26,22 +26,28 @@ const NewsCard = ({ article }) => {
           />
         </a>
       </Link>
-      <Link href={`/news/${article.slug}`}>
-        <a className={classes.title}>{article.title}</a>
-      </Link>
+      <div className={classes.belowPicture}>
+        <Link href={`/news/${article.slug}`}>
+          <a className={classes.title}>{article.title}</a>
+        </Link>
 
-      <p className={classes.excerpt}>
-        {truncate(article.body, 100, true)}&hellip;
-      </p>
-      <div className={classes.moreInfo}>
-          {article.ministries.length ? <div className={classes.moreInfoDetail}>{article.ministries[0].ministryName}</div> : null }
-        
-        <div className={classes.moreInfoDetail}>
-          {new Date(article.created_at).toLocaleDateString("en-US", {
-            month: "short",
-            day: "numeric",
-            year: "numeric",
-          })}
+        <p className={classes.excerpt}>
+          {truncate(article.body, 100, true)}&hellip;
+        </p>
+        <div className={classes.moreInfo}>
+          {article.ministries.length ? (
+            <div className={classes.moreInfoDetail}>
+              {article.ministries[0].ministryName}
+            </div>
+          ) : null}
+
+          <div className={classes.moreInfoDetail}>
+            {new Date(article.created_at).toLocaleDateString("en-US", {
+              month: "short",
+              day: "numeric",
+              year: "numeric",
+            })}
+          </div>
         </div>
       </div>
     </div>
