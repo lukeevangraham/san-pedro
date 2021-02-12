@@ -9,7 +9,6 @@
 
 @media only screen and (max-width: 767px) {
     .HomePage {
-      height: 80vh;
       background-attachment: scroll
     }
   }
