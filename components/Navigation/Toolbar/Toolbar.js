@@ -1,4 +1,5 @@
 import React from "react";
+import { getStrapiMedia } from "../../../lib/media";
 
 import classes from "./Toolbar.module.css";
 import Logo from "../../Logo/Logo";
@@ -26,8 +27,8 @@ const Toolbar = (props) => {
             sticky={props.sticky}
             imageUrl={
               props.sticky
-                ? `https://sanpedroadmin.lukegraham.us${props.navData.logo.url}`
-                : `https://sanpedroadmin.lukegraham.us${props.navData.logoWhite.url}`
+                ? getStrapiMedia(props.navData.logo.url)
+                : getStrapiMedia(props.navData.logoWhite.url)
             }
           />
         </div>

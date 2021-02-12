@@ -1,5 +1,5 @@
 import React from "react";
-
+import { getStrapiMedia } from "../../../lib/media";
 import Logo from "../../Logo/Logo";
 import NavigationItems from "../NavigationItems/NavigationItems";
 import classes from "./SideDrawer.module.css";
@@ -16,7 +16,10 @@ const sideDrawer = (props) => {
       <Backdrop show={props.open} clicked={props.closed} />
       <div className={attachedClasses.join(" ")} onClick={props.closed}>
         <div className={classes.Logo}>
-          <Logo logo={props.navData.logo} logoWhite={props.navData.logo} />
+        <Logo
+            sticky={props.sticky}
+            imageUrl={getStrapiMedia(props.navData.logo.url)}
+          />
         </div>
         <nav>
           <NavigationItems navData={props.navData} />
