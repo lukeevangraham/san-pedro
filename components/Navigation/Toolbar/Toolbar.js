@@ -9,11 +9,16 @@ import classNames from "classnames";
 
 const Toolbar = (props) => {
   let attachedClasses = [classes.innerToolbar, "row"];
-  console.log("sticky: ", props.sticky)
   // console.log("home: ", props.home)
   return (
     <header
-      className={props.sticky ? classes.Sticky : classes.Toolbar}
+      className={
+        props.sticky
+          ? classes.Sticky
+          : props.home
+          ? classes.Toolbar
+          : [classes.Toolbar, classes.notHome].join(" ")
+      }
     >
       <div className={attachedClasses.join(" ")}>
         <div className={classes.Logo}>
