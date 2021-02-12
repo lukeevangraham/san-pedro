@@ -1,16 +1,16 @@
 .homeHeader {
-  background-size: cover !important;
+  background-size: cover;
   background-position: center;
   height: 80vh;
-  width: 100%;
   background-attachment: fixed;
+  /* width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center; */
 }
 
 @media (max-width: 767px) {
-  .homeHeader {
+  /* .homeHeader {
     background-attachment: scroll;
-  }
+  } */
 }

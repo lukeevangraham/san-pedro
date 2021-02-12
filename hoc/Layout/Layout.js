@@ -12,8 +12,6 @@ import Sections from "../../components/sections/sections";
 const Layout = (props) => {
   const { navbar, notificationBanner } = props.global;
 
-  console.log("props: ", props)
-
   const [showSideDrawer, setShowSideDrawer] = useState(false);
   const [makeNavSticky, setMakeNavSticky] = useState(false);
   const [bannerIsShown, setBannerIsShown] = useState(true);
@@ -36,7 +34,6 @@ const Layout = (props) => {
       )}
 
       <Waypoint
-        topOffset={"120px"}
         onLeave={() => setMakeNavSticky(true)}
         onEnter={() => setMakeNavSticky(false)}
       >
@@ -51,7 +48,6 @@ const Layout = (props) => {
     url(https://sanpedroadmin.lukegraham.us${props.children.props.homeData.contentSections[0].picture.url})`,
             }}
           >
-          {console.log("props: ", props.children.props.homeData.contentSections[0])}
             <Toolbar
               sticky={makeNavSticky}
               drawerToggleClicked={sideDrawerToggleHandler}

@@ -15,8 +15,6 @@ export const GlobalContext = createContext({});
 function MyApp({ Component, pageProps }) {
   const { global } = pageProps;
 
-  console.log(useRouter().pathname)
-
   return (
     <GlobalContext.Provider value={global}>
       <Layout global={global} home={useRouter().pathname === '/'}>

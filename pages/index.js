@@ -1,11 +1,11 @@
 import Head from "next/head";
 import { DefaultSeo } from "next-seo";
-import Layout from "../hoc/Layout/Layout";
+// import Layout from "../hoc/Layout/Layout";
 import HomePage from "../components/HomePage/HomePage";
 import Sections from "../components/sections/sections";
 import { getStrapiMedia } from "../lib/media";
 import { fetchAPI } from "../lib/api";
-import { render } from "react-dom";
+// import { render } from "react-dom";
 
 // import styles from '../styles/Home.module.css'
 
@@ -54,15 +54,8 @@ export default function Home(props) {
         }}
       />
 
-      {/* <Layout
-        home
-        global={props.global}
-        heroBg={props.homeData.contentSections[0].picture.url}
-        heroData={props.homeData.contentSections[0]}
-      > */}
         <HomePage />
         {renderSections}
-      {/* </Layout> */}
 
       {/* <main className={styles.main}>
         <h1 className={styles.title}>

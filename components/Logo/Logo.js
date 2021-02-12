@@ -8,8 +8,6 @@ const Logo = (props) => {
     props.sticky ? classes.StickyLogo : classes.UnstickyLogo,
   ];
 
-  console.log("logoSticky: ", props.sticky);
-
   let renderLogo = props.logo ? (
     <img
       src={
