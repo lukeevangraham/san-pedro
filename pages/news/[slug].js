@@ -27,10 +27,10 @@ export async function getStaticProps({ params }) {
 
 export default function News(props) {
   return (
-    <div className="row" style={{ textAlign: "center"}}>
+    <div className="row" style={{ textAlign: "center" }}>
       <h1>{props.newsData.title}</h1>
       <img className="responsiveImage" src={getStrapiMedia(props.newsData.image.url)} />
-      <div style={{ display: "flex", justifyContent: "center" }}>
+      <div style={{ display: "flex", justifyContent: "center", backgroundColor: "#fff", marginTop: 0 }}>
         <div style={{ maxWidth: "600px", lineHeight: "1.5", textAlign: "left", margin: "2rem 0" }}>
           <Markdown source={props.newsData.body} />
         </div>
