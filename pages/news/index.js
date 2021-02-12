@@ -1,7 +1,8 @@
 import { getSortedNewsData, fetchAPI } from "../../lib/api";
-import { getStrapiMedia } from "../../lib/media";
+
+import NewsCard from "../../components/News/NewsCard/NewsCard";
 import Layout from "../../hoc/Layout/Layout";
-import Link from "next/link";
+
 
 export async function getStaticProps() {
   const allNewsData = await getSortedNewsData();
@@ -23,14 +24,7 @@ const News = ({ allNewsData, global }) => (
     <div className="row">
       {allNewsData.map((article) => (
         <div key={article.id} className="col col3 span-1-of-3">
-          {console.log("article: ", article)}{" "}
-          <img className="responsiveImage"
-            src={getStrapiMedia(article.image.formats.medium.url)}
-            alt={article.image.alternativeText}
-          />
-          <Link href={`/news/${article.slug}`}>
-            <a>{article.title}</a>
-          </Link>
+          <NewsCard article={article} />
         </div>
       ))}
     </div>
