@@ -34,7 +34,8 @@ const NewsCard = ({ article }) => {
         {truncate(article.body, 100, true)}&hellip;
       </p>
       <div className={classes.moreInfo}>
-        <div className={classes.moreInfoDetail}>{article.ministries[0].ministryName}</div>
+          {article.ministries.length ? <div className={classes.moreInfoDetail}>{article.ministries[0].ministryName}</div> : null }
+        
         <div className={classes.moreInfoDetail}>
           {new Date(article.created_at).toLocaleDateString("en-US", {
             month: "short",
