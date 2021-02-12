@@ -1,5 +1,6 @@
 import { getStrapiMedia } from "../../../lib/media";
 import Link from "next/link";
+import { IoCalendarOutline, IoPeopleCircleOutline } from "react-icons/io5";
 
 import classes from "./NewsCard.module.css";
 
@@ -16,7 +17,6 @@ const NewsCard = ({ article }) => {
 
   return (
     <div className={classes.newsCard}>
-      {console.log("article: ", article)}
       <Link href={`/news/${article.slug}`}>
         <a>
           <img
@@ -36,12 +36,16 @@ const NewsCard = ({ article }) => {
         </p>
         <div className={classes.moreInfo}>
           {article.ministries.length ? (
+            <>
+          <IoPeopleCircleOutline />
             <div className={classes.moreInfoDetail}>
               {article.ministries[0].ministryName}
             </div>
+            </>
           ) : null}
 
           <div className={classes.moreInfoDetail}>
+            <IoCalendarOutline />
             {new Date(article.created_at).toLocaleDateString("en-US", {
               month: "short",
               day: "numeric",
