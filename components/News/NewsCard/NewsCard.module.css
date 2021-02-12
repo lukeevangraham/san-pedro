@@ -1,0 +1,18 @@
+.title {
+    font-size: 120%;
+    text-transform: uppercase;
+}
+
+.excerpt {
+    font-size: 90%;
+}
+
+.moreInfo {
+    display: flex;
+    margin: 15px 0;
+}
+
+.moreInfoDetail {
+    margin-right: 20px;
+    font-size: 90%;
+}

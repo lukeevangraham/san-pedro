@@ -1,17 +1,17 @@
 import { getStrapiMedia } from "../../../lib/media";
 import Link from "next/link";
 
+import classes from "./NewsCard.module.css";
+
 const NewsCard = ({ article }) => {
   const truncate = (str, n, useWordBoundary) => {
     if (str.length <= n) {
       return str;
     }
     const subString = str.substr(0, n - 1); // the original check
-    return (
-      (useWordBoundary
-        ? subString.substr(0, subString.lastIndexOf(" "))
-        : subString)
-    );
+    return useWordBoundary
+      ? subString.substr(0, subString.lastIndexOf(" "))
+      : subString;
   };
 
   return (
@@ -27,17 +27,22 @@ const NewsCard = ({ article }) => {
         </a>
       </Link>
       <Link href={`/news/${article.slug}`}>
-        <a>{article.title}</a>
+        <a className={classes.title}>{article.title}</a>
       </Link>
-      <div>{article.ministries[0].ministryName}</div>
-      <div>
-        {new Date(article.created_at).toLocaleDateString("en-US", {
-          month: "short",
-          day: "numeric",
-          year: "numeric",
-        })}
+
+      <p className={classes.excerpt}>
+        {truncate(article.body, 100, true)}&hellip;
+      </p>
+      <div className={classes.moreInfo}>
+        <div className={classes.moreInfoDetail}>{article.ministries[0].ministryName}</div>
+        <div className={classes.moreInfoDetail}>
+          {new Date(article.created_at).toLocaleDateString("en-US", {
+            month: "short",
+            day: "numeric",
+            year: "numeric",
+          })}
+        </div>
       </div>
-      <div>{truncate(article.body, 50, true)}&hellip;</div>
     </>
   );
 };
