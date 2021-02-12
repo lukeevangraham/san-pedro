@@ -31,7 +31,7 @@ export default function News(props) {
       <h1>{props.newsData.title}</h1>
       <img className="responsiveImage" src={getStrapiMedia(props.newsData.image.url)} />
       <div style={{ display: "flex", justifyContent: "center", backgroundColor: "#fff", marginTop: 0 }}>
-        <div style={{ maxWidth: "600px", lineHeight: "1.5", textAlign: "left", margin: "2rem 0" }}>
+        <div style={{ maxWidth: "600px", lineHeight: "1.5", textAlign: "left", margin: "2rem 0", fontFamily: "serif" }}>
           <Markdown source={props.newsData.body} />
         </div>
       </div>
