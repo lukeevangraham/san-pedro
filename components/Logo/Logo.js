@@ -8,23 +8,26 @@ const Logo = (props) => {
     props.sticky ? classes.StickyLogo : classes.UnstickyLogo,
   ];
 
-  let renderLogo = props.logo ? (
-    <img
-      src={
-        props.sticky
-          ? `https://sanpedroadmin.lukegraham.us${props.logo.url}`
-          : `https://sanpedroadmin.lukegraham.us${props.logoWhite.url}`
-      }
-      alt={props.logo.alternativeText}
-    />
-  ) : (
-    <div>Loading...</div>
-  );
+  // let renderLogo = props.logo ? (
+  //   <img
+  //     src={
+  //       props.sticky
+  //         ? `https://sanpedroadmin.lukegraham.us${props.logo.url}`
+  //         : `https://sanpedroadmin.lukegraham.us${props.logoWhite.url}`
+  //     }
+  //     alt={props.logo.alternativeText}
+  //   />
+  // ) : (
+  //   <div>Loading...</div>
+  // );
 
   return (
     <div className={attachedClasses.join(" ")}>
       <Link href="/">
-        <a>{renderLogo}</a>
+        <a><img
+      src={props.imageUrl}
+      alt="San Pedro Presbyterian Church Logo"
+    /></a>
       </Link>
     </div>
   );

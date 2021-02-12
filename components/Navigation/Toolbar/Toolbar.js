@@ -9,7 +9,7 @@ import classNames from "classnames";
 
 const Toolbar = (props) => {
   let attachedClasses = [classes.innerToolbar, "row"];
-  // console.log("home: ", props.home)
+
   return (
     <header
       className={
@@ -24,8 +24,11 @@ const Toolbar = (props) => {
         <div className={classes.Logo}>
           <Logo
             sticky={props.sticky}
-            logo={props.navData.logo}
-            logoWhite={props.navData.logoWhite}
+            imageUrl={
+              props.sticky
+                ? `https://sanpedroadmin.lukegraham.us${props.navData.logo.url}`
+                : `https://sanpedroadmin.lukegraham.us${props.navData.logoWhite.url}`
+            }
           />
         </div>
         <DrawerToggle

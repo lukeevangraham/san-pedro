@@ -11,7 +11,7 @@
 }
 
 @media (max-width: 767px) {
-  /* .homeHeader {
+  .homeHeader {
     background-attachment: scroll;
-  } */
+  }
 }
