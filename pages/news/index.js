@@ -1,8 +1,9 @@
 import { getSortedNewsData, fetchAPI } from "../../lib/api";
 
+import faker from "faker";
 import NewsCard from "../../components/News/NewsCard/NewsCard";
 import Layout from "../../hoc/Layout/Layout";
-
+import { IoFileTrayStackedSharp } from "react-icons/io5";
 
 export async function getStaticProps() {
   const allNewsData = await getSortedNewsData();
@@ -17,18 +18,50 @@ export async function getStaticProps() {
   };
 }
 
-const News = ({ allNewsData, global }) => (
-  <>
-    <h1>Here are the news pages:</h1>
-    {/* <h2>Here are the news pages:</h2> */}
-    <div className="row">
-      {allNewsData.map((article) => (
-        <div key={article.id} className="col col3 span-1-of-3">
-          <NewsCard article={article} />
+const News = ({ allNewsData, global }) => {
+  const createArticle = () => {
+    return {
+      id: faker.random.number(),
+      title: faker.lorem.words(),
+      slug: faker.lorem.slug(),
+      shortName: faker.lorem.words(),
+      author: faker.name.findName(),
+      body: faker.lorem.text(),
+      published_at: faker.date.past(),
+      created_at: faker.date.past(),
+      updated_at: faker.date.past(),
+      image: {
+        formats: {
+          medium: {
+            url: faker.random.image(),
+          },
+        },
+      },
+      ministries: []
+    };
+  };
+
+  const createArticles = (numArticles = 6) => {
+    return new Array(numArticles).fill(undefined).map(createArticle);
+  };
+
+  const fakeArticles = createArticles(6);
+
+  console.log("article: ", fakeArticles);
+  return (
+    <>
+      <h1>Here are the news pages:</h1>
+      {/* <h2>Here are the news pages:</h2> */}
+      <div className="row">
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "1rem" }}>
+        {/* {allNewsData.map((article) => ( */}
+        {fakeArticles.map((article) => (
+            <NewsCard article={article} key={article.id} />
+        ))}
         </div>
-      ))}
-    </div>
-  </>
-);
+      </div>
+    </>
+  );
+};
 
 export default News;

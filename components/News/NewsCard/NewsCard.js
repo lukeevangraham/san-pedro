@@ -19,11 +19,14 @@ const NewsCard = ({ article }) => {
     <div className={classes.newsCard}>
       <Link href={`/news/${article.slug}`}>
         <a>
-          <img
-            className="responsiveImage"
-            src={getStrapiMedia(article.image.formats.medium.url)}
-            alt={article.image.alternativeText}
-          />
+          {/* src={getStrapiMedia(article.image.formats.medium.url)} */}
+          <div className={classes.ratioWrapper}>
+            <img
+              className="responsiveImage"
+              src={article.image.formats.medium.url}
+              alt={article.image.alternativeText}
+            />
+          </div>
         </a>
       </Link>
       <div className={classes.belowPicture}>
@@ -37,10 +40,10 @@ const NewsCard = ({ article }) => {
         <div className={classes.moreInfo}>
           {article.ministries.length ? (
             <>
-          <IoPeopleCircleOutline />
-            <div className={classes.moreInfoDetail}>
-              {article.ministries[0].ministryName}
-            </div>
+              <IoPeopleCircleOutline />
+              <div className={classes.moreInfoDetail}>
+                {article.ministries[0].ministryName}
+              </div>
             </>
           ) : null}
 
