@@ -19,11 +19,11 @@ const NewsCard = ({ article }) => {
     <div className={classes.newsCard}>
       <Link href={`/news/${article.slug}`}>
         <a>
-          {/* src={getStrapiMedia(article.image.formats.medium.url)} */}
           <div className={classes.ratioWrapper}>
             <img
               className="responsiveImage"
-              src={article.image.formats.medium.url}
+              src={getStrapiMedia(article.image.formats.medium.url)}
+              // src={article.image.formats.medium.url}
               alt={article.image.alternativeText}
             />
           </div>
