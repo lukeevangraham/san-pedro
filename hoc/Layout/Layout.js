@@ -33,11 +33,12 @@ const Layout = (props) => {
         />
       )}
 
-      <Waypoint
-        onLeave={() => setMakeNavSticky(true)}
-        onEnter={() => setMakeNavSticky(false)}
-      >
-        {props.home ? (
+      {props.home ? (
+        <Waypoint
+          topOffset={"65px"}
+          onLeave={() => setMakeNavSticky(true)}
+          onEnter={() => setMakeNavSticky(false)}
+        >
           <div
             className={classes.homeHeader}
             style={{
@@ -54,18 +55,27 @@ const Layout = (props) => {
               navData={navbar}
               home={true}
             />
-            <Sections sections={[props.children.props.homeData.contentSections[0]]} home />
-          </div>
-        ) : (
-          <div>
-            <Toolbar
-              sticky={makeNavSticky}
-              drawerToggleClicked={sideDrawerToggleHandler}
-              navData={navbar}
+            <Sections
+              sections={[props.children.props.homeData.contentSections[0]]}
+              home
             />
           </div>
-        )}
-      </Waypoint>
+        </Waypoint>
+      ) : (
+        <Waypoint
+          topOffset={"-100px"}
+          onLeave={() => setMakeNavSticky(true)}
+          onEnter={() => setMakeNavSticky(false)}
+        >
+        <div>
+          <Toolbar
+            sticky={makeNavSticky}
+            drawerToggleClicked={sideDrawerToggleHandler}
+            navData={navbar}
+          />
+        </div>
+        </Waypoint>
+      )}
       <SideDrawer
         open={showSideDrawer}
         closed={sideDrawerClosedHandler}

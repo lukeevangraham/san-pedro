@@ -51,7 +51,7 @@ const NewsCard = ({ article }) => {
 
           <div className={classes.moreInfoDetail}>
             <IoCalendarOutline />
-            {new Date(article.created_at).toLocaleDateString("en-US", {
+            {new Date(article.published_at).toLocaleDateString("en-US", {
               month: "short",
               day: "numeric",
               year: "numeric",
