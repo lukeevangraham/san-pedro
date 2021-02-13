@@ -39,12 +39,14 @@ const NewsCard = ({ article }) => {
         </p>
         <div className={classes.moreInfo}>
           {article.ministries.length ? (
-            <>
-              <IoPeopleCircleOutline />
-              <div className={classes.moreInfoDetail}>
-                {article.ministries[0].ministryName}
-              </div>
-            </>
+            <div className={classes.moreInfoDetail}>
+              <>
+                <IoPeopleCircleOutline />
+                <div className={classes.moreInfoDetail}>
+                  {article.ministries[0].ministryName}
+                </div>
+              </>
+            </div>
           ) : null}
 
           <div className={classes.moreInfoDetail}>

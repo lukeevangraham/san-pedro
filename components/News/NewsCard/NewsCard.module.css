@@ -7,6 +7,8 @@
     /* box-shadow: 0 30px 80px 10px rgba(0,0,0,.2); */
     border-radius: 5px;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
     transition: transform 0.2s;
 }
 
@@ -22,7 +24,10 @@
 }
 
 .belowPicture {
+    flex-grow: 1;
     padding: 1rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .title {
@@ -33,6 +38,7 @@
 .excerpt {
     font-size: 90%;
     margin: .5rem 0;
+    flex-grow: 1;
 }
 
 .moreInfo {

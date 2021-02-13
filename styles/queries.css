@@ -20,7 +20,7 @@
 
 /* SMALL PHONES to small tables: from 481 to 767px */
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 850px) {
   body {
     font-size: 16px;
   }
