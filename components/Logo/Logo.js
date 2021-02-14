@@ -30,8 +30,8 @@ const Logo = (props) => {
             <Image
               src={props.imageUrl}
               alt="San Pedro Presbyterian Church Logo"
-              width={props.sticky ? 80 : 115}
-              height={props.sticky ? 56 : 80}
+              width={props.sticky ? 75 : 115}
+              height={props.sticky ? 52 : 80}
             />
           </div>
           {/* <img

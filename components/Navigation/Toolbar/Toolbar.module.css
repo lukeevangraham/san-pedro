@@ -1,7 +1,7 @@
 .Toolbar {
   /* background-color: rgba(20, 90, 20, 0); */
   padding: 0 20px;
-  height: 120px;
+  height: 111px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -36,13 +36,15 @@
 
 .Sticky .Logo {
   /* height: 50px; */
-  margin-top: 7px;
+  /* margin-top: 7px; */
 }
 
 .Logo {
-  margin-top: 28px;
+  /* margin-top: 28px; */
   flex-grow: 1;
   height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .notHome {
