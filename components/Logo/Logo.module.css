@@ -1,19 +1,20 @@
-.Logo {
+/* .Logo {
   height: 100%;
-}
+} */
 
-.StickyLogo {
+/* .StickyLogo {
   width: 98px;
-}
+} */
 
-.UnstickyLogo {
+/* .UnstickyLogo img {
   width: 156px;
-}
+} */
 
-.Logo img {
+/* .Logo img {
   height: auto;
   width: 100%;
-}
+} */
+
 
 .Logo a:link,
 .Logo a:visited {

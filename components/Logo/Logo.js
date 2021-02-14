@@ -1,6 +1,7 @@
 import React from "react";
 import classes from "./Logo.module.css";
 import Link from "next/link";
+import Image from "next/image";
 
 const Logo = (props) => {
   let attachedClasses = [
@@ -24,10 +25,20 @@ const Logo = (props) => {
   return (
     <div className={attachedClasses.join(" ")}>
       <Link href="/">
-        <a><img
+        <a>
+          <div className={classes.imageParent}>
+            <Image
+              src={props.imageUrl}
+              alt="San Pedro Presbyterian Church Logo"
+              width={props.sticky ? 98 : 115}
+              height={props.sticky ? 68 : 80}
+            />
+          </div>
+          {/* <img
       src={props.imageUrl}
       alt="San Pedro Presbyterian Church Logo"
-    /></a>
+    /> */}
+        </a>
       </Link>
     </div>
   );
