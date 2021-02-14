@@ -1,5 +1,5 @@
 import { getStrapiMedia } from "../../../lib/media";
-import Image from "next/image"
+import Image from "next/image";
 import Link from "next/link";
 import { IoCalendarOutline, IoPeopleCircleOutline } from "react-icons/io5";
 
@@ -21,7 +21,11 @@ const NewsCard = ({ article }) => {
       <Link href={`/news/${article.slug}`}>
         <a>
           <div className={classes.ratioWrapper}>
-            <Image src={getStrapiMedia(article.image.url)} alt={article.image.alternativeText} layout="fill" />
+            <Image
+              src={getStrapiMedia(article.image.url)}
+              alt={article.image.alternativeText}
+              layout="fill"
+            />
             {/* <img
               className="responsiveImage"
               src={getStrapiMedia(article.image.formats.medium.url)}
@@ -40,15 +44,17 @@ const NewsCard = ({ article }) => {
           {truncate(article.body, 100, true)}&hellip;
         </p>
         <div className={classes.moreInfo}>
-          {article.ministries.length ? (
-            <div className={classes.moreInfoDetail}>
-              <>
-                <IoPeopleCircleOutline />
-                <div className={classes.moreInfoDetail}>
-                  {article.ministries[0].ministryName}
-                </div>
-              </>
-            </div>
+          {article.ministries ? (
+            article.ministries.length ? (
+              <div className={classes.moreInfoDetail}>
+                <>
+                  <IoPeopleCircleOutline />
+                  <div className={classes.moreInfoDetail}>
+                    {article.ministries[0].ministryName}
+                  </div>
+                </>
+              </div>
+            ) : null
           ) : null}
 
           <div className={classes.moreInfoDetail}>

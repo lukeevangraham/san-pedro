@@ -2,6 +2,7 @@ import Head from "next/head";
 import { DefaultSeo } from "next-seo";
 // import Layout from "../hoc/Layout/Layout";
 import HomePage from "../components/HomePage/HomePage";
+import NewsCard from "../components/News/NewsCard/NewsCard";
 import Sections from "../components/sections/sections";
 import { getStrapiMedia } from "../lib/media";
 import { fetchAPI } from "../lib/api";
@@ -54,8 +55,8 @@ export default function Home(props) {
         }}
       />
 
-        <HomePage />
-        {renderSections}
+      <HomePage data={props.homeData} />
+      {/* {renderSections} */}
 
       {/* <main className={styles.main}>
         <h1 className={styles.title}>
