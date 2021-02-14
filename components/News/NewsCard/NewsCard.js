@@ -1,4 +1,5 @@
 import { getStrapiMedia } from "../../../lib/media";
+import Image from "next/image"
 import Link from "next/link";
 import { IoCalendarOutline, IoPeopleCircleOutline } from "react-icons/io5";
 
@@ -20,12 +21,13 @@ const NewsCard = ({ article }) => {
       <Link href={`/news/${article.slug}`}>
         <a>
           <div className={classes.ratioWrapper}>
-            <img
+            <Image src={getStrapiMedia(article.image.url)} alt={article.image.alternativeText} layout="fill" />
+            {/* <img
               className="responsiveImage"
               src={getStrapiMedia(article.image.formats.medium.url)}
               // src={article.image.formats.medium.url}
               alt={article.image.alternativeText}
-            />
+            /> */}
           </div>
         </a>
       </Link>

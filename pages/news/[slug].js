@@ -1,5 +1,6 @@
 import Markdown from "react-markdown";
 import Layout from "../../hoc/Layout/Layout";
+import Image from "next/image"
 import { getStrapiMedia } from "../../lib/media";
 import { getAllNewsSlugs, getNewsData, fetchAPI } from "../../lib/api";
 import { IoPerson } from "react-icons/io5"
