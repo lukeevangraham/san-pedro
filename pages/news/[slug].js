@@ -1,9 +1,9 @@
 import Markdown from "react-markdown";
 import Layout from "../../hoc/Layout/Layout";
-import Image from "next/image"
+import Image from "next/image";
 import { getStrapiMedia } from "../../lib/media";
 import { getAllNewsSlugs, getNewsData, fetchAPI } from "../../lib/api";
-import { IoPerson } from "react-icons/io5"
+import { IoPerson } from "react-icons/io5";
 import Head from "next/head";
 
 import classes from "./slug.module.css";
@@ -47,13 +47,18 @@ export default function News(props) {
         </div>
         <div className={classes.authorAndTitle}>
           <div className={classes.title}>{props.newsData.title}</div>
-          <div className={classes.author}><IoPerson /> {props.newsData.author}</div>
+          <div className={classes.author}>
+            <IoPerson /> {props.newsData.author}
+          </div>
         </div>
       </div>
-      <img
+      <div className={classes.imageWrap}>
+        <Image src={getStrapiMedia(props.newsData.image.url)} layout="fill" objectFit="cover" alt={props.newsData.image.alternativeText} />
+      </div>
+      {/* <img
         className={["responsiveImage", classes.image].join(" ")}
         src={getStrapiMedia(props.newsData.image.url)}
-      />
+      /> */}
       <div className={classes.belowPhoto}>
         <div className={classes.body}>
           <Markdown source={props.newsData.body} />
