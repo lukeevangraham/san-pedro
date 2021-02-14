@@ -44,11 +44,12 @@
 .moreInfo {
     display: flex;
     margin-top: .5rem;
+    font-size: 65%;
+    justify-content: space-between;
 }
 
 .moreInfoDetail {
     margin-right: 20px;
-    font-size: 80%;
     font-weight: 600;
     display: flex;
     align-items: center;
