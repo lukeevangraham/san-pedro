@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Waypoint } from "react-waypoint";
 
+import Image from "next/image";
+import { getStrapiMedia } from "../../lib/media";
 import classes from "./Layout.module.css";
 import Aux from "../Aux/Aux";
 import NotificationBanner from "../../components/UI/NotificationBanner/NotificationBanner";
@@ -39,16 +41,20 @@ const Layout = (props) => {
           onLeave={() => setMakeNavSticky(true)}
           onEnter={() => setMakeNavSticky(false)}
         >
-          <div
-            className={classes.homeHeader}
-            style={{
-              backgroundImage: `linear-gradient(
-      rgba(0, 0, 0, 0.4),
-      rgba(0, 0, 0, 0.4)
-    ),
-    url(https://sanpedroadmin.lukegraham.us${props.children.props.homeData.contentSections[0].picture.url})`,
-            }}
-          >
+          <div className={classes.homeHeader}>
+            <Image
+              src={getStrapiMedia(
+                props.children.props.homeData.contentSections[0].picture.url
+              )}
+              alt={
+                props.children.props.homeData.contentSections[0].picture
+                  .alternativeText
+              }
+              layout="fill"
+              objectFit="cover"
+              objectPosition="center center"
+              className={classes.heroBgImage}
+            />
             <Toolbar
               sticky={makeNavSticky}
               drawerToggleClicked={sideDrawerToggleHandler}
@@ -67,13 +73,13 @@ const Layout = (props) => {
           onLeave={() => setMakeNavSticky(true)}
           onEnter={() => setMakeNavSticky(false)}
         >
-        <div>
-          <Toolbar
-            sticky={makeNavSticky}
-            drawerToggleClicked={sideDrawerToggleHandler}
-            navData={navbar}
-          />
-        </div>
+          <div>
+            <Toolbar
+              sticky={makeNavSticky}
+              drawerToggleClicked={sideDrawerToggleHandler}
+              navData={navbar}
+            />
+          </div>
         </Waypoint>
       )}
       <SideDrawer

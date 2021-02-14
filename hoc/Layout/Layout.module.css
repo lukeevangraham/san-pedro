@@ -4,25 +4,31 @@
   height: 80vh;
   background-attachment: fixed;
   position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
   /* width: 100%; */
   /* display: flex;
   flex-direction: column; */
   /* justify-content: center; */
 }
 
-@media (max-width: 767px) {
-  .homeHeader {
-    background-attachment: scroll;
-  }
+.heroBgImage {
+  z-index: -1;
 }
 
 .Content {
   margin-bottom: 3rem;
   /* background-image: linear-gradient(to top right, #8d7169, #f8e0da), url("/images/stucco.png"); */
-  background-image: linear-gradient(to top right, #8d71698c, #f8e0da7c), url("/images/stucco.png");
+  background-image: linear-gradient(to top right, #8d71698c, #f8e0da7c),
+    url("/images/stucco.png");
   /* background-image: linear-gradient(
       rgba(0, 0, 0, 0.4),
       rgba(0, 0, 0, 0.4)
     ),
     url(https://sanpedroadmin.lukegraham.us${props.children.props.homeData.contentSections[0].picture.url}); */
+}
+
+@media (max-width: 767px) {
+  .homeHeader {
+    background-attachment: scroll;
+  }
 }
