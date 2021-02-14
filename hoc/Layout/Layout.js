@@ -55,6 +55,7 @@ const Layout = (props) => {
               objectPosition="center center"
               className={classes.heroBgImage}
             />
+
             <Toolbar
               sticky={makeNavSticky}
               drawerToggleClicked={sideDrawerToggleHandler}

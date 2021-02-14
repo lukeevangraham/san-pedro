@@ -5,6 +5,8 @@
   width: 100%;
   display: flex;
   align-items: center;
+  z-index: 98;
+  position: relative;
 }
 
 .innerToolbar {
