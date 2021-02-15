@@ -34,6 +34,7 @@ const Logo = (props) => {
               objectFit="scale-down"
               objectPosition="left center"
               sizes="33vw"
+              priority="true"
             />
           </div>
           {/* <img
