@@ -10,11 +10,11 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <link rel="preconnect" href="https://fonts.gstatic.com"></link>
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
-            href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400;600&family=Cardo&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Cardo&family=Source+Sans+Pro:wght@200;400;600&display=swap"
             rel="stylesheet"
-          ></link>
+          />
         </Head>
         <body>
           <Main />
