@@ -1,12 +1,12 @@
 import React from "react";
 import { getStrapiMedia } from "../../../lib/media";
-
-import classes from "./Toolbar.module.css";
 import Logo from "../../Logo/Logo";
+import Image from "next/image";
 import Button from "../../UI/Button/Button";
 import NavigationItems from "../NavigationItems/NavigationItems";
 import DrawerToggle from "../SideDrawer/DrawerToggle/DrawerToggle";
 import classNames from "classnames";
+import classes from "./Toolbar.module.css";
 
 const Toolbar = (props) => {
   let attachedClasses = [classes.innerToolbar, "row"];
@@ -22,6 +22,15 @@ const Toolbar = (props) => {
       }
     >
       <div className={attachedClasses.join(" ")}>
+        {/* <div className={classes.Logo}>
+          <Image
+            src={getStrapiMedia(props.navData.logo.url)}
+            layout="fill"
+            objectFit="contain"
+            objectPosition="left top"
+            className={classes.image}
+          />
+        </div> */}
         <div className={classes.Logo}>
           <Logo
             sticky={props.sticky}
@@ -30,6 +39,8 @@ const Toolbar = (props) => {
                 ? getStrapiMedia(props.navData.logo.url)
                 : getStrapiMedia(props.navData.logoWhite.url)
             }
+            width={props.sticky ? 75 : 115}
+            height={props.sticky ? 52 : 80}
           />
         </div>
         <DrawerToggle

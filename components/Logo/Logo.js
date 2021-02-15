@@ -1,7 +1,7 @@
 import React from "react";
-import classes from "./Logo.module.css";
 import Link from "next/link";
 import Image from "next/image";
+import classes from "./Logo.module.css";
 
 const Logo = (props) => {
   let attachedClasses = [
@@ -26,12 +26,13 @@ const Logo = (props) => {
     <div className={attachedClasses.join(" ")}>
       <Link href="/">
         <a>
-          <div className={classes.imageParent}>
+          <div style={{ width: props.width, height: props.height }}>
             <Image
               src={props.imageUrl}
               alt="San Pedro Presbyterian Church Logo"
-              width={props.sticky ? 75 : 115}
-              height={props.sticky ? 52 : 80}
+              layout="fill"
+              objectFit="scale-down"
+              objectPosition="left center"
             />
           </div>
           {/* <img

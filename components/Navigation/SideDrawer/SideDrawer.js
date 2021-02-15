@@ -19,6 +19,8 @@ const sideDrawer = (props) => {
         <Logo
             sticky={props.sticky}
             imageUrl={getStrapiMedia(props.navData.logo.url)}
+            width={115}
+            height={80}
           />
         </div>
         <nav>

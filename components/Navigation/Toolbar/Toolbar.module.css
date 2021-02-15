@@ -41,11 +41,17 @@
 
 .Logo {
   /* margin-top: 28px; */
+  /* height: 100%; */
+  /* position: relative; */
+  /* padding-bottom: 70%; */
+  position: relative;
+  /* height: 74px; */
   flex-grow: 1;
-  height: 100%;
-  display: flex;
-  align-items: center;
+  /* padding: 20px; */
+  /* display: flex; */
+  /* align-items: center; */
 }
+
 
 .notHome {
   background: linear-gradient(to bottom right, #4f1610f6, #90281df6);
@@ -73,7 +79,7 @@
   .Toolbar {
     height: 98px;
   }
-  .Logo {
+  /* .Logo {
     margin-top: 8px;
-  }
+  } */
 }
