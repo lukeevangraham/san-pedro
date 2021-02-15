@@ -25,7 +25,7 @@ const NewsCard = ({ article }) => {
               src={getStrapiMedia(article.image.url)}
               alt={article.image.alternativeText}
               layout="fill"
-              sizes="33vw"
+              sizes="(max-width: 480px) 100vw, 33vw"
             />
             {/* <img
               className="responsiveImage"
