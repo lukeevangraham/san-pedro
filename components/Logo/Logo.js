@@ -33,6 +33,7 @@ const Logo = (props) => {
               layout="fill"
               objectFit="scale-down"
               objectPosition="left center"
+              sizes="33vw"
             />
           </div>
           {/* <img
