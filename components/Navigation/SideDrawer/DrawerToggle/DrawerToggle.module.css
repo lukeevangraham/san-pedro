@@ -22,12 +22,12 @@
   background-color: white;
 }
 
-.Sticky div {
-  background-color: #1d1d1d !important;
+.Sticky svg {
+  color: #1d1d1d !important;
 }
 
 @media (min-width: 768px) {
-  .DrawerToggle {
+  .newDrawerToggle {
     display: none;
   }
 }
