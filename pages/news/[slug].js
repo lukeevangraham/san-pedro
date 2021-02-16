@@ -1,3 +1,5 @@
+// import Head from "next/head";
+import { NextSeo } from "next-seo";
 import Markdown from "react-markdown";
 import Layout from "../../hoc/Layout/Layout";
 import Image from "next/image";
@@ -31,51 +33,56 @@ export async function getStaticProps({ params }) {
 
 export default function News(props) {
   return (
-    <section className={["row", classes.article].join(" ")}>
-      <div className={classes.topInfo}>
-          <div className={classes.dateBox}>
-            <div className={classes.day}>
-              {new Date(props.newsData.published_at).toLocaleDateString(
-                "en-US",
-                {
-                  day: "numeric",
-                }
-              )}
+    <>
+      <NextSeo title="Hi there" />
+      <section style={{ backgroundColor: "rgb(252, 252, 252)" }}>
+        <div className={["row", classes.article].join(" ")}>
+          <div className={classes.topInfo}>
+            <div className={classes.dateBox}>
+              <div className={classes.day}>
+                {new Date(props.newsData.published_at).toLocaleDateString(
+                  "en-US",
+                  {
+                    day: "numeric",
+                  }
+                )}
+              </div>
+              <div className={classes.month}>
+                {new Date(props.newsData.published_at).toLocaleDateString(
+                  "en-US",
+                  {
+                    month: "short",
+                  }
+                )}
+              </div>
             </div>
-            <div className={classes.month}>
-              {new Date(props.newsData.published_at).toLocaleDateString(
-                "en-US",
-                {
-                  month: "short",
-                }
-              )}
+            <div className={classes.authorAndTitle}>
+              <div className={classes.title}>{props.newsData.title}</div>
+              <div className={classes.author}>
+                <IoPerson /> {props.newsData.author}
+              </div>
             </div>
           </div>
-        <div className={classes.authorAndTitle}>
-          <div className={classes.title}>{props.newsData.title}</div>
-          <div className={classes.author}>
-            <IoPerson /> {props.newsData.author}
+          <div className={classes.imageWrap}>
+            <Image
+              src={getStrapiMedia(props.newsData.image.url)}
+              layout="fill"
+              objectFit="cover"
+              alt={props.newsData.image.alternativeText}
+            />
           </div>
-        </div>
-      </div>
-      <div className={classes.imageWrap}>
-        <Image
-          src={getStrapiMedia(props.newsData.image.url)}
-          layout="fill"
-          objectFit="cover"
-          alt={props.newsData.image.alternativeText}
-        />
-      </div>
-      {/* <img
+          {/* <img
         className={["responsiveImage", classes.image].join(" ")}
         src={getStrapiMedia(props.newsData.image.url)}
       /> */}
-      <div className={classes.belowPhoto}>
-        <div className={classes.body}>
-          <Markdown source={props.newsData.body} />
+          <div className={classes.belowPhoto}>
+            <div className={classes.body}>
+              <Markdown source={props.newsData.body} />
+            </div>
+          </div>
+          {console.log("props: ", props)}
         </div>
-      </div>
-      {console.log("props: ", props)}
-    </section>
+      </section>
+    </>
   );
 }
