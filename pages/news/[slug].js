@@ -1,5 +1,5 @@
 // import Head from "next/head";
-import { NextSeo } from "next-seo";
+import Seo from "../../components/elements/seo";
 import Markdown from "react-markdown";
 import Layout from "../../hoc/Layout/Layout";
 import Image from "next/image";
@@ -34,7 +34,7 @@ export async function getStaticProps({ params }) {
 export default function News(props) {
   return (
     <>
-      <NextSeo title="Hi there" />
+      <Seo metadata={props.newsData.metadata} />
       <section style={{ backgroundColor: "rgb(252, 252, 252)" }}>
         <div className={["row", classes.article].join(" ")}>
           <div className={classes.topInfo}>
