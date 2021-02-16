@@ -69,19 +69,17 @@ const Layout = (props) => {
           </div>
         </Waypoint>
       ) : (
-        <Waypoint
-          topOffset={"-100px"}
-          onLeave={() => setMakeNavSticky(true)}
-          onEnter={() => setMakeNavSticky(false)}
-        >
-          <div>
-            <Toolbar
-              sticky={makeNavSticky}
-              drawerToggleClicked={sideDrawerToggleHandler}
-              navData={navbar}
-            />
-          </div>
-        </Waypoint>
+        <div>
+          <Toolbar
+            sticky={makeNavSticky}
+            drawerToggleClicked={sideDrawerToggleHandler}
+            navData={navbar}
+          />
+          <Waypoint
+            onLeave={() => setMakeNavSticky(true)}
+            onEnter={() => setMakeNavSticky(false)}
+          ></Waypoint>
+        </div>
       )}
       <SideDrawer
         open={showSideDrawer}

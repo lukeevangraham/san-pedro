@@ -33,16 +33,24 @@ export default function News(props) {
   return (
     <section className={["row", classes.article].join(" ")}>
       <div className={classes.topInfo}>
-        <div className={classes.dateBox}>
-          <div className={classes.day}>
-            {new Date(props.newsData.published_at).toLocaleDateString("en-US", {
-              day: "numeric",
-            })}
-          </div>
-          <div className={classes.month}>
-            {new Date(props.newsData.published_at).toLocaleDateString("en-US", {
-              month: "short",
-            })}
+        <div className={classes.dateBoxWrapper}>
+          <div className={classes.dateBox}>
+            <div className={classes.day}>
+              {new Date(props.newsData.published_at).toLocaleDateString(
+                "en-US",
+                {
+                  day: "numeric",
+                }
+              )}
+            </div>
+            <div className={classes.month}>
+              {new Date(props.newsData.published_at).toLocaleDateString(
+                "en-US",
+                {
+                  month: "short",
+                }
+              )}
+            </div>
           </div>
         </div>
         <div className={classes.authorAndTitle}>
@@ -53,7 +61,12 @@ export default function News(props) {
         </div>
       </div>
       <div className={classes.imageWrap}>
-        <Image src={getStrapiMedia(props.newsData.image.url)} layout="fill" objectFit="cover" alt={props.newsData.image.alternativeText} />
+        <Image
+          src={getStrapiMedia(props.newsData.image.url)}
+          layout="fill"
+          objectFit="cover"
+          alt={props.newsData.image.alternativeText}
+        />
       </div>
       {/* <img
         className={["responsiveImage", classes.image].join(" ")}

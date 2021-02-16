@@ -4,13 +4,17 @@ import classes from "./HomePage.module.css";
 
 const HomePage = ({ data }) => (
   <>
-    <section className="row">
-      <h2>Featured News</h2>
-      {/* <div className="row"> */}
-      <div className={classes.grid}>
-        {data.news.map((article) => (
-          <NewsCard article={article} key={article.id} />
-        ))}
+    <section>
+      <div className="row">
+        <div className="col">
+          <h2>Featured News</h2>
+          {/* <div className="row"> */}
+          <div className={classes.grid}>
+            {data.news.map((article) => (
+              <NewsCard article={article} key={article.id} />
+            ))}
+          </div>
+        </div>
       </div>
       {/* </div> */}
     </section>
