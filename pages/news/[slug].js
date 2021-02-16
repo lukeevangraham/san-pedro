@@ -33,7 +33,6 @@ export default function News(props) {
   return (
     <section className={["row", classes.article].join(" ")}>
       <div className={classes.topInfo}>
-        <div className={classes.dateBoxWrapper}>
           <div className={classes.dateBox}>
             <div className={classes.day}>
               {new Date(props.newsData.published_at).toLocaleDateString(
@@ -52,7 +51,6 @@ export default function News(props) {
               )}
             </div>
           </div>
-        </div>
         <div className={classes.authorAndTitle}>
           <div className={classes.title}>{props.newsData.title}</div>
           <div className={classes.author}>

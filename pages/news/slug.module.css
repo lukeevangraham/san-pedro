@@ -56,10 +56,6 @@
     margin: 2rem 0;
 }
 
-.dateBoxWrapper {
-    padding-bottom: 50%;
-}
-
 .dateBox {
     background-image: linear-gradient(to right bottom, #DB3D2C, #9C2C1F);
     color: #fff;
@@ -71,6 +67,7 @@
     margin-right: 1rem;
     margin-bottom: 1rem;
     border-radius: 5px;
+    padding: 0 20px;
 }
 
 .day {
