@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Waypoint } from "react-waypoint";
 
 import Image from "next/image";
-import { getStrapiMedia } from "../../lib/media";
 import classes from "./Layout.module.css";
 import Aux from "../Aux/Aux";
 import NotificationBanner from "../../components/UI/NotificationBanner/NotificationBanner";
@@ -42,10 +41,12 @@ const Layout = (props) => {
           onEnter={() => setMakeNavSticky(false)}
         >
           <div className={classes.homeHeader}>
+            {console.log(
+              "here: ",
+              props.children.props.homeData.contentSections[0].picture.url
+            )}
             <Image
-              src={getStrapiMedia(
-                props.children.props.homeData.contentSections[0].picture.url
-              )}
+              src={props.children.props.homeData.contentSections[0].picture.url}
               alt={
                 props.children.props.homeData.contentSections[0].picture
                   .alternativeText
