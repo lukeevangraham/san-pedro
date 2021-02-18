@@ -1,6 +1,94 @@
+.eventsCard {
+  /* flex-grow: 1; */
+  /* margin-bottom: 2rem; */
+  background-color: #fff;
+  margin: 10px;
+  box-shadow: 0 0px 9px 6px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 30px 80px 10px rgba(0,0,0,.2); */
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s;
+}
+
+.eventsCard:hover {
+  transform: scale(1.05);
+}
+
+.eventsCard a {
+  padding-bottom: 0;
+}
+
 .ratioWrapper {
-    height: 0;
-    overflow: hidden;
-    position: relative;
-    padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 56.25%;
+}
+
+.belowPicture {
+  flex-grow: 1;
+  display: flex;
+}
+
+.dateBox {
+  background-image: linear-gradient(to right bottom, #db3d2c, #9c2c1f);
+  color: #fff;
+  width: 70px;
+  /* height: 100%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  text-align: center;
+  /* padding: 0 20px; */
+  flex-shrink: 0;
+  line-height: 125%;
+}
+
+.day {
+  font-size: 140%;
+  font-weight: 200;
+  margin-top: -5px;
+  margin-bottom: -5px;
+  /* line-height: 150%; */
+  padding-bottom: 2px;
+}
+
+.month {
+  font-weight: 600;
+  font-size: 65%;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.weekday {
+  font-weight: 600;
+  font-size: 65%;
+  letter-spacing: 2px;
+}
+
+.moreInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.title {
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 110%;
+  line-height: 100%;
+  padding-bottom: .25rem !important;
+}
+
+.time {
+  text-transform: lowercase;
+  font-size: 80%;
+}
+
+.location {
+  font-size: 80%;
 }
