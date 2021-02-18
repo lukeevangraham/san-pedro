@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import { IoCalendarClearOutline, IoLocationOutline } from "react-icons/io5";
+
 import classes from "./EventCard.module.css";
 
 const EventCard = ({ event }) => (
@@ -46,12 +48,14 @@ const EventCard = ({ event }) => (
           <a className={classes.title}>{event.title}</a>
         </Link>
         <div className={classes.time}>
+          <IoCalendarClearOutline />
           {new Date(event.startDate).toLocaleTimeString("en-US", {
             hour: "numeric",
             minute: "numeric",
           })}
         </div>
         <div className={classes.location}>
+          <IoLocationOutline />
           {event.location}
         </div>
       </div>
