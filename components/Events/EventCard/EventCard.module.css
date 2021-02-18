@@ -95,6 +95,7 @@
   align-items: center;
   display: flex;
   align-items: center;
+  padding-bottom: 0.15rem !important;
 }
 
 .location {
