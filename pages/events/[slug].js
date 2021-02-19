@@ -1,5 +1,6 @@
 import { getAllEventsSlugs, getEventData } from "../../lib/api";
 import Seo from "../../components/elements/seo";
+import Markdown from "react-markdown";
 import Image from "next/image";
 import DateBox from "../../components/Events/DateBox/DateBox";
 import TopInfo from "../../components/Events/TopInfo/TopInfo";
@@ -44,12 +45,17 @@ export default function Event({ eventData }) {
               </div>
             </div>
             <div className="col span-1-of-2">
-              <div className={classes.topRight}>
-                <div className={classes.dateBoxContainer}>
-                  <DateBox event={eventData} />
+              <div className={classes.rightColumn}>
+                <div className={classes.topRight}>
+                  <div className={classes.dateBoxContainer}>
+                    <DateBox event={eventData} />
+                  </div>
+                  <div className={classes.topInfo}>
+                    <TopInfo event={eventData} />
+                  </div>
                 </div>
-                <div className={classes.topInfo}>
-                  <TopInfo event={eventData} />
+                <div className={classes.description}>
+                  <Markdown source={eventData.description} />
                 </div>
               </div>
             </div>

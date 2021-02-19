@@ -1,8 +1,9 @@
 .event {
     text-align: center;
     background-color: rgb(252, 252, 252);
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
+    /* padding-left: 2.5rem; */
+    /* padding-right: 2.5rem; */
+    padding: 80px 2.5rem;
 }
 
 .imageWrap {
@@ -12,6 +13,11 @@
   /* height: auto; */
   padding-bottom: 56.25%;
   /* width: 100%; */
+}
+
+.rightColumn {
+    display: flex;
+    flex-direction: column;
 }
 
 .dateBoxContainer {
@@ -26,6 +32,8 @@
   display: flex;
 }
 
-/* .topInfo {
-    transform: scale(1.5);
-} */
+.description {
+    margin-top: 1.25rem;
+    text-align: left;
+    font-family: "Cardo", serif;
+}

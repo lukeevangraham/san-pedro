@@ -1,91 +1,91 @@
 .article {
-    text-align: center;
-    background-color: rgb(252, 252, 252);
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
+  text-align: center;
+  background-color: rgb(252, 252, 252);
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
 }
 
 .topInfo {
-    display: flex;
-    margin-top: 1rem;
-    padding-top: 80px;
+  display: flex;
+  margin-top: 1rem;
+  padding-top: 80px;
 }
 
 .title {
-    font-size: 150%;
-    letter-spacing: 1px;
-    line-height: 1.5;
+  font-size: 150%;
+  letter-spacing: 1px;
+  line-height: 1.5;
 }
 
 .author {
-    font-size: 90%;
-    display: flex;
-    align-items: center;
-    color: rgb(85, 85, 85);
-    font-family: 'Cardo', serif;
+  font-size: 90%;
+  display: flex;
+  align-items: center;
+  color: rgb(85, 85, 85);
+  font-family: "Cardo", serif;
 }
 
 .author svg {
-    margin-right: 7px;
+  margin-right: 7px;
 }
 
 .belowPhoto {
-    display: flex;
-    justify-content: center;
-    margin-top: 0;
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
 }
 
 .image {
-    border-radius: 5px;
-    overflow: hidden;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 .imageWrap {
-    position: relative;
-    border-radius: 5px;
-    overflow: hidden;
-    /* height: auto; */
-    padding-bottom: 56.25%;
-    /* width: 100%; */
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+  /* height: auto; */
+  padding-bottom: 56.25%;
+  /* width: 100%; */
 }
 
 .body {
-    font-family: 'Cardo', serif;
-    max-width: 575px;
-    line-height: 1.5;
-    text-align: left;
-    margin: 2rem 0;
+  font-family: "Cardo", serif;
+  max-width: 575px;
+  line-height: 1.5;
+  text-align: justify;
+  margin: 2rem 0;
 }
 
 .dateBox {
-    background-image: linear-gradient(to right bottom, #DB3D2C, #9C2C1F);
-    color: #fff;
-    width: 70px;
-    height: 70px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-right: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 5px;
-    /* padding: 0 20px; */
-    flex-shrink: 0;
+  background-image: linear-gradient(to right bottom, #db3d2c, #9c2c1f);
+  color: #fff;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  /* padding: 0 20px; */
+  flex-shrink: 0;
 }
 
 .day {
-    font-size: 190%;
-    font-weight: 200;
-    margin-top: -5px;
-    margin-bottom: -5px;
+  font-size: 190%;
+  font-weight: 200;
+  margin-top: -5px;
+  margin-bottom: -5px;
 }
 
 .month {
-    font-weight: 600;
-    /* font-size: 98%; */
+  font-weight: 600;
+  /* font-size: 98%; */
 }
 
 .authorAndTitle {
-    display: flex;
-    flex-direction: column;
-align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
