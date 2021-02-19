@@ -57,6 +57,10 @@
   margin: 2rem 0;
 }
 
+.body p {
+  margin-bottom: 1rem;
+}
+
 .dateBox {
   background-image: linear-gradient(to right bottom, #db3d2c, #9c2c1f);
   color: #fff;
