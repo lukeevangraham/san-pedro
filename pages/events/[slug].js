@@ -30,24 +30,28 @@ export default function Event({ eventData }) {
   return (
     <>
       <Seo metadata={eventData.metadata} />
-      <section>
-        <h1>Upcoming Event</h1>
-        <div className="row">
-          <div className="col span-1-of-2">
-            <div className={classes.imageWrap}>
-              <Image
-                src={eventData.eventImage.url}
-                layout="fill"
-                objectFit="cover"
-              />
-            </div>
-          </div>
-          <div className="col span-1-of-2">
-            <div className={classes.topInfo}>
-              <div className={classes.dateBoxContainer}>
-                <DateBox event={eventData} />
+      <section style={{ padding: 0 }}>
+        <div className={["row", classes.event].join(" ")}>
+          <h1>Upcoming Event</h1>
+          <div className="row">
+            <div className="col span-1-of-2">
+              <div className={classes.imageWrap}>
+                <Image
+                  src={eventData.eventImage.url}
+                  layout="fill"
+                  objectFit="cover"
+                />
               </div>
-              <TopInfo event={eventData} />
+            </div>
+            <div className="col span-1-of-2">
+              <div className={classes.topRight}>
+                <div className={classes.dateBoxContainer}>
+                  <DateBox event={eventData} />
+                </div>
+                <div className={classes.topInfo}>
+                  <TopInfo event={eventData} />
+                </div>
+              </div>
             </div>
           </div>
         </div>

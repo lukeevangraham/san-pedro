@@ -29,7 +29,9 @@ const EventCard = ({ event }) => (
     <div className={classes.belowPicture}>
       <DateBox event={event} />
 
-      <TopInfo event={event} />
+      <div className={classes.topInfoContainer}>
+        <TopInfo event={event} />
+      </div>
       {/* <div className={classes.moreInfo}>
         <Link href={`/events/${event.slug}`}>
           <a className={classes.title}>{event.title}</a>

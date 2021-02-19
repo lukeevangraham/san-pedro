@@ -1,3 +1,10 @@
+.event {
+    text-align: center;
+    background-color: rgb(252, 252, 252);
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}
+
 .imageWrap {
   position: relative;
   border-radius: 5px;
@@ -11,9 +18,14 @@
   border-radius: 5px;
   overflow: hidden;
   width: 70px;
+  height: 66px !important;
   margin-right: 1rem;
 }
 
-.topInfo {
-    display: flex;
+.topRight {
+  display: flex;
 }
+
+/* .topInfo {
+    transform: scale(1.5);
+} */
