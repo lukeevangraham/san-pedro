@@ -1,6 +1,6 @@
 import { getSortedEventsData } from "../../lib/api";
 import EventCard from "../../components/Events/EventCard/EventCard";
-import faker from "faker";
+// import faker from "faker";
 
 import classes from "./index.module.css";
 

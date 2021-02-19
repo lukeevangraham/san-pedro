@@ -6,7 +6,7 @@ import classes from "./EventCard.module.css";
 
 const EventCard = ({ event }) => (
   <div className={classes.eventsCard}>
-    <Link href={`/news/${event.slug}`}>
+    <Link href={`/events/${event.slug}`}>
       <a>
         <div className={classes.ratioWrapper}>
           <Image
@@ -44,7 +44,7 @@ const EventCard = ({ event }) => (
       </div>
 
       <div className={classes.moreInfo}>
-        <Link href={`/news/${event.slug}`}>
+        <Link href={`/events/${event.slug}`}>
           <a className={classes.title}>{event.title}</a>
         </Link>
         <div className={classes.time}>
