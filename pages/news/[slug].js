@@ -35,7 +35,8 @@ export default function News(props) {
   return (
     <>
       <Seo metadata={props.newsData.metadata} />
-      <section style={{ backgroundColor: "rgb(252, 252, 252)" }}>
+      {/* <section style={{ backgroundColor: "rgb(252, 252, 252)" }}> */}
+      <section style={{ padding: 0}}>
         <div className={["row", classes.article].join(" ")}>
           <div className={classes.topInfo}>
             <div className={classes.dateBox}>

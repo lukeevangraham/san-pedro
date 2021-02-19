@@ -1,0 +1,36 @@
+.dateBox {
+    background-image: linear-gradient(to right bottom, #db3d2c, #9c2c1f);
+    color: #fff;
+    width: 70px;
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    text-align: center;
+    /* padding: 0 20px; */
+    flex-shrink: 0;
+    line-height: 125%;
+  }
+  
+  .day {
+    font-size: 140%;
+    font-weight: 200;
+    margin-top: -5px;
+    margin-bottom: -5px;
+    /* line-height: 150%; */
+    padding-bottom: 2px;
+  }
+  
+  .month {
+    font-weight: 600;
+    font-size: 65%;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .weekday {
+    font-weight: 600;
+    font-size: 65%;
+    letter-spacing: 2px;
+  }

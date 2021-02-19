@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import DateBox from "../DateBox/DateBox";
+import TopInfo from "../TopInfo/TopInfo";
 import { IoCalendarClearOutline, IoLocationOutline } from "react-icons/io5";
 
 import classes from "./EventCard.module.css";
@@ -25,25 +27,10 @@ const EventCard = ({ event }) => (
       </a>
     </Link>
     <div className={classes.belowPicture}>
-      <div className={classes.dateBox}>
-        <div className={classes.month}>
-          {new Date(event.startDate).toLocaleDateString("en-US", {
-            month: "short",
-          })}
-        </div>
-        <div className={classes.day}>
-          {new Date(event.startDate).toLocaleDateString("en-US", {
-            day: "numeric",
-          })}
-        </div>
-        <div className={classes.weekday}>
-          {new Date(event.startDate).toLocaleDateString("en-US", {
-            weekday: "short",
-          })}
-        </div>
-      </div>
+      <DateBox event={event} />
 
-      <div className={classes.moreInfo}>
+      <TopInfo event={event} />
+      {/* <div className={classes.moreInfo}>
         <Link href={`/events/${event.slug}`}>
           <a className={classes.title}>{event.title}</a>
         </Link>
@@ -58,7 +45,7 @@ const EventCard = ({ event }) => (
           <IoLocationOutline />
           {event.location}
         </div>
-      </div>
+      </div> */}
 
       {/* <p className={classes.excerpt}>
           {truncate(event.body, 100, true)}&hellip;
