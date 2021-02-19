@@ -59,7 +59,7 @@ const Events = ({ allEventsData, global }) => {
         <div className={classes.grid}>
           {/* {fakeEvents.map((event) => ( */}
           {allEventsData.map((event) => (
-            <EventCard event={event} key={event.id} />
+            <EventCard event={event} key={event.id} index={true} />
           ))}
         </div>
       </div>

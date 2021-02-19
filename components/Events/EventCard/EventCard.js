@@ -6,7 +6,7 @@ import { IoCalendarClearOutline, IoLocationOutline } from "react-icons/io5";
 
 import classes from "./EventCard.module.css";
 
-const EventCard = ({ event }) => (
+const EventCard = ({ event, index }) => (
   <div className={classes.eventsCard}>
     <Link href={`/events/${event.slug}`}>
       <a>
@@ -30,7 +30,7 @@ const EventCard = ({ event }) => (
       <DateBox event={event} />
 
       <div className={classes.topInfoContainer}>
-        <TopInfo event={event} />
+        <TopInfo event={event} index={index} />
       </div>
       {/* <div className={classes.moreInfo}>
         <Link href={`/events/${event.slug}`}>

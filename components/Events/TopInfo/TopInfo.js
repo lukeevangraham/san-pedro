@@ -3,11 +3,15 @@ import { IoCalendarClearOutline, IoLocationOutline } from "react-icons/io5";
 
 import classes from "./TopInfo.module.css";
 
-const TopInfo = ({ event }) => (
+const TopInfo = ({ event, index }) => (
   <div className={classes.moreInfo}>
-    <Link href={`/events/${event.slug}`}>
-      <a className={classes.title}>{event.title}</a>
-    </Link>
+    {index ? (
+      <Link href={`/events/${event.slug}`}>
+        <a className={classes.title}>{event.title}</a>
+      </Link>
+    ) : (
+      <div className={[classes.title, classes.titleNoLink].join(" ")}>{event.title}</div>
+    )}
     <div className={classes.time}>
       <IoCalendarClearOutline />
       {new Date(event.startDate).toLocaleTimeString("en-US", {

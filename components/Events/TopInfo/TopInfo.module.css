@@ -18,6 +18,10 @@
     line-height: 100%;
     padding-bottom: 0.25rem !important;
   }
+
+  .titleNoLink {
+    color: #db3d2c;
+  }
   
   .time {
     text-transform: lowercase;
