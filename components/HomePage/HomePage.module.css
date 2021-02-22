@@ -1,10 +1,10 @@
 .HomePage {
-    height: 80vh;
-    width: 100%;
-    background-image: linear-gradient(rgba(0,0,0,0.33), rgba(255,255,255, 0.33)), url(http://sanpedroadmin.lukegraham.us/uploads/home_Hero_5241e16bd5.jpg);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+  height: 80vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.33), rgba(255, 255, 255, 0.33)), url(http://sanpedroadmin.lukegraham.us/uploads/home_Hero_5241e16bd5.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .grid {
@@ -14,16 +14,21 @@
   /* background-color: red; */
 }
 
-.second {
+.whiteBg {
   background-color: #fff;
-  width: 100%;
+}
+
+.second {
+  /* width: 100%; */
+  margin-top: -69px;
+  padding-top: 138px;
 }
 
 @media only screen and (max-width: 767px) {
-    .HomePage {
-      background-attachment: scroll
-    }
-    .grid {
-      grid-template-columns: 1fr;
+  .HomePage {
+    background-attachment: scroll
   }
+  .grid {
+    grid-template-columns: 1fr;
   }
+}

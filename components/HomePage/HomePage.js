@@ -1,12 +1,43 @@
 import React from "react";
 import NewsCard from "../News/NewsCard/NewsCard";
 import EventCard from "../Events/EventCard/EventCard";
-import TopCountdown from "./TopCountdown/TopCountdown"
+import TopCountdown from "./TopCountdown/TopCountdown";
 import classes from "./HomePage.module.css";
 
 const HomePage = ({ data }) => (
   <>
     <TopCountdown event={data.topEvent} />
+
+    <section className={[classes.second, classes.whiteBg].join(" ")}>
+      <h2>Welcome To San Pedro Presbyterian Church</h2>
+      <div className="row">
+        <div className="col span-1-of-2">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/NAKxaZ6Gblc?controls=0;showinfo=0"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            
+          ></iframe>
+        </div>
+        <div className="col span-1-of-2">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            rhoncus consequat massa, vel vulputate orci molestie eu. Suspendisse
+            ullamcorper neque ultricies justo euismod gravida. Cras lobortis
+            commodo arcu vitae auctor. Maecenas tristique ante sed enim
+            consequat congue. Vestibulum iaculis ac orci at auctor. Sed rutrum
+            turpis nunc, sed vehicula neque ornare eget. Suspendisse euismod
+            velit quis tempor consequat. Mauris quis tellus in dui dictum
+            congue. Sed consectetur risus sem, quis gravida ipsum eleifend at.
+            In vulputate nulla est.
+          </p>
+        </div>
+      </div>
+    </section>
+
     <section>
       <div className="row">
         <div className="col">
@@ -22,7 +53,7 @@ const HomePage = ({ data }) => (
       {/* </div> */}
     </section>
 
-    <section className={[classes.second].join(" ")}>
+    <section className={[classes.whiteBg].join(" ")}>
       <div className="row">
         <h2>Section title</h2>
         <div className="col">

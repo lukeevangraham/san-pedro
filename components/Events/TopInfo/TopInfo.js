@@ -8,7 +8,7 @@ const TopInfo = ({ event, index, fromHome }) => (
   <div className={classes.moreInfo}>
     {index ? (
       <Link href={`/events/${event.slug}`}>
-        <a className={classes.title}>{event.title}</a>
+        <a className={classes.title}>{fromHome ? `UPCOMING EVENT: ${event.title}` :  event.title}</a>
       </Link>
     ) : (
       <div className={[classes.title, classes.titleNoLink].join(" ")}>{event.title}</div>
