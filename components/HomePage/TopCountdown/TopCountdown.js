@@ -29,7 +29,7 @@ const TopCountdown = ({ event }) => {
   return (
     <div className="row">
       <div className={classes.wrapper}>
-        <div style={{ display: "flex", flexGrow: 1, marginLeft: "1rem" }}>
+        <div className={classes.firstColumn}>
           <DateBox event={event} />
           <div className={classes.topInfoWrapper}>
             <TopInfo event={event} index />

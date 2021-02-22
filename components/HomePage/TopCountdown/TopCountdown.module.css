@@ -10,10 +10,10 @@
   padding: 0 1rem;
 }
 
-.biggerInfoWrapper {
+.firstColumn {
   display: flex;
   flex-grow: 1;
-  margin-left: "1rem";
+  padding-left: 1rem;
 }
 
 .topInfoWrapper {
@@ -47,17 +47,24 @@
 }
 
 @media only screen and (max-width: 850px) {
-.wrapper {
+  .wrapper {
     height: auto;
     margin: 0;
-    padding: 0;
-}
-
-    .wrapper{
-        flex-wrap:wrap;
-      }
-      .wrapper:first-child{
-        flex: 0 0 100%;
-        text-align:right;
-      }
+    padding: 70px 0;
+    flex-wrap: wrap;
+  }
+  .wrapper:first-child {
+    flex: 0 0 100%;
+    text-align: right;
+  }
+  .firstColumn {
+    flex-direction: column;
+    align-items: center;
+    height: 150px;
+    justify-content: space-between;
+    padding-left: 0;
+  }
+  .countdownWrapper {
+    padding: 2rem 2rem 0 2rem;
+  }
 }
