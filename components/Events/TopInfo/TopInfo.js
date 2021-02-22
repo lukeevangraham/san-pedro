@@ -1,9 +1,10 @@
 import Link from "next/link";
+import classNames from "classnames";
 import { IoCalendarClearOutline, IoLocationOutline } from "react-icons/io5";
 
 import classes from "./TopInfo.module.css";
 
-const TopInfo = ({ event, index }) => (
+const TopInfo = ({ event, index, fromHome }) => (
   <div className={classes.moreInfo}>
     {index ? (
       <Link href={`/events/${event.slug}`}>
@@ -12,14 +13,14 @@ const TopInfo = ({ event, index }) => (
     ) : (
       <div className={[classes.title, classes.titleNoLink].join(" ")}>{event.title}</div>
     )}
-    <div className={classes.time}>
+    <div className={classNames(classes.time, { [classes.fromHome]: fromHome })}>
       <IoCalendarClearOutline />
       {new Date(event.startDate).toLocaleTimeString("en-US", {
         hour: "numeric",
         minute: "numeric",
       })}
     </div>
-    <div className={classes.location}>
+    <div className={classNames(classes.location, { [classes.fromHome]: fromHome })}>
       <IoLocationOutline />
       {event.location}
     </div>

@@ -10,13 +10,13 @@ const TopCountdown = ({ event }) => {
   const [mins, setMins] = useState(0);
   const [secs, setSecs] = useState(0);
 
-  const dateToCountTo = new Date(event.startDate).getTime() + 36000000;
+  const dateToCountTo = new Date(event.startDate).getTime();
   useEffect(() => {
-    setInterval(() => {
+    let timer = setInterval(() => {
       let currentDate = new Date().getTime();
       let seconds_left = (dateToCountTo - currentDate) / 1000;
       setDays(parseInt(seconds_left / 86400));
-      seconds_left = seconds_left % 3600;
+      seconds_left = seconds_left % 86400;
 
       setHours(parseInt(seconds_left / 3600));
       seconds_left = seconds_left % 3600;
@@ -24,15 +24,18 @@ const TopCountdown = ({ event }) => {
       setMins(parseInt(seconds_left / 60));
       setSecs(parseInt(seconds_left % 60));
     }, 1000);
+    return () => clearInterval(timer)
   }, []);
 
   return (
     <div className="row">
       <div className={classes.wrapper}>
         <div className={classes.firstColumn}>
-          <DateBox event={event} />
+          <div className={classes.dateBoxWrapper}>
+            <DateBox event={event} fromHome />
+          </div>
           <div className={classes.topInfoWrapper}>
-            <TopInfo event={event} index />
+            <TopInfo event={event} index fromHome />
           </div>
         </div>
         <div className={classes.countdownWrapper}>

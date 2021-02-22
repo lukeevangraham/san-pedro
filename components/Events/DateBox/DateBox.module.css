@@ -12,6 +12,10 @@
     flex-shrink: 0;
     line-height: 125%;
   }
+
+  .fromHome {
+    height: 70px;
+  }
   
   .day {
     font-size: 140%;

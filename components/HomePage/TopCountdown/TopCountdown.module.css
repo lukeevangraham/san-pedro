@@ -1,8 +1,8 @@
 .wrapper {
   background-image: linear-gradient(to bottom right, rgb(221, 221, 221), #fff);
-  height: 160px;
+  height: 138px;
   border-radius: 5px;
-  margin: -80px 3rem 0 3rem;
+  margin: -69px 3rem 0 3rem;
   position: relative;
   display: flex;
   align-items: center;
@@ -12,8 +12,14 @@
 
 .firstColumn {
   display: flex;
+  justify-content: center;
   flex-grow: 1;
-  padding-left: 1rem;
+}
+
+.dateBoxWrapper {
+  border-radius: 5px;
+  overflow: hidden;
+  height: 67px;
 }
 
 .topInfoWrapper {
@@ -49,9 +55,10 @@
 @media only screen and (max-width: 850px) {
   .wrapper {
     height: auto;
-    margin: 0;
+    margin: 0 -2% 0 -2%;
     padding: 70px 0;
     flex-wrap: wrap;
+    flex-direction: column;
   }
   .wrapper:first-child {
     flex: 0 0 100%;

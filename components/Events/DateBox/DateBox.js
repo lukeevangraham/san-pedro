@@ -1,7 +1,9 @@
+import classNames from "classnames";
 import classes from "./DateBox.module.css";
 
-const DateBox = ({ event }) => (
-  <div className={classes.dateBox}>
+const DateBox = ({ event, fromHome }) => (
+  // <div className={classes.dateBox}>
+  <div className={classNames(classes.dateBox, { [classes.fromHome]: fromHome })}>
     <div className={classes.month}>
       {new Date(event.startDate).toLocaleDateString("en-US", {
         month: "short",
