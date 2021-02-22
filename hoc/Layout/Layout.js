@@ -41,10 +41,6 @@ const Layout = (props) => {
           onEnter={() => setMakeNavSticky(false)}
         >
           <div className={classes.homeHeader}>
-            {console.log(
-              "here: ",
-              props.children.props.homeData.contentSections[0].picture.url
-            )}
             <Image
               src={props.children.props.homeData.contentSections[0].picture.url}
               alt={

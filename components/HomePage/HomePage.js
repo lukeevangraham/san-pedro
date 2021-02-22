@@ -1,10 +1,12 @@
 import React from "react";
 import NewsCard from "../News/NewsCard/NewsCard";
-import EventCard from "../Events/EventCard/EventCard"
+import EventCard from "../Events/EventCard/EventCard";
+import TopCountdown from "./TopCountdown/TopCountdown"
 import classes from "./HomePage.module.css";
 
 const HomePage = ({ data }) => (
   <>
+    <TopCountdown event={data.topEvent} />
     <section>
       <div className="row">
         <div className="col">
@@ -33,7 +35,7 @@ const HomePage = ({ data }) => (
             turpis nunc, sed vehicula neque ornare eget. Suspendisse euismod
             velit quis tempor consequat. Mauris quis tellus in dui dictum
             congue. Sed consectetur risus sem, quis gravida ipsum eleifend at.
-            In vulputate nulla est. 
+            In vulputate nulla est.
           </p>
         </div>
       </div>
