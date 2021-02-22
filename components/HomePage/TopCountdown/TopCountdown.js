@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import keepEventsCurrent from "../../../lib/events";
 
 import DateBox from "../../Events/DateBox/DateBox";
 import TopInfo from "../../Events/TopInfo/TopInfo";
@@ -9,6 +10,8 @@ const TopCountdown = ({ event }) => {
   const [hours, setHours] = useState(0);
   const [mins, setMins] = useState(0);
   const [secs, setSecs] = useState(0);
+
+  keepEventsCurrent([event]);
 
   const dateToCountTo = new Date(event.startDate).getTime();
   useEffect(() => {
@@ -24,7 +27,7 @@ const TopCountdown = ({ event }) => {
       setMins(parseInt(seconds_left / 60));
       setSecs(parseInt(seconds_left % 60));
     }, 1000);
-    return () => clearInterval(timer)
+    return () => clearInterval(timer);
   }, []);
 
   return (
