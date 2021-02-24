@@ -1,7 +1,11 @@
 .HomePage {
   height: 80vh;
   width: 100%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.33), rgba(255, 255, 255, 0.33)), url(http://sanpedroadmin.lukegraham.us/uploads/home_Hero_5241e16bd5.jpg);
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.33),
+      rgba(255, 255, 255, 0.33)
+    ),
+    url(http://sanpedroadmin.lukegraham.us/uploads/home_Hero_5241e16bd5.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -24,9 +28,68 @@
   padding-top: 138px;
 }
 
+.welcomeWrap {
+  display: flex;
+  align-items: center;
+}
+
+.videoWrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%;
+}
+
+.responsiveIframe {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.sectionPhotos {
+  padding: 0;
+}
+
+.photoShowcase {
+  list-style: none;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.photoShowcase li {
+  /* display: block;
+  float: left; */
+  width: 100%;
+}
+
+.showcasePhoto {
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.showcasePhoto img {
+  opacity: 0.7;
+  width: 100%;
+  height: auto;
+  transform: scale(1.15);
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.showcasePhoto img:hover {
+  transform: scale(1.03);
+  opacity: 1;
+}
+
 @media only screen and (max-width: 767px) {
   .HomePage {
-    background-attachment: scroll
+    background-attachment: scroll;
   }
   .grid {
     grid-template-columns: 1fr;
