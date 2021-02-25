@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import Hero from "./Hero/Hero";
+import Verse from "./Verse/Verse"
 import LargeVideo from "./large-video";
 import FeatureColumnsGroup from "./feature-columns-group";
 import FeatureRowsGroup from "./feature-rows-group";
@@ -14,6 +15,7 @@ import classes from "./sections.module.css"
 // Map Strapi sections to section components
 const sectionComponents = {
   "sections.hero": Hero,
+  "sections.verse": Verse,
   "sections.large-video": LargeVideo,
   "sections.feature-columns-group": FeatureColumnsGroup,
   "sections.feature-rows-group": FeatureRowsGroup,
@@ -25,6 +27,7 @@ const sectionComponents = {
 
 // Display a section individually
 const Section = ({ sectionData }) => {
+
   // Prepare the component
   const SectionComponent = sectionComponents[sectionData.__component];
 
@@ -59,7 +62,6 @@ const PreviewModeBanner = () => {
 
 // Display the list of sections
 const Sections = ({ sections, preview, home }) => {
-  // console.log("Sections: ", sections)
   return (
     <div className={classNames("flex flex-col", { [classes.home] : home })}>
       {/* Show a banner if preview mode is on */}

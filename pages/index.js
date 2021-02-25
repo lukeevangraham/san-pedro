@@ -25,8 +25,14 @@ export async function getStaticProps() {
 export default function Home(props) {
   const { metadata } = props.global;
 
+  // Making sure we don't render the hero (first section)
   let renderSections = props.homeData.contentSections ? (
-    <Sections sections={props.homeData.contentSections} preview={null} />
+    <Sections
+      sections={props.homeData.contentSections.filter(
+        (section, index) => index !== 0
+      )}
+      preview={null}
+    />
   ) : (
     <div>Loading...</div>
   );

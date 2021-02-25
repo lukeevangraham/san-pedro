@@ -5,6 +5,7 @@ import Markdown from "react-markdown";
 import NewsCard from "../News/NewsCard/NewsCard";
 import EventCard from "../Events/EventCard/EventCard";
 import TopCountdown from "./TopCountdown/TopCountdown";
+import Verse from "../sections/Verse/Verse";
 import classes from "./HomePage.module.css";
 
 const HomePage = ({ data }) => {
@@ -51,10 +52,18 @@ const HomePage = ({ data }) => {
         {/* </div> */}
       </section>
 
+      <Verse
+        data={
+          data.contentSections.filter(
+            (section) => section.__component === "sections.verse"
+          )[0]
+        }
+      />
+
       <section className={classes.sectionPhotos}>
         <ul className={classes.photoShowcase}>
           {data.photoShowcase.map((photo) => (
-            <li>
+            <li key={photo.id}>
               <figure className={classes.showcasePhoto}>
                 {/* <img src={getStrapiMedia(photo.url)} alt=""/> */}
                 <Image
