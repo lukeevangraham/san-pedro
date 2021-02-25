@@ -1,5 +1,5 @@
 .wrapper {
-  background-image: linear-gradient(to bottom right, rgb(221, 221, 221), #fff);
+  background-image: linear-gradient(to bottom right, rgb(221, 221, 221), rgb(235, 235, 235));
   height: 138px;
   border-radius: 5px;
   margin: -69px 3rem 0 3rem;
