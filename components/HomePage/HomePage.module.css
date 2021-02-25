@@ -55,16 +55,17 @@
 }
 
 .photoShowcase {
-  /* list-style: none; */
+  list-style: none;
   width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
+  /* grid-template-columns: 1fr 1fr 1fr 1fr; */
 }
 
 .photoShowcase li {
-  /* display: block;
-  float: left; */
-  width: 100%;
+  display: block;
+  /* float: left; */
+  width: 25%;
 }
 
 .showcasePhoto {
@@ -72,6 +73,10 @@
   margin: 0;
   overflow: hidden;
   background-color: #000;
+}
+
+.showcasePhoto div:first-child {
+  display: inherit !important;
 }
 
 .showcasePhoto img {

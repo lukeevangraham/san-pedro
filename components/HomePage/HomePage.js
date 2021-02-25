@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { getStrapiMedia } from "../../lib/media"
+import { getStrapiMedia } from "../../lib/media";
 import Markdown from "react-markdown";
 import NewsCard from "../News/NewsCard/NewsCard";
 import EventCard from "../Events/EventCard/EventCard";
@@ -52,12 +52,16 @@ const HomePage = ({ data }) => {
       </section>
 
       <section className={classes.sectionPhotos}>
-        <ul className={[classes.photoShowcase].join(" ")}>
+        <ul className={classes.photoShowcase}>
           {data.photoShowcase.map((photo) => (
             <li>
               <figure className={classes.showcasePhoto}>
                 {/* <img src={getStrapiMedia(photo.url)} alt=""/> */}
-                <Image src={getStrapiMedia(photo.url)} width={800} height={600} />
+                <Image
+                  src={getStrapiMedia(photo.url)}
+                  width={800}
+                  height={600}
+                />
               </figure>
             </li>
           ))}
