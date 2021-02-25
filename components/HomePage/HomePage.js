@@ -57,7 +57,7 @@ const HomePage = ({ data }) => {
             <li>
               <figure className={classes.showcasePhoto}>
                 {/* <img src={getStrapiMedia(photo.url)} alt=""/> */}
-                <Image src={photo.url} width={800} height={600} />
+                <Image src={getStrapiMedia(photo.url)} width={800} height={600} />
               </figure>
             </li>
           ))}
