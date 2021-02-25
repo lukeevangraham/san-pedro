@@ -16,6 +16,10 @@ const NewsCard = ({ article }) => {
       : subString;
   };
 
+  let dateShown;
+
+  article.dateline ? (dateShown = article.dateline.replace(/-/g, "/")) : null;
+
   return (
     <div className={classes.newsCard}>
       <Link href={`/news/${article.slug}`}>
@@ -60,12 +64,12 @@ const NewsCard = ({ article }) => {
 
           <div className={classes.moreInfoDetail}>
             <IoCalendarOutline />
-            {new Date(article.dateline).toLocaleDateString("en-US", {
+            {new Date(dateShown).toLocaleDateString("en-US", {
               month: "short",
               day: "numeric",
               year: "numeric",
             })}
-              {/* timeZone: "Portugal", */}
+            {/* timeZone: "Portugal", */}
           </div>
         </div>
       </div>
