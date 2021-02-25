@@ -16,8 +16,6 @@ const NewsCard = ({ article }) => {
       : subString;
   };
 
-  let dateShown = new Date(article.dateline);
-
   return (
     <div className={classes.newsCard}>
       <Link href={`/news/${article.slug}`}>
