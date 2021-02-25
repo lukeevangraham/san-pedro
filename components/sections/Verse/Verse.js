@@ -11,8 +11,8 @@ const Verse = ({ data, global }) => {
             <div className={classes.text}>"{data.scripture}"</div>
             <div className={classes.verseWrapper}>
               <Image
-                src={`https://admin.sanpedropc.org/uploads/logo_color_eb957aee2e.png`}
-                width={179}
+                src={`https://res.cloudinary.com/diqgdacjy/image/upload/v1614294191/logo_Black_46cf7633db.jpg`}
+                width={203}
                 height={125}
               />
             </div>
