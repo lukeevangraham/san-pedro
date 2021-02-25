@@ -64,8 +64,8 @@ const NewsCard = ({ article }) => {
               month: "short",
               day: "numeric",
               year: "numeric",
-              timeZone: "Portugal",
             })}
+              {/* timeZone: "Portugal", */}
           </div>
         </div>
       </div>
