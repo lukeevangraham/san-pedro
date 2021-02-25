@@ -56,8 +56,8 @@ const HomePage = ({ data }) => {
           {data.photoShowcase.map((photo) => (
             <li>
               <figure className={classes.showcasePhoto}>
-                <img src={getStrapiMedia(photo.url)} alt=""/>
-                {/* <Image src={photo.url} layout="fill" objectFit="contain" /> */}
+                {/* <img src={getStrapiMedia(photo.url)} alt=""/> */}
+                <Image src={photo.url} width={800} height={600} />
               </figure>
             </li>
           ))}
