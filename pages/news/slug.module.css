@@ -54,7 +54,7 @@
   max-width: 575px;
   line-height: 1.5;
   text-align: justify;
-  margin: 2rem 0;
+  margin: 2rem 0 0 0;
 }
 
 .body p {
@@ -92,4 +92,10 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+
+.btnContainer {
+  text-align: left;
+  max-width: 575px;
+  margin: 0 auto 2rem auto;
 }

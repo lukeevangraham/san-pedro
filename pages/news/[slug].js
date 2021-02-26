@@ -2,10 +2,11 @@
 import Seo from "../../components/elements/seo";
 import Markdown from "react-markdown";
 import Layout from "../../hoc/Layout/Layout";
+import Button from "../../components/UI/Button/Button";
 import Image from "next/image";
 import { getStrapiMedia } from "../../lib/media";
 import { getAllNewsSlugs, getNewsData, fetchAPI } from "../../lib/api";
-import { IoPerson } from "react-icons/io5";
+import { IoPerson, IoLogoFacebook } from "react-icons/io5";
 import Head from "next/head";
 
 import classes from "./slug.module.css";
@@ -36,7 +37,7 @@ export default function News(props) {
     <>
       <Seo metadata={props.newsData.metadata} />
       {/* <section style={{ backgroundColor: "rgb(252, 252, 252)" }}> */}
-      <section style={{ padding: 0}}>
+      <section style={{ padding: 0 }}>
         <div className={["row", classes.article].join(" ")}>
           <div className={classes.topInfo}>
             <div className={classes.dateBox}>
@@ -81,7 +82,18 @@ export default function News(props) {
               <Markdown source={props.newsData.body} />
             </div>
           </div>
-          {console.log("props: ", props)}
+          <div className={classes.btnContainer}>
+            <Button
+              button={{
+                url: `https://www.facebook.com/sharer/sharer.php?u=sanpedropc.org/news/${props.newsData.slug}`,
+                newTab: true,
+                text: "Share",
+                type: "primary",
+              }}
+              compact={true}
+              logo={"Facebook"}
+            />
+          </div>
         </div>
       </section>
     </>

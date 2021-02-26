@@ -7,6 +7,18 @@
   transition: all 0.2s;
 }
 
+.btnSmall {
+  padding: 5px 15px;
+  font-size: 80%;
+  text-transform: uppercase;
+  /* display: flex;
+  align-items: center; */
+}
+
+.btnSmall svg {
+  vertical-align: -9%;
+}
+
 .btnFull {
   background-image: linear-gradient(to right bottom, #db3d2c, #9c2c1f);
   border: none;
