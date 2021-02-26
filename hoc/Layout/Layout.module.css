@@ -11,9 +11,9 @@
   /* justify-content: center; */
 }
 
-/* .Fixed img {
+.Fixed img {
   position: fixed !important;
-} */
+}
 
 .heroBgImage {
   z-index: -1;
