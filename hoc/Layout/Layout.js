@@ -41,17 +41,21 @@ const Layout = (props) => {
           onEnter={() => setMakeNavSticky(false)}
         >
           <div className={classes.homeHeader}>
-            <Image
-              src={props.children.props.homeData.contentSections[0].picture.url}
-              alt={
-                props.children.props.homeData.contentSections[0].picture
-                  .alternativeText
-              }
-              layout="fill"
-              objectFit="cover"
-              objectPosition="center center"
-              className={classes.heroBgImage}
-            />
+            <div className={classes.Fixed}>
+              <Image
+                src={
+                  props.children.props.homeData.contentSections[0].picture.url
+                }
+                alt={
+                  props.children.props.homeData.contentSections[0].picture
+                    .alternativeText
+                }
+                layout="fill"
+                objectFit="cover"
+                objectPosition="center center"
+                className={classes.heroBgImage}
+              />
+            </div>
 
             <Toolbar
               sticky={makeNavSticky}

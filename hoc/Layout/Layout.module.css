@@ -11,6 +11,10 @@
   /* justify-content: center; */
 }
 
+.Fixed img {
+  position: fixed !important;
+}
+
 .heroBgImage {
   z-index: -1;
 }

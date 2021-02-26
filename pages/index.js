@@ -38,7 +38,7 @@ export default function Home(props) {
   );
 
   return (
-    <div>
+    <>
       <Head>
         <link rel="icon" href={getStrapiMedia(props.global.favicon.url)} />
       </Head>
@@ -115,6 +115,6 @@ export default function Home(props) {
           <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
         </a>
       </footer> */}
-    </div>
+    </>
   );
 }
