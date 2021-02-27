@@ -1,20 +1,33 @@
 import Layout from "../hoc/Layout/Layout";
+import Image from "next/image";
 import { fetchAPI } from "../lib/api";
 
-// export async function getStaticProps() {
-//   const global = await fetchAPI("/global");
-//   return {
-//     props: {
-//       global,
-//     },
-//     revalidate: 1,
-//   };
-// }
+export async function getStaticProps() {
+  const about = await fetchAPI("/about");
+  return {
+    props: {
+      about,
+    },
+    revalidate: 1,
+  };
+}
 
-const About = ({ global }) => {
+const About = ({ global, about }) => {
   return (
     <>
-      <h2>Here is the About page</h2>
+      <section>
+        <h2>{about.topText}</h2>
+        <div
+          className="row"
+          style={{ display: "flex", alignItems: "center", flexWrap: "wrap" }}
+        >
+          <div className="col span-1-of-2">
+            <Image src={about.topSideImage.url} width={450} height={470} />
+          </div>
+          <div className="col span-1-of-2">{about.historyText}</div>
+        </div>
+      </section>
+      {console.log(about)}
     </>
   );
 };

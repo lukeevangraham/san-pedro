@@ -6,7 +6,6 @@ import { IoCalendarOutline, IoPeopleCircleOutline } from "react-icons/io5";
 import classes from "./NewsCard.module.css";
 
 const NewsCard = ({ article }) => {
-  console.log("article: ", article);
   const truncate = (str, n, useWordBoundary) => {
     if (str.length <= n) {
       return str;
