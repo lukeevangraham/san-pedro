@@ -1,0 +1,26 @@
+.imageWrapper {
+  position: relative;
+  margin: auto;
+}
+
+.pastorOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom right, #4f161091, #90281df6);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+.imageWrapper:hover .pastorOverlay {
+  visibility: visible;
+  opacity: 1;
+}

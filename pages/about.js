@@ -2,6 +2,8 @@ import Layout from "../hoc/Layout/Layout";
 import Image from "next/image";
 import { fetchAPI } from "../lib/api";
 
+import classes from "../styles/about.module.css";
+
 export async function getStaticProps() {
   const about = await fetchAPI("/about");
   return {
@@ -34,17 +36,31 @@ const About = ({ global, about }) => {
             <div
               className={`col span-1-of-${array.length}`}
               key={leader.id}
-              style={{ textAlign: "center" }}
+              style={{ textAlign: "center", padding: "1rem" }}
             >
-              <Image
-                src={leader.image.url}
-                alt={leader.image.alternativeText}
-                width={360}
-                height={360}
-              />
-              <div>{`${leader.title ? leader.title : ""} ${leader.firstName} ${
+              <div className={classes.imageWrapper}>
+                <Image
+                  src={leader.image.url}
+                  alt={leader.image.alternativeText}
+                  width={360}
+                  height={360}
+                  layout="responsive"
+                />
+
+                <div className={classes.pastorOverlay}>
+                  {leader.shortBio}
+                </div>
+              </div>
+              <h3
+                style={{
+                  marginBottom: ".25rem",
+                  marginTop: ".35rem",
+                  fontWeight: "600",
+                }}
+              >{`${leader.title ? leader.title : ""} ${leader.firstName} ${
                 leader.lastName
-              }`}</div>
+              }`}</h3>
+              <div>{leader.role}</div>
             </div>
           ))}
         </div>
