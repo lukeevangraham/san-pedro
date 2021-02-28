@@ -43,8 +43,8 @@ const About = ({ global, about }) => {
                 <Image
                   src={leader.image.url}
                   alt={leader.image.alternativeText}
-                  width={360}
-                  height={360}
+                  width={521}
+                  height={521}
                   layout="responsive"
                 />
 
