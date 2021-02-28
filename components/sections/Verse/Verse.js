@@ -7,16 +7,19 @@ const Verse = ({ data, global }) => {
   return (
     <section className={classes.whiteBg}>
       <div className="row">
-          <div className={classes.container}>
-            <div className={classes.text}>"{data.scripture}"</div>
-            <div className={classes.verseWrapper}>
-              <Image
-                src={`https://res.cloudinary.com/diqgdacjy/image/upload/v1614294191/logo_Black_46cf7633db.jpg`}
-                width={203}
-                height={125}
-              />
-            </div>
+        <div className={classes.container}>
+          <div className={classes.text}>
+            <div>"{data.scripture}"</div>
+            <div className={classes.reference}>{data.reference}</div>
           </div>
+          <div className={classes.verseWrapper}>
+            <Image
+              src={`https://res.cloudinary.com/diqgdacjy/image/upload/v1614294191/logo_Black_46cf7633db.jpg`}
+              width={203}
+              height={125}
+            />
+          </div>
+        </div>
       </div>
     </section>
   );
