@@ -79,6 +79,26 @@ const About = ({ global, about }) => {
           ))}
         </div>
       </section>
+
+      <section>
+        <h2>{about.serviceSectionTitle}</h2>
+        <div className="row">
+          <div className="col span-1-of-2">{about.serviceInfo}</div>
+          <div className="col span-1-of-2">{about.locationInfo}</div>
+        </div>
+      </section>
+
+      <section className={classes.whiteBg}>
+        <h2>{about.familySectionTitle}</h2>
+        <div className="row">
+          {about.ministryInfo.map((ministry, index, array) => (
+            <div className={`col span-1-of-${array.length} ${classes.ministry}`}>
+              <h3>{ministry.title}</h3>
+              <div>{ministry.description}</div>
+            </div>
+          ))}
+        </div>
+      </section>
       {console.log(about)}
     </>
   );
