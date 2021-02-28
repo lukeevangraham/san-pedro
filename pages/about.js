@@ -27,6 +27,28 @@ const About = ({ global, about }) => {
           <div className="col span-1-of-2">{about.historyText}</div>
         </div>
       </section>
+      <section>
+        <h2>{about.pastorSectionTitle}</h2>
+        <div className="row">
+          {about.leaderInfo.map((leader, index, array) => (
+            <div
+              className={`col span-1-of-${array.length}`}
+              key={leader.id}
+              style={{ textAlign: "center" }}
+            >
+              <Image
+                src={leader.image.url}
+                alt={leader.image.alternativeText}
+                width={360}
+                height={360}
+              />
+              <div>{`${leader.title ? leader.title : ""} ${leader.firstName} ${
+                leader.lastName
+              }`}</div>
+            </div>
+          ))}
+        </div>
+      </section>
       {console.log(about)}
     </>
   );
