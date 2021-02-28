@@ -1,5 +1,6 @@
 import Layout from "../hoc/Layout/Layout";
 import Image from "next/image";
+import { IoMailOutline, IoCallOutline } from "react-icons/io5";
 import { fetchAPI } from "../lib/api";
 
 import classes from "../styles/about.module.css";
@@ -29,7 +30,7 @@ const About = ({ global, about }) => {
           <div className="col span-1-of-2">{about.historyText}</div>
         </div>
       </section>
-      <section>
+      <section className={classes.whiteBg}>
         <h2>{about.pastorSectionTitle}</h2>
         <div className="row">
           {about.leaderInfo.map((leader, index, array) => (
@@ -48,13 +49,26 @@ const About = ({ global, about }) => {
                 />
 
                 <div className={classes.pastorOverlay}>
-                  {leader.shortBio}
+                  <div>{leader.shortBio}</div>
+                  <br />
+                  {leader.phoneNumber ? (
+                    <div className={classes.contact}>
+                      <IoCallOutline />
+                      {`: ${leader.phoneNumber}`}
+                    </div>
+                  ) : null}
+                  {leader.email ? (
+                    <div className={classes.contact}>
+                      <IoMailOutline />
+                      {`: ${leader.email}`}
+                    </div>
+                  ) : null}
                 </div>
               </div>
               <h3
                 style={{
                   marginBottom: ".25rem",
-                  marginTop: ".35rem",
+                  marginTop: "1rem",
                   fontWeight: "600",
                 }}
               >{`${leader.title ? leader.title : ""} ${leader.firstName} ${
