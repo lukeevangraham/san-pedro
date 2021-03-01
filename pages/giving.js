@@ -53,11 +53,6 @@ const Giving = ({ global, giving }) => {
         </div>
       </section>
 
-      <section>
-        <div className="row">
-          <div className="col">Hello</div>
-        </div>
-      </section>
     </>
   );
 };
