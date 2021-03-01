@@ -77,7 +77,7 @@ const HomePage = ({ data }) => {
         </ul>
       </section>
 
-      <section className={[classes.whiteBg].join(" ")}>
+      {/* <section className={[classes.whiteBg].join(" ")}>
         <div className="row">
           <h2>Section title</h2>
           <div className="col">
@@ -94,7 +94,7 @@ const HomePage = ({ data }) => {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section>
         <div className="row">
