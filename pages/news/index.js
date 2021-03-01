@@ -52,7 +52,7 @@ const News = ({ allNewsData, global }) => {
   // console.log("article: ", fakeArticles);
   return (
     <section>
-      <h1>Current News</h1>
+      <h2>Current News</h2>
       {/* <h2>Here are the news pages:</h2> */}
       <div className="row">
         <div className={classes.grid}>

@@ -54,7 +54,7 @@ const Events = ({ allEventsData, global }) => {
 //   console.log("events: ", fakeEvents);
   return (
     <section>
-      <h1>Current Events</h1>
+      <h2>Current Events</h2>
       <div className="row">
         <div className={classes.grid}>
           {/* {fakeEvents.map((event) => ( */}

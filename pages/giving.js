@@ -23,8 +23,8 @@ const Giving = ({ global, giving }) => {
 
   return (
     <>
-      <section style={{ padding: "0" }}>
-        <div className="row" style={{ background: "#fff", padding: "80px 0" }}>
+      <section style={{ background: "#fff" }}>
+        <div className="row">
           <h2>{giving.givingPageTitle}</h2>
           {console.log("giving: ", giving)}
           <div className="col span-1-of-1">
@@ -34,6 +34,14 @@ const Giving = ({ global, giving }) => {
             ))}
           </div>
         </div>
+      </section>
+
+      <section>
+          <div className="row">
+              <div className="col">
+                  Hello
+              </div>
+          </div>
       </section>
     </>
   );
