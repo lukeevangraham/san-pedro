@@ -1,6 +1,6 @@
 import Layout from "../hoc/Layout/Layout";
 import Image from "next/image";
-import Markdown from "react-markdown"
+import Markdown from "react-markdown/with-html";
 import { IoMailOutline, IoCallOutline } from "react-icons/io5";
 import { fetchAPI } from "../lib/api";
 
@@ -86,8 +86,12 @@ const About = ({ global, about }) => {
       <section>
         <h2>{about.serviceSectionTitle}</h2>
         <div className="row">
-          <div className="col span-1-of-2">{about.serviceInfo}</div>
-          <div className="col span-1-of-2">{about.locationInfo}</div>
+          <div className="col span-1-of-2">
+            <Markdown source={about.serviceInfo} />
+          </div>
+          <div className="col span-1-of-2">
+            <Markdown source={about.locationInfo} allowDangerousHtml />
+          </div>
         </div>
       </section>
 
@@ -95,7 +99,9 @@ const About = ({ global, about }) => {
         <h2>{about.familySectionTitle}</h2>
         <div className="row">
           {about.ministryInfo.map((ministry, index, array) => (
-            <div className={`col span-1-of-${array.length} ${classes.ministry}`}>
+            <div
+              className={`col span-1-of-${array.length} ${classes.ministry}`} key={ministry.id}
+            >
               <h3>{ministry.title}</h3>
               <div>{ministry.description}</div>
             </div>
