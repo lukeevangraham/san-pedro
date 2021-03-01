@@ -1,5 +1,6 @@
 import Layout from "../hoc/Layout/Layout";
 import Image from "next/image";
+import Markdown from "react-markdown"
 import { IoMailOutline, IoCallOutline } from "react-icons/io5";
 import { fetchAPI } from "../lib/api";
 
@@ -27,7 +28,9 @@ const About = ({ global, about }) => {
           <div className="col span-1-of-2">
             <Image src={about.topSideImage.url} width={450} height={470} />
           </div>
-          <div className="col span-1-of-2">{about.historyText}</div>
+          <div className={`col span-1-of-2 ${classes.historyText}`}>
+            <Markdown source={about.historyText} />
+          </div>
         </div>
       </section>
       <section className={classes.whiteBg}>

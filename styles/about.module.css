@@ -1,3 +1,7 @@
+.historyText p {
+  margin-bottom: 1rem;
+}
+
 .whiteBg {
   background: #fff;
 }
@@ -26,7 +30,7 @@
 
 .contact svg {
   vertical-align: -18%;
-  padding-right: .02rem;
+  padding-right: 0.02rem;
 }
 
 .imageWrapper:hover .pastorOverlay {
