@@ -34,14 +34,29 @@ const Giving = ({ global, giving }) => {
             ))}
           </div>
         </div>
+        <div className="row">
+          <div className="col span-1-of-1">You can also</div>
+        </div>
+
+        <div className="row">
+          {giving.moreWaysToGive[0].features.map(
+            (givingMethod, index, array) => (
+              <div
+                className={`col span-1-of-${array.length}`}
+                key={givingMethod.id}
+              >
+                <div>{givingMethod.title}</div>
+                <Markdown source={givingMethod.description} />
+              </div>
+            )
+          )}
+        </div>
       </section>
 
       <section>
-          <div className="row">
-              <div className="col">
-                  Hello
-              </div>
-          </div>
+        <div className="row">
+          <div className="col">Hello</div>
+        </div>
       </section>
     </>
   );
