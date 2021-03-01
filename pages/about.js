@@ -25,7 +25,7 @@ const About = ({ global, about }) => {
           className="row"
           style={{ display: "flex", alignItems: "center", flexWrap: "wrap" }}
         >
-          <div className="col span-1-of-2">
+          <div className="col span-1-of-2" style={{ textAlign: "center" }}>
             <Image src={about.topSideImage.url} width={450} height={470} />
           </div>
           <div className={`col span-1-of-2 ${classes.historyText}`}>
