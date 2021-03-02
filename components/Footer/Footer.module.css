@@ -1,6 +1,6 @@
 .footer {
-  background-image: linear-gradient(to bottom right, #752017de, #4f161079),
-    url(https://res.cloudinary.com/diqgdacjy/image/upload/v1614700818/footer_Bg_1fa2ea12ac.jpg);
+  /* background-image: linear-gradient(to bottom right, #752017de, #4f161079),
+    url(https://res.cloudinary.com/diqgdacjy/image/upload/v1614700818/footer_Bg_1fa2ea12ac.jpg); */
   background-size: cover;
   background-position: center 60%;
   color: #fff;
@@ -14,9 +14,9 @@
   margin-bottom: 1.5rem;
 }
 
-.column ul svg {
+.column svg {
   color: #e9c7c4;
-  vertical-align: -14%;
+  vertical-align: -11%;
   margin-right: 0.15rem;
 }
 
@@ -87,5 +87,23 @@
 
 .socialIcons ul li a:hover,
 .socialIcons ul li a:active {
-  color: #db3d2c;
+  color: #90291d;
+}
+
+.linkColumn {
+  margin-top: 1rem;
+}
+
+.linkColumn h3 {
+  font-weight: 400;
+}
+
+.linkColumn ul a:link,
+.linkColumn ul a:visited {
+  color: #fff;
+}
+
+.linkColumn ul a:hover,
+.linkColumn ul a:active {
+  color: #90291d;
 }
