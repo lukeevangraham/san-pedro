@@ -63,17 +63,23 @@ const Footer = ({ data }) => (
           <div className={classes.socialIcons}>
             <ul>
               <li>
-                <a href="https://www.facebook.com/SanPedroPresbyterianChurch">
+                <a
+                  href="https://www.facebook.com/SanPedroPresbyterianChurch"
+                  target="_blank"
+                >
                   <IoLogoFacebook />
                 </a>
               </li>
               <li>
-                <a href="https://twitter.com/SanPedroPres">
+                <a href="https://twitter.com/SanPedroPres" target="_blank">
                   <IoLogoTwitter />
                 </a>
               </li>
               <li>
-                <a href="https://www.youtube.com/channel/UCvIdCpNuCMjS0JAkHvZqbkA">
+                <a
+                  href="https://www.youtube.com/channel/UCvIdCpNuCMjS0JAkHvZqbkA"
+                  target="_blank"
+                >
                   <IoLogoYoutube />
                 </a>
               </li>
