@@ -1,13 +1,12 @@
 .footer {
-  /* position: relative; */
   background-image: linear-gradient(to bottom right, #752017de, #4f161079),
     url(https://res.cloudinary.com/diqgdacjy/image/upload/v1614700818/footer_Bg_1fa2ea12ac.jpg);
   background-size: cover;
-  /* background-attachment: fixed; */
   background-position: center 60%;
   color: #fff;
   font-size: 75%;
   line-height: 180%;
+  padding: 1.5rem 0;
 }
 
 .column ul {
@@ -18,7 +17,7 @@
 .column ul svg {
   color: #e9c7c4;
   vertical-align: -14%;
-  margin-right: .15rem;
+  margin-right: 0.15rem;
 }
 
 .horiLogo {
@@ -35,7 +34,7 @@
   margin-left: 0.5rem;
   color: #fff;
   text-transform: uppercase;
-  padding-top: .25rem;
+  padding-top: 0.25rem;
 }
 
 .logoText div:first-child {
@@ -47,18 +46,46 @@
 }
 
 .logoText div:nth-child(2) {
-font-size: 92%;
+  font-size: 92%;
 }
 
 .bottomRow {
-  border-top: .5px solid rgba(255, 255, 255, 0.349);
+  border-top: 0.5px solid rgba(255, 255, 255, 0.349);
 }
 
 .copyrightBlock {
-  opacity: .7;
+  opacity: 0.7;
 }
 
-.copyrightBlock a:link, .copyrightBlock a:visited {
+.copyrightBlock a:link,
+.copyrightBlock a:visited {
   color: #fff;
-  margin-left: .1rem;
+  margin-left: 0.1rem;
+  transition: all 0.2s;
+}
+
+.copyrightBlock a:hover,
+.copyrightBlock a:active {
+  text-shadow: 0 0 3px rgb(189, 189, 189);
+}
+
+.socialIcons {
+  font-size: 130%;
+}
+
+.socialIcons ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.socialIcons ul li a:link,
+.socialIcons ul li a:visited {
+  color: #fff;
+  margin-left: 1rem;
+}
+
+.socialIcons ul li a:hover,
+.socialIcons ul li a:active {
+  color: #db3d2c;
 }

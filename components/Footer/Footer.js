@@ -1,7 +1,14 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { IoCall, IoLocation, IoMail } from "react-icons/io5";
+import {
+  IoCall,
+  IoLocation,
+  IoMail,
+  IoLogoFacebook,
+  IoLogoTwitter,
+  IoLogoYoutube,
+} from "react-icons/io5";
 import { getStrapiMedia } from "../../lib/media";
 
 import classes from "./Footer.module.css";
@@ -47,10 +54,32 @@ const Footer = ({ data }) => (
       </div>
       <div className={["row", classes.bottomRow].join(" ")}>
         <div className={`col span-2-of-3 ${classes.copyrightBlock}`}>
-          Copyright &copy; {new Date().getFullYear()} All rights reserved | 
-          <a href="http://grahamwebdesign.com" target="_blank">Graham Web Design</a> 
+          Copyright &copy; {new Date().getFullYear()} All rights reserved |
+          <a href="http://grahamwebdesign.com" target="_blank">
+            Graham Web Design
+          </a>
         </div>
-        <div className="col span-1-of-3">Social Icons</div>
+        <div className="col span-1-of-3">
+          <div className={classes.socialIcons}>
+            <ul>
+              <li>
+                <a href="https://www.facebook.com/SanPedroPresbyterianChurch">
+                  <IoLogoFacebook />
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/SanPedroPres">
+                  <IoLogoTwitter />
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/channel/UCvIdCpNuCMjS0JAkHvZqbkA">
+                  <IoLogoYoutube />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
         {/* <div className="col span_6_of_12">
           <ul className={classes.footerNav}>
             <li>
