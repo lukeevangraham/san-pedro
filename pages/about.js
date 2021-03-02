@@ -26,7 +26,12 @@ const About = ({ global, about }) => {
           style={{ display: "flex", alignItems: "center", flexWrap: "wrap" }}
         >
           <div className="col span-1-of-2" style={{ textAlign: "center" }}>
-            <Image src={about.topSideImage.url} width={450} height={470} />
+            <Image
+              src={about.topSideImage.url}
+              width={450}
+              height={470}
+              className={classes.topImage}
+            />
           </div>
           <div className={`col span-1-of-2 ${classes.historyText}`}>
             <Markdown source={about.historyText} />
@@ -100,7 +105,8 @@ const About = ({ global, about }) => {
         <div className="row">
           {about.ministryInfo.map((ministry, index, array) => (
             <div
-              className={`col span-1-of-${array.length} ${classes.ministry}`} key={ministry.id}
+              className={`col span-1-of-${array.length} ${classes.ministry}`}
+              key={ministry.id}
             >
               <h3>{ministry.title}</h3>
               <div>{ministry.description}</div>

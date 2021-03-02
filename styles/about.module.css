@@ -11,6 +11,11 @@
   margin: auto;
 }
 
+.topImage {
+  border-radius: 5%;
+  overflow: hidden;
+}
+
 .pastorOverlay {
   position: absolute;
   top: 0;

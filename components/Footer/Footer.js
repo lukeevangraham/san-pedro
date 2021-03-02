@@ -62,7 +62,7 @@ const Footer = ({ data }) => (
               <h3>{column.title}</h3>
               <ul>
                 {column.links.map((link) => (
-                  <li>
+                  <li key={link.id}>
                     {" "}
                     <IoCaretForward />
                     <Link href={link.url}>
