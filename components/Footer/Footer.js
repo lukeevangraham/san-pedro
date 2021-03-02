@@ -58,6 +58,7 @@ const Footer = ({ data }) => (
               className={`col span-1-of-${array.length + 1} ${
                 classes.linkColumn
               } ${classes.column}`}
+              key={column.id}
             >
               <h3>{column.title}</h3>
               <ul>
