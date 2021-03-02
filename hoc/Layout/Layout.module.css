@@ -20,7 +20,6 @@
 }
 
 .Content {
-  margin-bottom: 3rem;
   /* background-image: linear-gradient(to top right, #8d7169, #f8e0da), url("/images/stucco.png"); */
   background-image: linear-gradient(to top right, #8d71698c, #f8e0da7c),
     url("/images/stucco.png");

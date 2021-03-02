@@ -11,7 +11,7 @@ import Footer from "../../components/Footer/Footer";
 import Sections from "../../components/sections/sections";
 
 const Layout = (props) => {
-  const { navbar, notificationBanner } = props.global;
+  const { navbar, notificationBanner, footer } = props.global;
 
   const [showSideDrawer, setShowSideDrawer] = useState(false);
   const [makeNavSticky, setMakeNavSticky] = useState(false);
@@ -88,7 +88,7 @@ const Layout = (props) => {
         navData={navbar}
       />
       <main className={classes.Content}>{props.children}</main>
-      <Footer />
+      <Footer data={footer} />
     </Aux>
   );
 };

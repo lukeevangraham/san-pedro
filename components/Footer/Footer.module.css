@@ -1,0 +1,64 @@
+.footer {
+  /* position: relative; */
+  background-image: linear-gradient(to bottom right, #752017de, #4f161079),
+    url(https://res.cloudinary.com/diqgdacjy/image/upload/v1614700818/footer_Bg_1fa2ea12ac.jpg);
+  background-size: cover;
+  /* background-attachment: fixed; */
+  background-position: center 60%;
+  color: #fff;
+  font-size: 75%;
+  line-height: 180%;
+}
+
+.column ul {
+  list-style-type: none;
+  margin-bottom: 1.5rem;
+}
+
+.column ul svg {
+  color: #e9c7c4;
+  vertical-align: -14%;
+  margin-right: .15rem;
+}
+
+.horiLogo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.logoText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.5rem;
+  color: #fff;
+  text-transform: uppercase;
+  padding-top: .25rem;
+}
+
+.logoText div:first-child {
+  line-height: 118%;
+  border-bottom: 1px solid white;
+  font-family: "Bodoni Moda", serif;
+  font-weight: 500;
+  font-size: 158%;
+}
+
+.logoText div:nth-child(2) {
+font-size: 92%;
+}
+
+.bottomRow {
+  border-top: .5px solid rgba(255, 255, 255, 0.349);
+}
+
+.copyrightBlock {
+  opacity: .7;
+}
+
+.copyrightBlock a:link, .copyrightBlock a:visited {
+  color: #fff;
+  margin-left: .1rem;
+}
