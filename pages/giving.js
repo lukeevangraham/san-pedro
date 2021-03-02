@@ -39,7 +39,7 @@ const Giving = ({ global, giving }) => {
         </div>
 
         <div className="row">
-          {giving.moreWaysToGive[0].features.map(
+          {/* {giving.moreWaysToGive[0].features.map(
             (givingMethod, index, array) => (
               <div
                 className={`col span-1-of-${array.length}`}
@@ -49,7 +49,7 @@ const Giving = ({ global, giving }) => {
                 <Markdown source={givingMethod.description} />
               </div>
             )
-          )}
+          )} */}
         </div>
       </section>
 
