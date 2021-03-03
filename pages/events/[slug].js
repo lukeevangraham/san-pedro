@@ -60,6 +60,9 @@ export default function Event({ eventData }) {
               </div>
             </div>
           </div>
+          {eventData.bottomEmbed ? (
+            <div dangerouslySetInnerHTML={{ __html: eventData.bottomEmbed }} />
+          ) : null}
         </div>
       </section>
     </>

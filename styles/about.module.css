@@ -9,6 +9,10 @@
 .imageWrapper {
   position: relative;
   margin: auto;
+  border-radius: 25px;
+  overflow: hidden;
+  /* padding: 4rem; */
+  margin: 0 4rem;
 }
 
 .topImage {
@@ -32,6 +36,7 @@
   justify-content: flex-end;
   padding: 1rem;
 }
+
 
 .contact svg {
   vertical-align: -18%;
