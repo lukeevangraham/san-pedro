@@ -6,7 +6,7 @@ import {
   IoLocation,
   IoMail,
   IoLogoFacebook,
-  IoLogoTwitter,
+  IoLogoLinkedin,
   IoLogoYoutube,
   IoCaretForward,
 } from "react-icons/io5";
@@ -97,8 +97,8 @@ const Footer = ({ data }) => (
                   </a>
                 </li>
                 <li>
-                  <a href="https://twitter.com/SanPedroPres" target="_blank">
-                    <IoLogoTwitter />
+                  <a href="https://www.linkedin.com/company/san-pedro-presbyterian-church/" target="_blank">
+                    <IoLogoLinkedin />
                   </a>
                 </li>
                 <li>

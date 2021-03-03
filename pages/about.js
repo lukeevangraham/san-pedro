@@ -36,6 +36,7 @@ const About = ({ global, about }) => {
           <div className={`col span-1-of-2 ${classes.historyText}`}>
             <Markdown source={about.historyText} />
           </div>
+          
         </div>
       </section>
       <section className={classes.whiteBg}>
@@ -91,11 +92,14 @@ const About = ({ global, about }) => {
       <section>
         <h2>{about.serviceSectionTitle}</h2>
         <div className="row">
-          <div className="col span-1-of-2">
+          <div className="col span-1-of-3">
             <Markdown source={about.serviceInfo} />
           </div>
-          <div className="col span-1-of-2">
+          <div className={`col span-1-of-3 ${classes.colWithEmbed}`}>
             <Markdown source={about.locationInfo} allowDangerousHtml />
+          </div>
+          <div className={`col span-1-of-3`}>
+            <Markdown source={about.thirdColumn} />
           </div>
         </div>
       </section>
