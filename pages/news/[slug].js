@@ -1,6 +1,6 @@
 // import Head from "next/head";
 import Seo from "../../components/elements/seo";
-import Markdown from "react-markdown";
+import Markdown from "react-markdown/with-html";
 import Layout from "../../hoc/Layout/Layout";
 import Button from "../../components/UI/Button/Button";
 import Image from "next/image";
@@ -79,7 +79,7 @@ export default function News(props) {
       /> */}
           <div className={classes.belowPhoto}>
             <div className={classes.body}>
-              <Markdown source={props.newsData.body} />
+              <Markdown source={props.newsData.body} allowDangerousHtml />
             </div>
           </div>
           <div className={classes.btnContainer}>
