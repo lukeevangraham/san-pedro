@@ -3,6 +3,7 @@ import Image from "next/image";
 import Button from "../components/UI/Button/Button";
 import Markdown from "react-markdown";
 import Sections from "../components/sections/sections";
+import Verse from "../components/sections/Verse/Verse"
 
 import classes from "../styles/giving.module.css"
 
@@ -18,8 +19,8 @@ export async function getStaticProps() {
 
 const Giving = ({ global, giving }) => {
   // Making sure we don't render the hero (first section)
-  let renderSections = giving.mainContent ? (
-    <Sections sections={giving.mainContent} preview={null} />
+  let renderSections = giving.bottomVerse ? (
+    <Sections sections={[giving.bottomVerse]} preview={null} />
   ) : (
     <div>Loading...</div>
   );
@@ -54,6 +55,7 @@ const Giving = ({ global, giving }) => {
           ))}
         </div>
       </section>
+      <Verse data={giving.bottomVerse} />
     </>
   );
 };
