@@ -1,5 +1,18 @@
+.watchColumn {
+  background-color: rgba(255, 255, 255, 0.301);
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 1rem 0 0 0;
+}
+
 .watchColumn iframe {
   width: 100%;
-margin: .5rem 0;
-  /* height: auto; */
+  margin: 0.5rem 0 -.25rem 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.watchColumn h3 {
+  font-weight: 400;
+  font-size: 125%;
 }
