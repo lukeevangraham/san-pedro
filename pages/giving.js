@@ -3,7 +3,7 @@ import Image from "next/image";
 import Button from "../components/UI/Button/Button";
 import Markdown from "react-markdown";
 import Sections from "../components/sections/sections";
-import Verse from "../components/sections/Verse/Verse"
+import Verse from "../components/sections/Verse/Verse";
 
 import classes from "../styles/giving.module.css";
 
@@ -43,7 +43,8 @@ const Giving = ({ global, giving }) => {
         {/* <div className="row">
           <div className="col span-2-of-2">You can also:</div>
         </div> */}
-
+      </section>
+      <section>
         <div className="row">
           {giving.moreWaysToGive.map((givingMethod, index, array) => (
             <div
@@ -57,7 +58,10 @@ const Giving = ({ global, giving }) => {
                 className={classes.icon}
               />
               <div className={classes.methodTitle}>{givingMethod.title}</div>
-              <Markdown source={givingMethod.description} className={classes.methodDescription} />
+              <Markdown
+                source={givingMethod.description}
+                className={classes.methodDescription}
+              />
             </div>
           ))}
         </div>
