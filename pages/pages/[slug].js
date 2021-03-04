@@ -37,7 +37,7 @@ export default function Page({ pageData }) {
 
   return (
     <>
-    {console.log("data: ", pageData)}
+    {console.log("DATA: ", pageData)}
       <section>
         <div className="row">{pageData.shortName}</div>
       </section>
