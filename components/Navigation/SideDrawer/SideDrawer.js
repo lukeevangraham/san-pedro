@@ -2,6 +2,7 @@ import React from "react";
 import { getStrapiMedia } from "../../../lib/media";
 import Logo from "../../Logo/Logo";
 import NavigationItems from "../NavigationItems/NavigationItems";
+import Button from "../../UI/Button/Button";
 import classes from "./SideDrawer.module.css";
 import Backdrop from "../../UI/Backdrop/Backdrop";
 import Aux from "../../../hoc/Aux/Aux";
@@ -25,6 +26,11 @@ const sideDrawer = (props) => {
         </div>
         <nav>
           <NavigationItems navData={props.navData} />
+          {props.navData.button && (
+            <div style={{ marginTop: ".5rem" }}>
+              <Button button={props.navData.button} />
+            </div>
+          )}
         </nav>
       </div>
     </Aux>

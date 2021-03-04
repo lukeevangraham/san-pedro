@@ -45,10 +45,10 @@ const Layout = (props) => {
             <div className={classes.Fixed}>
               <Image
                 src={
-                  props.children.props.homeData.contentSections[0].picture.url
+                  props.children.props.homeData.homeHero.picture.url
                 }
                 alt={
-                  props.children.props.homeData.contentSections[0].picture
+                  props.children.props.homeData.homeHero.picture
                     .alternativeText
                 }
                 layout="fill"
