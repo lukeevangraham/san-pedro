@@ -9,6 +9,7 @@ import Toolbar from "../../components/Navigation/Toolbar/Toolbar";
 import SideDrawer from "../../components/Navigation/SideDrawer/SideDrawer";
 import Footer from "../../components/Footer/Footer";
 import Sections from "../../components/sections/sections";
+import HomeHero from "../../components/sections/HomeHero/HomeHero"
 
 const Layout = (props) => {
   const { navbar, notificationBanner, footer } = props.global;
@@ -63,10 +64,11 @@ const Layout = (props) => {
               navData={navbar}
               home={true}
             />
-            <Sections
+            {/* <Sections
               sections={[props.children.props.homeData.contentSections[0]]}
               home
-            />
+            /> */}
+            <HomeHero data={props.children.props.homeData.homeHero} />
           </div>
         </Waypoint>
       ) : (
