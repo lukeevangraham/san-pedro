@@ -25,7 +25,6 @@ const Footer = ({ data }) => (
     >
       <div className={classes.bgImage}>
         <div className="row">
-          {console.log("footer data: ", data)}
           <div className={`col span-1-of-${data.columns.length + 1}`}>
             <div className={classes.column}>
               <div className={classes.horiLogo}>
@@ -97,7 +96,10 @@ const Footer = ({ data }) => (
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.linkedin.com/company/san-pedro-presbyterian-church/" target="_blank">
+                  <a
+                    href="https://www.linkedin.com/company/san-pedro-presbyterian-church/"
+                    target="_blank"
+                  >
                     <IoLogoLinkedin />
                   </a>
                 </li>
