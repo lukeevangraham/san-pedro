@@ -1,3 +1,29 @@
+.topText {
+    margin-bottom: 1rem;
+    width: 70%;
+    margin: auto;
+}
+
+.topText p {
+    margin-bottom: 1rem;
+}
+
+.topButtons {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
 .icon {
     color: red;
+}
+
+.methodTitle {
+    text-transform: uppercase;
+    margin: .75rem 0;
+    font-size: 115%;
+    font-weight: 400;
+}
+
+.methodDescription {
+    font-size: 90%;
 }

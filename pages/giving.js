@@ -4,7 +4,7 @@ import Button from "../components/UI/Button/Button";
 import Markdown from "react-markdown";
 import Sections from "../components/sections/sections";
 
-import classes from "../styles/giving.module.css"
+import classes from "../styles/giving.module.css";
 
 export async function getStaticProps() {
   const giving = await fetchAPI("/giving");
@@ -27,19 +27,21 @@ const Giving = ({ global, giving }) => {
   return (
     <>
       <section style={{ background: "#fff" }}>
+        <h2>{giving.givingPageTitle}</h2>
         <div className="row">
-          <h2>{giving.givingPageTitle}</h2>
           {console.log("giving: ", giving)}
-          <div className="col span-2-of-2">
+          <div className={classes.topText}>
             <Markdown source={giving.topText} />
-            {giving.topButton.map((button) => (
-              <Button button={button} key={button.id} />
-            ))}
+            <div className={classes.topButtons}>
+              {giving.topButton.map((button) => (
+                <Button button={button} key={button.id} />
+              ))}
+            </div>
           </div>
         </div>
-        <div className="row">
-          <div className="col span-1-of-1">You can also</div>
-        </div>
+        {/* <div className="row">
+          <div className="col span-2-of-2">You can also:</div>
+        </div> */}
 
         <div className="row">
           {giving.moreWaysToGive.map((givingMethod, index, array) => (
@@ -47,9 +49,14 @@ const Giving = ({ global, giving }) => {
               className={`col span-1-of-${array.length}`}
               key={givingMethod.id}
             >
-              <Image src={givingMethod.icon.url} width={55} height={55} className={classes.icon} />
-              <div>{givingMethod.title}</div>
-              <Markdown source={givingMethod.description} />
+              <Image
+                src={givingMethod.icon.url}
+                width={55}
+                height={55}
+                className={classes.icon}
+              />
+              <div className={classes.methodTitle}>{givingMethod.title}</div>
+              <Markdown source={givingMethod.description} className={classes.methodDescription} />
             </div>
           ))}
         </div>
