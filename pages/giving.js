@@ -1,7 +1,10 @@
 import { fetchAPI } from "../lib/api";
+import Image from "next/image";
 import Button from "../components/UI/Button/Button";
 import Markdown from "react-markdown";
 import Sections from "../components/sections/sections";
+
+import classes from "../styles/giving.module.css"
 
 export async function getStaticProps() {
   const giving = await fetchAPI("/giving");
@@ -27,10 +30,10 @@ const Giving = ({ global, giving }) => {
         <div className="row">
           <h2>{giving.givingPageTitle}</h2>
           {console.log("giving: ", giving)}
-          <div className="col span-1-of-1">
+          <div className="col span-2-of-2">
             <Markdown source={giving.topText} />
             {giving.topButton.map((button) => (
-              <Button button={button} />
+              <Button button={button} key={button.id} />
             ))}
           </div>
         </div>
@@ -39,20 +42,18 @@ const Giving = ({ global, giving }) => {
         </div>
 
         <div className="row">
-          {/* {giving.moreWaysToGive[0].features.map(
-            (givingMethod, index, array) => (
-              <div
-                className={`col span-1-of-${array.length}`}
-                key={givingMethod.id}
-              >
-                <div>{givingMethod.title}</div>
-                <Markdown source={givingMethod.description} />
-              </div>
-            )
-          )} */}
+          {giving.moreWaysToGive.map((givingMethod, index, array) => (
+            <div
+              className={`col span-1-of-${array.length}`}
+              key={givingMethod.id}
+            >
+              <Image src={givingMethod.icon.url} width={55} height={55} className={classes.icon} />
+              <div>{givingMethod.title}</div>
+              <Markdown source={givingMethod.description} />
+            </div>
+          ))}
         </div>
       </section>
-
     </>
   );
 };
