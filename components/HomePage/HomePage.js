@@ -39,7 +39,7 @@ const HomePage = ({ data }) => {
 
       <section>
         <div className="row">
-          <div className="col">
+          <div className="col span-2-of-2">
             <h2>Featured Events</h2>
             {/* <div className="row"> */}
             <div className={classes.grid}>

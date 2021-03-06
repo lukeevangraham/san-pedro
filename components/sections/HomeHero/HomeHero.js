@@ -9,7 +9,6 @@ import classes from "./HomeHero.module.css"
 
 const HomeHero = ({ data }) => {
   {/* <main className="container flex flex-col md:flex-row items-center justify-between py-12"> */}
-    console.log("data: ", data)
   return (
     <main className={classNames("row", classes.main)}>
       {/* Left column for content */}

@@ -1,0 +1,28 @@
+.topInfo {
+  text-align: center;
+}
+
+.description {
+  /* margin-left: auto !important;
+    margin: auto;
+    float: unset; */
+  text-align: left;
+  line-height: 1.5;
+}
+
+.leaderPhoto {
+  border-radius: 5px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  /* background-color: red; */
+}
+
+@media only screen and (max-width: 767px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

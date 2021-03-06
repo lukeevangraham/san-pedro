@@ -1,6 +1,6 @@
 .main {
     flex-grow: 3;
-    padding: 2rem 0;
+    padding: 2rem 20px;
     position: absolute;
     top: 50%;
     left: 0;
