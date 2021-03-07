@@ -1,4 +1,5 @@
 import { getAllEventsSlugs, getEventData } from "../../lib/api";
+import { keepEventsCurrent } from "../../lib/events";
 import Seo from "../../components/elements/seo";
 import Markdown from "react-markdown";
 import Image from "next/image";
@@ -28,6 +29,7 @@ export async function getStaticProps({ params }) {
 }
 
 export default function Event({ eventData }) {
+  keepEventsCurrent([eventData]);
   return (
     <>
       <Seo metadata={eventData.metadata} />
