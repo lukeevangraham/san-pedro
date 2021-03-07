@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { getStrapiMedia } from "../../lib/media";
+import { keepEventsCurrent, compareAndSortDates } from "../../lib/events";
 import Markdown from "react-markdown";
 import NewsCard from "../News/NewsCard/NewsCard";
 import EventCard from "../Events/EventCard/EventCard";
@@ -10,6 +11,17 @@ import classes from "./HomePage.module.css";
 
 const HomePage = ({ data }) => {
   let videoUrl = data.topVideoEmbed.split(`src="`);
+
+  // GETTING RID OF EVENTS THAT HAPPENED AND DON'T REPEAT
+  const oldEventsRemoved = data.featuredEvents.filter(
+    (event) => event.endDate >= new Date().toISOString()
+  );
+
+  // BRINGING REPEATING EVENTS UP TO CURRENT ITERATION
+  const recurringEventsMadeCurrent = keepEventsCurrent(oldEventsRemoved);
+
+  // SORTING THE DATES LEFT
+  const sortedEvents = recurringEventsMadeCurrent.sort(compareAndSortDates);
 
   return (
     <>
@@ -43,9 +55,9 @@ const HomePage = ({ data }) => {
             <h2>Featured Events</h2>
             {/* <div className="row"> */}
             <div className={classes.grid}>
-              {data.featuredEvents.map((event) => (
+              {sortedEvents.map((event, index) => index < 3 ? (
                 <EventCard event={event} key={event.id} index={true} />
-              ))}
+              ) : null )}
             </div>
           </div>
         </div>
