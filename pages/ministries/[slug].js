@@ -2,6 +2,8 @@ import Markdown from "react-markdown/with-html";
 import Seo from "../../components/elements/seo";
 import Image from "next/image";
 import NewsCard from "../../components/News/NewsCard/NewsCard";
+import EventCard from "../../components/Events/EventCard/EventCard";
+import { keepEventsCurrent, compareAndSortDates } from "../../lib/events";
 import { getStrapiMedia } from "../../lib/media";
 import { getAllMinistriesSlugs, getMinistryData } from "../../lib/api";
 
@@ -26,6 +28,18 @@ export async function getStaticProps({ params }) {
 }
 
 export default function Ministry({ ministryData }) {
+  // const currentMinistryEvents = keepEventsCurrent(ministryData.events)
+
+  const oldEventsRemoved = ministryData.events.filter(
+    (event) => event.endDate >= new Date().toISOString()
+  );
+
+  const recurringEventsMadeCurrent = keepEventsCurrent(oldEventsRemoved);
+
+  const sortedDates = recurringEventsMadeCurrent.sort(compareAndSortDates);
+
+  console.log("NEW: ", sortedDates);
+
   return (
     <>
       {console.log("ministryData: ", ministryData)}
@@ -52,7 +66,11 @@ export default function Ministry({ ministryData }) {
           </div>
         </div>
       </section>
-      <section>
+      <section
+        style={{
+          backgroundImage: "linear-gradient(to bottom right, #f5f5f5, #f3f3f3)",
+        }}
+      >
         <div className="row">
           <div className={`col span-2-of-2 ${classes.topInfo}`}>
             <h2>Latest {ministryData.ministryName} Ministry News</h2>
@@ -62,6 +80,22 @@ export default function Ministry({ ministryData }) {
               <div className={classes.grid}>
                 {ministryData.news.map((article) => (
                   <NewsCard article={article} key={article.id} />
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div className="row">
+          <div className={`col span-2-of-2 ${classes.topInfo}`}>
+            <h2>Upcoming {ministryData.ministryName} Ministry Events</h2>
+          </div>
+          <div className="row">
+            <div className="col span-2-of-2">
+              <div className={classes.grid}>
+                {sortedDates.map((event) => (
+                  <EventCard event={event} key={event.id} />
                 ))}
               </div>
             </div>
