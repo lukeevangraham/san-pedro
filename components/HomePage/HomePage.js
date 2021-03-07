@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { getStrapiMedia } from "../../lib/media";
 import { keepEventsCurrent, compareAndSortDates } from "../../lib/events";
+import { compareAndSortArticlesByDate } from "../../lib/news";
 import Markdown from "react-markdown";
 import NewsCard from "../News/NewsCard/NewsCard";
 import EventCard from "../Events/EventCard/EventCard";
@@ -22,6 +23,9 @@ const HomePage = ({ data }) => {
 
   // SORTING THE DATES LEFT
   const sortedEvents = recurringEventsMadeCurrent.sort(compareAndSortDates);
+
+  // SORTING THE NEWS ITEMS
+  const sortedArticles = data.news.sort(compareAndSortArticlesByDate);
 
   return (
     <>
@@ -55,9 +59,11 @@ const HomePage = ({ data }) => {
             <h2>Featured Events</h2>
             {/* <div className="row"> */}
             <div className={classes.grid}>
-              {sortedEvents.map((event, index) => index < 3 ? (
-                <EventCard event={event} key={event.id} index={true} />
-              ) : null )}
+              {sortedEvents.map((event, index) =>
+                index < 3 ? (
+                  <EventCard event={event} key={event.id} index={true} />
+                ) : null
+              )}
             </div>
           </div>
         </div>
@@ -114,9 +120,11 @@ const HomePage = ({ data }) => {
             <h2>Featured News</h2>
             {/* <div className="row"> */}
             <div className={classes.grid}>
-              {data.news.map((article) => (
-                <NewsCard article={article} key={article.id} />
-              ))}
+              {sortedArticles.map((article, index) =>
+                index < 3 ? (
+                  <NewsCard article={article} key={article.id} />
+                ) : null
+              )}
             </div>
           </div>
         </div>
