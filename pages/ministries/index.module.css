@@ -1,0 +1,8 @@
+.ministriesContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ministry {
+  padding: 2rem;
+}
