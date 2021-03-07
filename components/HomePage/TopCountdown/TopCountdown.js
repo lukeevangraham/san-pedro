@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import keepEventsCurrent from "../../../lib/events";
+import { keepEventsCurrent } from "../../../lib/events";
 
 import DateBox from "../../Events/DateBox/DateBox";
 import TopInfo from "../../Events/TopInfo/TopInfo";
