@@ -45,14 +45,12 @@ export default function Ministry({ ministryData }) {
 
   return (
     <>
-      {console.log("ministryData: ", ministryData)}
       <Seo metadata={ministryData.metadata} />
       <section>
-        <div className="row">
-          <div className={`col span-2-of-2 ${classes.topInfo}`}>
-            <h2>{ministryData.ministryName} Ministry</h2>
-          </div>
-        </div>
+        <h2 className={classes.topInfo}>
+          {ministryData.ministryName} Ministry
+        </h2>
+        <div className="row"></div>
         <div className="row">
           <div className="col span-1-of-8"></div>
           <div className={`col span-4-of-8 ${classes.description}`}>
