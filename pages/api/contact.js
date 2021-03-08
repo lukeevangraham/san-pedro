@@ -2,6 +2,8 @@ const nodemailer = require("nodemailer");
 
 export default function handler(req, res) {
   console.log("BODY: ", req.body);
+  console.log("EMAIL: ", process.env.EMAIL)
+  console.log("EMAIL: ", process.env.EMAIL_PASS)
   res.status(200).json({ user: "Ada Lovelace" });
 
   async function main() {
@@ -11,13 +13,13 @@ export default function handler(req, res) {
       secure: "true",
       auth: {
         user: process.env.EMAIL,
-        pass: process.env.EMAIL_PASS,
-      },
-    });
+        pass: process.env.EMAIL_PASS
+      }
+    })
 
     let info = await transporter.sendMail({
       from: '"SANPEDROPC.ORG" <donotreply@sanpedropc.org>',
-      to: "revbsjr@gmail.com",
+      to: "luke@grahamwebdesign.com",
       subject: "Message from sanpedropc.org",
       text: `${req.body.name} (${req.body.email}) just sent this message via www.sanpedropc.org:
     
