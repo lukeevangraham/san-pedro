@@ -11,18 +11,14 @@ const EventCard = ({ event, index }) => (
     <Link href={`/events/${event.slug}`}>
       <a>
         <div className={classes.ratioWrapper}>
-          <Image
-            src={event.eventImage.url}
-            alt={event.eventImage.alternativeText}
-            layout="fill"
-            sizes="(max-width: 480px) 100vw, 33vw"
-          />
-          {/* <img
-              className="responsiveImage"
-              src={getStrapiMedia(event.image.formats.medium.url)}
-              // src={event.image.formats.medium.url}
-              alt={event.image.alternativeText}
-            /> */}
+
+            <Image
+              src={event.eventImage.url}
+              alt={event.eventImage.alternativeText}
+              layout="fill"
+              sizes="(max-width: 480px) 100vw, 33vw"
+            />
+
         </div>
       </a>
     </Link>
