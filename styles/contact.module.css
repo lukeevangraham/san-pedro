@@ -1,0 +1,23 @@
+.addressInfo ul {
+  list-style-type: none;
+}
+
+.addressInfo ul li {
+  display: flex;
+  align-items: center;
+}
+
+.iconBg {
+  background-image: linear-gradient(to right bottom, #db3d2c, #9c2c1f);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.33rem 0.33rem 0.33rem 0;
+}
+
+.iconBg svg {
+  color: #fff;
+}
