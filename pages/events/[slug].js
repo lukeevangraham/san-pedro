@@ -39,11 +39,13 @@ export default function Event({ eventData }) {
           <div className="row">
             <div className="col span-1-of-2">
               <div className={classes.imageWrap}>
-                <Image
-                  src={eventData.eventImage.url}
-                  layout="fill"
-                  objectFit="cover"
-                />
+                {eventData.eventImage ? (
+                  <Image
+                    src={eventData.eventImage.url}
+                    layout="fill"
+                    objectFit="cover"
+                  />
+                ) : null}
               </div>
             </div>
             <div className="col span-1-of-2">

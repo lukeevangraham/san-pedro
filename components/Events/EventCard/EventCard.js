@@ -11,14 +11,14 @@ const EventCard = ({ event, index }) => (
     <Link href={`/events/${event.slug}`}>
       <a>
         <div className={classes.ratioWrapper}>
-
+          {event.eventImage ? (
             <Image
               src={event.eventImage.url}
               alt={event.eventImage.alternativeText}
               layout="fill"
               sizes="(max-width: 480px) 100vw, 33vw"
             />
-
+          ) : null}
         </div>
       </a>
     </Link>

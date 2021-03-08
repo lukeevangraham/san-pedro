@@ -39,6 +39,7 @@
     font-size: 90%;
     margin: .5rem 0;
     flex-grow: 1;
+    text-align: justify;
 }
 
 .moreInfo {

@@ -1,5 +1,6 @@
 .historyText p {
   margin-bottom: 1rem;
+  text-align: justify;
 }
 
 .whiteBg {
@@ -53,6 +54,14 @@
   text-align: center;
 }
 
+.ministry div {
+  text-align: justify;
+}
+
 .colWithEmbed iframe {
   width: 100% !important;
+}
+
+.serviceSection {
+  text-align: justify;
 }

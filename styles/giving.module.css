@@ -2,6 +2,7 @@
     margin-bottom: 1rem;
     width: 70%;
     margin: auto;
+    text-align: justify;
 }
 
 .topText p {
@@ -26,4 +27,5 @@
 
 .methodDescription {
     font-size: 90%;
+    text-align: justify;
 }

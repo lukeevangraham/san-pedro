@@ -91,7 +91,7 @@ const About = ({ global, about }) => {
 
       <section>
         <h2>{about.serviceSectionTitle}</h2>
-        <div className="row">
+        <div className={`row ${classes.serviceSection}`}>
           <div className="col span-1-of-3">
             <Markdown source={about.serviceInfo} />
           </div>
