@@ -1,9 +1,6 @@
 const nodemailer = require("nodemailer");
 
 export default function handler(req, res) {
-  console.log("BODY: ", req.body);
-  console.log("EMAIL: ", process.env.EMAIL)
-  console.log("EMAIL: ", process.env.EMAIL_PASS)
   res.status(200).json({ user: "Ada Lovelace" });
 
   async function main() {

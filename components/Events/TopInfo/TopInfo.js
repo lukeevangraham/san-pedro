@@ -19,6 +19,12 @@ const TopInfo = ({ event, index, fromHome }) => (
         hour: "numeric",
         minute: "numeric",
       })}
+      {/* {console.log("DATE: ", event.startDate)}
+      {console.log("FORMATTED: ", new Date(event.startDate).toLocaleTimeString("en-US", {
+        hour: "numeric",
+        minute: "numeric",
+        timeZone: "America/Los_Angeles"
+      }) )} */}
     </div>
     <div className={classNames(classes.location, { [classes.fromHome]: fromHome })}>
       <IoLocationOutline />
