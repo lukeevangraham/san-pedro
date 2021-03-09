@@ -3,7 +3,7 @@ import Image from "next/image";
 import { getStrapiMedia } from "../../lib/media";
 import { keepEventsCurrent, compareAndSortDates } from "../../lib/events";
 import { compareAndSortArticlesByDate } from "../../lib/news";
-import Markdown from "react-markdown";
+import Markdown from "react-markdown/with-html";
 import NewsCard from "../News/NewsCard/NewsCard";
 import EventCard from "../Events/EventCard/EventCard";
 import TopCountdown from "./TopCountdown/TopCountdown";
@@ -47,8 +47,8 @@ const HomePage = ({ data }) => {
               ></iframe>
             </div>
           </div>
-          <div className="col span-1-of-2">
-            <Markdown source={data.introBox} />
+          <div className={`col span-1-of-2 ${classes.introBox}`}>
+            <Markdown source={data.introBox} allowDangerousHtml />
           </div>
         </div>
       </section>
