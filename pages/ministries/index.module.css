@@ -1,6 +1,11 @@
 .ministriesContainer {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.ministriesContainer:before, .ministriesContainer:after {
+  content: none;
 }
 
 .ministry {
