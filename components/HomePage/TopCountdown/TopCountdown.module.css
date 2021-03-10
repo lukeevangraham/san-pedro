@@ -20,6 +20,8 @@
   border-radius: 5px;
   overflow: hidden;
   height: 67px;
+  width: 70px !important;
+  flex-shrink: 0;
 }
 
 .topInfoWrapper {

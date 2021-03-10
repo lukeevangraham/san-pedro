@@ -26,6 +26,7 @@
   width: 70px;
   height: 66px !important;
   margin-right: 1rem;
+  flex-shrink: 0;
 }
 
 .topRight {
