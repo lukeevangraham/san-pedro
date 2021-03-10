@@ -43,10 +43,19 @@
   .dateBoxContainer {
     height: 57px !important;
   }
+  .event {
+    padding: 60px 2.5rem;
+  }
+  .event h1 {
+    padding-top: 15px;
+  }
 }
 
 @media only screen and (max-width: 850px) {
   .dateBoxContainer {
     height: 52px !important;
+  }
+  .event {
+    padding: 30px 0;
   }
 }
