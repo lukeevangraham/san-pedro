@@ -24,6 +24,7 @@
 
 .topInfoWrapper {
   margin: 0 1rem;
+  text-align: center;
 }
 
 .countdownWrapper {
@@ -55,7 +56,7 @@
 @media only screen and (max-width: 850px) {
   .wrapper {
     height: auto;
-    margin: 0 -2% 0 -2%;
+    margin: 0 -4%;
     padding: 70px 0;
     flex-wrap: wrap;
     flex-direction: column;

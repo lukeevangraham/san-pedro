@@ -9,6 +9,10 @@
   padding: 1.5rem 0;
 }
 
+.column {
+  padding-top: 1.75rem;
+}
+
 .column ul {
   list-style-type: none;
   margin-bottom: 1.5rem;
@@ -106,4 +110,15 @@
 .linkColumn ul a:hover,
 .linkColumn ul a:active {
   color: #90291d;
+}
+
+
+
+@media only screen and (max-width: 850px) {
+  .footer {
+    font-size: 100%;
+  }
+  .logoText {
+    font-size: 75%;
+  }
 }
