@@ -1,9 +1,9 @@
 .event {
-    text-align: center;
-    background-color: rgb(252, 252, 252);
-    /* padding-left: 2.5rem; */
-    /* padding-right: 2.5rem; */
-    padding: 80px 2.5rem;
+  /* text-align: center; */
+  background-color: rgb(252, 252, 252);
+  /* padding-left: 2.5rem; */
+  /* padding-right: 2.5rem; */
+  padding: 80px 2.5rem;
 }
 
 .imageWrap {
@@ -16,8 +16,8 @@
 }
 
 .rightColumn {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .dateBoxContainer {
@@ -33,7 +33,19 @@
 }
 
 .description {
-    margin-top: 1.25rem;
-    text-align: justify;
-    font-family: "Cardo", serif;
+  margin-top: 1.25rem;
+  text-align: justify;
+  font-family: "Cardo", serif;
+}
+
+@media only screen and (max-width: 1023px) {
+  .dateBoxContainer {
+    height: 57px !important;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .dateBoxContainer {
+    height: 52px !important;
+  }
 }
