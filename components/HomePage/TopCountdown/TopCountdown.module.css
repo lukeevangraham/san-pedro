@@ -24,7 +24,7 @@
 
 .topInfoWrapper {
   margin: 0 1rem;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .countdownWrapper {
@@ -74,5 +74,8 @@
   }
   .countdownWrapper {
     padding: 2rem 2rem 0 2rem;
+  }
+  .topInfoWrapper {
+    text-align: center;
   }
 }
