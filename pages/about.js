@@ -109,11 +109,11 @@ const About = ({ global, about }) => {
         <div className="row">
           {about.ministryInfo.map((ministry, index, array) => (
             <div
-              className={`col span-1-of-${array.length} ${classes.ministry}`}
+              className={`col span-1-of-${array.length} box ${classes.ministry}`}
               key={ministry.id}
             >
               <h3>{ministry.title}</h3>
-              <div>{ministry.description}</div>
+              <p>{ministry.description}</p>
             </div>
           ))}
         </div>
