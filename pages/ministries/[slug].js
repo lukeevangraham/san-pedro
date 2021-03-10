@@ -53,10 +53,10 @@ export default function Ministry({ ministryData }) {
         <div className="row"></div>
         <div className="row">
           <div className="col span-1-of-8"></div>
-          <div className={`col span-4-of-8 ${classes.description}`}>
+          <div className={`col span-4-of-8 box ${classes.description}`}>
             <Markdown source={ministryData.description} />
           </div>
-          <div className={`col span-2-of-8`}>
+          <div className={`col span-2-of-8 box`}>
             {ministryData.leaderPhoto ? (
               <Image
                 src={getStrapiMedia(ministryData.leaderPhoto.url)}

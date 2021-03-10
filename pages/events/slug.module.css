@@ -39,6 +39,10 @@
   font-family: "Cardo", serif;
 }
 
+/* .description p {
+  margin-bottom: 1rem;
+} */
+
 @media only screen and (max-width: 1023px) {
   .dateBoxContainer {
     height: 57px !important;
