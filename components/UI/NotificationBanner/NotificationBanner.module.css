@@ -12,7 +12,10 @@
 .text {
     flex-grow: 1;
     padding: .25rem;
-    
+}
+
+.text a {
+    vertical-align: -1px;
 }
 
 .button {

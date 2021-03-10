@@ -47,7 +47,7 @@ const HomePage = ({ data }) => {
               ></iframe>
             </div>
           </div>
-          <div className={`col span-1-of-2 ${classes.introBox}`}>
+          <div className={`col span-1-of-2 box ${classes.introBox}`}>
             <Markdown source={data.introBox} allowDangerousHtml />
           </div>
         </div>

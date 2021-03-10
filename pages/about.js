@@ -33,7 +33,7 @@ const About = ({ global, about }) => {
               className={classes.topImage}
             />
           </div>
-          <div className={`col span-1-of-2 ${classes.historyText}`}>
+          <div className={`col span-1-of-2 box ${classes.historyText}`}>
             <Markdown source={about.historyText} />
           </div>
           
@@ -57,8 +57,8 @@ const About = ({ global, about }) => {
                   layout="responsive"
                 />
 
-                <div className={classes.pastorOverlay}>
-                  <div>{leader.shortBio}</div>
+                <div className={`box ${classes.pastorOverlay}`}>
+                  <p>{leader.shortBio}</p>
                   <br />
                   {leader.phoneNumber ? (
                     <div className={classes.contact}>
@@ -92,13 +92,13 @@ const About = ({ global, about }) => {
       <section>
         <h2>{about.serviceSectionTitle}</h2>
         <div className={`row ${classes.serviceSection}`}>
-          <div className="col span-1-of-3">
+          <div className="col span-1-of-3 box">
             <Markdown source={about.serviceInfo} />
           </div>
-          <div className={`col span-1-of-3 ${classes.colWithEmbed}`}>
+          <div className={`col span-1-of-3 box ${classes.colWithEmbed}`}>
             <Markdown source={about.locationInfo} allowDangerousHtml />
           </div>
-          <div className={`col span-1-of-3`}>
+          <div className={`col span-1-of-3 box`}>
             <Markdown source={about.thirdColumn} />
           </div>
         </div>

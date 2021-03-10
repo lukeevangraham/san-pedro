@@ -37,7 +37,7 @@ export default function Event({ eventData }) {
         <div className={["row", classes.event].join(" ")}>
           <h1>Upcoming Event</h1>
           <div className="row">
-            <div className="col span-1-of-2">
+            <div className="col span-1-of-2 box">
               <div className={classes.imageWrap}>
                 {eventData.eventImage ? (
                   <Image
@@ -48,7 +48,7 @@ export default function Event({ eventData }) {
                 ) : null}
               </div>
             </div>
-            <div className="col span-1-of-2">
+            <div className="col span-1-of-2 box">
               <div className={classes.rightColumn}>
                 <div className={classes.topRight}>
                   <div className={classes.dateBoxContainer}>
