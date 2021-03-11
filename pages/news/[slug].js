@@ -79,7 +79,8 @@ export default function News(props) {
       /> */}
           <div className={classes.belowPhoto}>
             <div className={classes.body}>
-              <Markdown source={props.newsData.body} allowDangerousHtml />
+              {/* <Markdown source={props.newsData.body} allowDangerousHtml /> */}
+              <div dangerouslySetInnerHTML={{__html: props.newsData.body}}></div>
             </div>
           </div>
           <div className={classes.btnContainer}>

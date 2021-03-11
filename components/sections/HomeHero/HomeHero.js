@@ -30,7 +30,7 @@ const HomeHero = ({ data }) => {
         </div>
         {/* Small rich text */}
         <div className={[classes.smallText, classes.whiteText].join(" ")}>
-          <Markdown source={data.smallTextWithLink} />
+          <div dangerouslySetInnerHTML={{__html: data.smallTextWithLink}} />
         </div>
       </div>
       {/* Right column for the image */}

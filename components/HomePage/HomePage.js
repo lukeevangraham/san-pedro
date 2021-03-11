@@ -48,7 +48,7 @@ const HomePage = ({ data }) => {
             </div>
           </div>
           <div className={`col span-1-of-2 box ${classes.introBox}`}>
-            <Markdown source={data.introBox} allowDangerousHtml />
+            <div dangerouslySetInnerHTML={{__html: data.introBox}} />
           </div>
         </div>
       </section>

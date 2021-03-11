@@ -8,7 +8,7 @@ const NotificationBanner = ({ data: { text, type }, closeSelf }) => {
   return (
     <div className={classes.bg}>
       <div className={classNames("row", classes.inside)}>
-        <Markdown className={classes.text} source={text} />
+        <div className={classes.text} dangerouslySetInnerHTML={{__html: text}} />
         <button className={classes.button} onClick={closeSelf}>
           <IoCloseOutline className={classes.icon} />
         </button>

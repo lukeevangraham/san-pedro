@@ -45,9 +45,10 @@ const NewsCard = ({ article }) => {
           <a className={classes.title}>{article.title}</a>
         </Link>
 
-        <p className={classes.excerpt}>
-          {truncate(article.body, 100, true)}&hellip;
-        </p>
+        <div className={classes.excerpt}>
+          {/* {truncate(article.body, 100, true)}&hellip; */}
+          <div dangerouslySetInnerHTML={{__html: article.body}} style={{ height: "2.5rem" }} />
+        </div>
         <div className={classes.moreInfo}>
           {article.author ? (
             article.author.length ? (

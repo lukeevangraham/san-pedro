@@ -34,9 +34,8 @@ const About = ({ global, about }) => {
             />
           </div>
           <div className={`col span-1-of-2 box ${classes.historyText}`}>
-            <Markdown source={about.historyText} />
+            <div dangerouslySetInnerHTML={{ __html: about.historyText }} />
           </div>
-          
         </div>
       </section>
       <section className={classes.whiteBg}>
@@ -93,13 +92,13 @@ const About = ({ global, about }) => {
         <h2>{about.serviceSectionTitle}</h2>
         <div className={`row ${classes.serviceSection}`}>
           <div className="col span-1-of-3 box">
-            <Markdown source={about.serviceInfo} />
+            <div dangerouslySetInnerHTML={{ __html: about.serviceInfo }} />
           </div>
           <div className={`col span-1-of-3 box ${classes.colWithEmbed}`}>
-            <Markdown source={about.locationInfo} allowDangerousHtml />
+            <div dangerouslySetInnerHTML={{ __html: about.locationInfo }} />
           </div>
           <div className={`col span-1-of-3 box`}>
-            <Markdown source={about.thirdColumn} />
+            <div dangerouslySetInnerHTML={{ __html: about.thirdColumn }} />
           </div>
         </div>
       </section>

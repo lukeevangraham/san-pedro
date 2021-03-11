@@ -59,7 +59,9 @@ export default function Event({ eventData }) {
                   </div>
                 </div>
                 <div className={classes.description}>
-                  <Markdown source={eventData.description} />
+                  <div
+                    dangerouslySetInnerHTML={{ __html: eventData.description }}
+                  />
                 </div>
               </div>
             </div>

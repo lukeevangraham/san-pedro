@@ -20,7 +20,7 @@ const Watch = ({ watch }) => (
       <div className="row">
         <div className="col span-2-of-2">
           <div style={{ marginBottom: "2.5rem" }}>
-            <Markdown source={watch.topText} allowDangerousHtml />
+            <div dangerouslySetInnerHTML={{ __html: watch.topText }} />
           </div>
         </div>
       </div>
@@ -31,7 +31,7 @@ const Watch = ({ watch }) => (
             key={column.id}
           >
             <h3>{column.columnTitle}</h3>
-            <Markdown source={column.columnBody} allowDangerousHtml />
+            <div dangerouslySetInnerHTML={{ __html: column.columnBody }} />
           </div>
         ))}
       </div>

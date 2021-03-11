@@ -32,7 +32,7 @@ const Giving = ({ global, giving }) => {
         <div className="row">
           {console.log("giving: ", giving)}
           <div className={classes.topText}>
-            <Markdown source={giving.topText} />
+            <div dangerouslySetInnerHTML={{__html: giving.topText}} />
             <div className={classes.topButtons}>
               {giving.topButton.map((button) => (
                 <Button button={button} key={button.id} />
@@ -58,8 +58,7 @@ const Giving = ({ global, giving }) => {
                 className={classes.icon}
               />
               <div className={classes.methodTitle}>{givingMethod.title}</div>
-              <Markdown
-                source={givingMethod.description}
+              <div dangerouslySetInnerHTML={{__html: givingMethod.description}}
                 className={classes.methodDescription}
               />
             </div>
