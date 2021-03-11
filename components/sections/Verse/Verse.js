@@ -9,7 +9,7 @@ const Verse = ({ data, global }) => {
       <div className="row">
         <div className={classes.container}>
           <div className={classes.text}>
-            <div>"{data.scripture}"</div>
+            <div dangerouslySetInnerHTML={{ __html: data.scripture }} />
             <div className={classes.reference}>{data.reference}</div>
           </div>
           <div className={classes.verseWrapper}>
