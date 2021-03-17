@@ -1,13 +1,48 @@
 .ministriesContainer {
+  margin: 2rem auto;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
-.ministriesContainer:before, .ministriesContainer:after {
+.ministriesContainer:before,
+.ministriesContainer:after {
   content: none;
 }
 
 .ministry {
   padding: 2rem;
+  margin: .5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(240, 240, 240, 0.863),
+    rgba(250, 250, 250, 0.226)
+  );
+  border-radius: 10px;
+  box-shadow: 0 0px 9px 6px rgba(0, 0, 0, 0.1);
+  transition: all .2s !important;
+}
+
+.ministry:hover,
+.ministry:active {
+  transform: scale(1.05);
+}
+
+.ministryName {
+  margin: 0.75rem 0 2rem 0;
+}
+
+.description {
+  /* margin-left: auto !important;
+    margin: auto;
+    float: unset; */
+  text-align: justify;
+  line-height: 1.5;
+}
+
+.leaderPhoto {
+  border-radius: 5px;
 }

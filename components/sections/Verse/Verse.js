@@ -3,9 +3,9 @@ import Image from "next/image";
 // import { getButtonAppearance } from "utils/button";
 import classes from "./Verse.module.css";
 
-const Verse = ({ data, global }) => {
+const Verse = ({ data, global, whiteBg }) => {
   return (
-    <section className={classes.whiteBg}>
+    <section className={whiteBg === false ? null : classes.whiteBg}>
       <div className="row">
         <div className={classes.container}>
           <div className={classes.text}>
