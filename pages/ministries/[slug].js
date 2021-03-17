@@ -51,7 +51,7 @@ export default function Ministry({ ministryData }) {
           {ministryData.ministryName} Ministry
         </h2>
         <div className="row"></div>
-        <div className="row">
+        <div className={`row ${classes.topCols}`}>
           <div className="col span-1-of-8"></div>
           <div className={`col span-4-of-8 box ${classes.description}`}>
             <div
