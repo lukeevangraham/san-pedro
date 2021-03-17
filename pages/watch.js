@@ -30,6 +30,7 @@ const Watch = ({ watch }) => (
             className={`col span-1-of-${array.length} ${classes.watchColumn}`}
             key={column.id}
           >
+          {console.log("COL: ", column)}
             <h3>{column.columnTitle}</h3>
             <div dangerouslySetInnerHTML={{ __html: column.columnBody }} />
           </div>
