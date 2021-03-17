@@ -34,10 +34,10 @@
   animation: moveDown 0.5s ease-in-out;;
 }
 
-.Sticky .Logo {
+/* .Sticky .Logo { */
   /* height: 50px; */
   /* margin-top: 7px; */
-}
+/* } */
 
 .Logo {
   /* margin-top: 28px; */

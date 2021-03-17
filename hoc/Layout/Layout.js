@@ -9,7 +9,7 @@ import Toolbar from "../../components/Navigation/Toolbar/Toolbar";
 import SideDrawer from "../../components/Navigation/SideDrawer/SideDrawer";
 import Footer from "../../components/Footer/Footer";
 import Sections from "../../components/sections/sections";
-import HomeHero from "../../components/sections/HomeHero/HomeHero"
+import HomeHero from "../../components/sections/HomeHero/HomeHero";
 
 const Layout = (props) => {
   const { navbar, notificationBanner, footer } = props.global;
@@ -44,12 +44,9 @@ const Layout = (props) => {
           <div className={classes.homeHeader}>
             <div className={classes.Fixed}>
               <Image
-                src={
-                  props.children.props.homeData.homeHero.picture.url
-                }
+                src={props.children.props.homeData.homeHero.picture.url}
                 alt={
-                  props.children.props.homeData.homeHero.picture
-                    .alternativeText
+                  props.children.props.homeData.homeHero.picture.alternativeText
                 }
                 layout="fill"
                 objectFit="cover"
@@ -79,6 +76,7 @@ const Layout = (props) => {
             navData={navbar}
           />
           <Waypoint
+            topOffset={makeNavSticky ? 0 : "65px"}
             onLeave={() => setMakeNavSticky(true)}
             onEnter={() => setMakeNavSticky(false)}
           ></Waypoint>
@@ -89,7 +87,15 @@ const Layout = (props) => {
         closed={sideDrawerClosedHandler}
         navData={navbar}
       />
-      <main className={classes.Content}>{props.children}</main>
+      <main
+        className={
+          makeNavSticky && !props.home
+            ? `${classes.Content} ${classes.stickyContent}`
+            : classes.Content
+        }
+      >
+        {props.children}
+      </main>
       <Footer data={footer} />
     </Aux>
   );

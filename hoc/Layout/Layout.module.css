@@ -30,6 +30,10 @@
     url(https://sanpedroadmin.lukegraham.us${props.children.props.homeData.contentSections[0].picture.url}); */
 }
 
+.stickyContent {
+  padding-top: 111px;
+}
+
 @media (max-width: 767px) {
   .homeHeader {
     background-attachment: scroll;
