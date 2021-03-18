@@ -21,3 +21,19 @@
 .iconBg svg {
   color: #fff;
 }
+
+.contactForm input[type="text"],
+.contactForm input[type="email"],
+.contactForm textarea {
+  width: 100%;
+  padding: 14px 7px 14px 20px;
+  border-radius: 5px;
+  border: 1px solid rgb(180, 180, 180);
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 15px;
+}
+
+
+.contactForm *:focus {
+  outline: none;
+}

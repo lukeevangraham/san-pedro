@@ -62,7 +62,7 @@ const Contact = (props) => {
           </ul>
         </div>
         <div className="col span-1-of-2">
-          <h3>We're happy to hear from you</h3>
+          <h3 style={{ textAlign: "center" }}>We're happy to hear from you</h3>
           <form onSubmit={sendMessage} className={classes.contactForm}>
             <div className="row">
               <div className="col span-1-of-2">
