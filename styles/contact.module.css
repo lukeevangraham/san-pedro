@@ -1,3 +1,7 @@
+.addressInfo {
+  margin-bottom: 1.7rem;
+}
+
 .addressInfo ul {
   list-style-type: none;
 }
@@ -39,6 +43,7 @@
   display: inline-block;
   padding: 10px 30px;
   font-weight: 300;
+  font-family: 'Source Sans Pro', sans-serif;
   text-decoration: none;
   border-radius: 200px;
   transition: all 0.2s;
@@ -53,6 +58,11 @@
 
 .contactForm button:hover {
   transform: scale(1.05);
+}
+
+.mapContainer {
+  height: 500px;
+  padding: 0;
 }
 
 @media only screen and (min-width: 480px) {
