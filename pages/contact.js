@@ -32,7 +32,7 @@ const Contact = (props) => {
   return (
     <section>
       <h2>Contact</h2>
-      <div className="row">
+      <div className={`row ${classes.contactPage}`}>
         <div className={`col span-1-of-2 ${classes.addressInfo}`}>
           <ul>
             <li>
