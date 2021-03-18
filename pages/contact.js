@@ -114,9 +114,9 @@ const Contact = (props) => {
           height="500"
           frameBorder="0"
           style={{ border: 0 }}
-          allowfullscreen=""
+          allowFullScreen=""
           aria-hidden="false"
-          tabindex="0"
+          tabIndex="0"
           loading="lazy"
         ></iframe>
       </section>
