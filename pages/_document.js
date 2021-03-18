@@ -10,6 +10,15 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZBX8ZQEVT0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZBX8ZQEVT0');
+</script>
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
             href="https://fonts.googleapis.com/css2?family=Cardo&family=Source+Sans+Pro:wght@200;400;600&family=Bodoni+Moda:wght@500&display=swap"
