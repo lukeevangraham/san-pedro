@@ -5,14 +5,16 @@
 
 .topInfo {
   display: flex;
-  margin-top: 1rem;
+  margin: 1rem 0;
   padding-top: 80px;
+  align-items: center;
 }
 
 .title {
   font-size: 150%;
   letter-spacing: 1px;
   line-height: 1.5;
+  text-align: left;
 }
 
 .author {
@@ -25,6 +27,7 @@
 
 .author svg {
   margin-right: 7px;
+  color: #90291D;
 }
 
 .belowPhoto {
@@ -68,7 +71,6 @@
   flex-direction: column;
   justify-content: center;
   margin-right: 1rem;
-  margin-bottom: 1rem;
   border-radius: 5px;
   /* padding: 0 20px; */
   flex-shrink: 0;
@@ -90,6 +92,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  margin-bottom: .4rem;
 }
 
 .btnContainer {
