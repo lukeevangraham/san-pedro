@@ -112,7 +112,7 @@ const Contact = (props) => {
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3469.9075441037994!2d-98.47911278446566!3d29.57729328205462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x865c8a708f3a58cf%3A0x62003f4e3fb955a0!2sSan%20Pedro%20Presbyterian%20Church!5e0!3m2!1sen!2sus!4v1616105690710!5m2!1sen!2sus"
           width="100%"
           height="500"
-          frameborder="0"
+          frameBorder="0"
           style={{ border: 0 }}
           allowfullscreen=""
           aria-hidden="false"
