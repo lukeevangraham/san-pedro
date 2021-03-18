@@ -5,10 +5,24 @@
   padding: 1rem 0 0 0;
 }
 
+.videoWrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%;
+}
+
 .watchColumn iframe {
   /* aspect-ratio: 16 /9; */
-  width: 560px;
-  height: 315px;
+  /* width: 560px;
+  height: 315px; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
   /* margin: 0.5rem 0 -.25rem 0; */
   border-radius: 10px;
   /* overflow: hidden; */
