@@ -47,6 +47,8 @@
   border: none;
   color: #fff;
   margin-right: 15px;
+  cursor: pointer;
+  font-size: 95%;
 }
 
 .contactForm button:hover {
