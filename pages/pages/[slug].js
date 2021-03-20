@@ -33,7 +33,7 @@ export default function Page({ pageData }) {
   return (
     <>
       {console.log("DATA: ", pageData)}
-      <section>
+      <section style={{ paddingBottom: 0 }}>
         <h2>{pageData.shortName}</h2>
       </section>
       {renderSections}

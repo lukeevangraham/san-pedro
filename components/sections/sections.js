@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import Hero from "./Hero/Hero";
 import Verse from "./Verse/Verse";
 import LargeVideo from "./large-video";
-import FeatureColumnsGroup from "./feature-columns-group";
+import FeatureColumnsGroup from "./FeatureColumnsGroup/FeatureColumnsGroup";
 import FeatureRowsGroup from "./FeatureRowsGroup/FeatureRowsGroup";
 import BottomActions from "./bottom-actions";
 import TestimonialsGroup from "./testimonials-group";
