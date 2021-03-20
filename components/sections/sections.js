@@ -3,10 +3,10 @@ import Hero from "./Hero/Hero";
 import Verse from "./Verse/Verse";
 import LargeVideo from "./large-video";
 import FeatureColumnsGroup from "./feature-columns-group";
-import FeatureRowsGroup from "./feature-rows-group";
+import FeatureRowsGroup from "./FeatureRowsGroup/FeatureRowsGroup";
 import BottomActions from "./bottom-actions";
 import TestimonialsGroup from "./testimonials-group";
-import RichText from "./rich-text";
+import RichText from "./Rich-Text/rich-text";
 import Pricing from "./pricing";
 import classNames from "classnames";
 
@@ -62,15 +62,17 @@ const PreviewModeBanner = () => {
 // Display the list of sections
 const Sections = ({ sections, preview, home }) => {
   return (
-    <div className={classNames("flex flex-col", { [classes.home]: home })}>
+    <div className={classNames(classes.sections, { [classes.home]: home })}>
       {/* Show a banner if preview mode is on */}
       {preview && <PreviewModeBanner />}
       {/* Show the actual sections */}
       {sections.map((section) => (
-        <Section
-          sectionData={section}
-          key={`${section.__component}${section.id}`}
-        />
+        <div className={classes.section}>
+          <Section
+            sectionData={section}
+            key={`${section.__component}${section.id}`}
+          />
+        </div>
       ))}
     </div>
   );

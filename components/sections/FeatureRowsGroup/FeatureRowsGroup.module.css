@@ -1,0 +1,56 @@
+.groupWrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.feature {
+    margin: .5rem 0;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.media {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.imageWrap {
+    width: 407px;
+    height: 326px;
+    position: relative;
+    margin: 0 0 0 auto;
+}
+
+.reverseRow {
+    flex-direction: row-reverse;
+}
+.reverseRow .media {
+    justify-content: flex-start;
+}
+.reverseRow .media .imageWrap {
+    margin: 0 auto 0 0;
+}
+
+.featureCol {
+    width: 100%;
+    margin: .5rem 0;
+}
+
+.title {
+    margin-bottom: 0;
+}
+
+.description {
+    margin: .8rem 0;
+}
+
+@media only screen and (max-width: 480px) {
+    .feature {
+        flex-direction: column;
+    }
+    .imageWrap {
+        margin: auto;
+    }
+}

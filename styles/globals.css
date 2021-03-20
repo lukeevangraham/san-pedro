@@ -136,3 +136,11 @@ a:hover, a:active {
 strong {
   font-weight: 600 !important;
 }
+
+ol li {
+  list-style-position: inside;
+}
+
+ul li {
+  list-style-position: inside;
+}

@@ -32,6 +32,14 @@
   padding: 9px 29px;
 }
 
+.redText {
+  color: #db3d2c !important;
+}
+
+.redText:hover {
+  color: #fff !important;
+}
+
 .btn:hover,
 .btn:active {
   transform: scale(1.05);

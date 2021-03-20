@@ -1,9 +1,21 @@
+.sections {
+  display: flex;
+  flex-direction: column;
+}
+
 .home {
-    /* flex-grow: 1; */
-    position: absolute;
-    top: 60%;
-    transform: translateY(-50%);
-    display: flex;
-    align-items: center;
-    padding-bottom: 2.5rem;
+  /* flex-grow: 1; */
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
+  align-items: center;
+  padding-bottom: 2.5rem;
+}
+
+/* .section:nth-child(odd) {
+  background-color: red;
+} */
+
+.section:nth-child(even) {
+  background-color: rgb(235, 235, 235);
 }

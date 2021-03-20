@@ -1,5 +1,5 @@
 import { getAllPageSlugs, getPageData, fetchAPI } from "../../lib/api";
-import Sections from "../../components/sections/sections"
+import Sections from "../../components/sections/sections";
 
 export async function getStaticPaths() {
   const paths = await getAllPageSlugs();
@@ -23,22 +23,19 @@ export async function getStaticProps({ params }) {
 }
 
 export default function Page({ pageData }) {
-
-    // Making sure we don't render the hero (first section)
+  // Making sure we don't render the hero (first section)
   let renderSections = pageData.contentSections ? (
-    <Sections
-      sections={pageData.contentSections}
-      preview={null}
-    />
+    <Sections sections={pageData.contentSections} preview={null} />
   ) : (
     <div>Loading...</div>
   );
 
-
   return (
     <>
-    {console.log("DATA: ", pageData)}
-        <div className="row">{pageData.shortName}</div>
+      {console.log("DATA: ", pageData)}
+      <section>
+        <h2>{pageData.shortName}</h2>
+      </section>
       {renderSections}
     </>
   );

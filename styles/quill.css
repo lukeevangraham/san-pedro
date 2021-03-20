@@ -1,0 +1,37 @@
+.ql-align-right {
+  text-align: right;
+}
+
+.ql-align-center {
+  text-align: center;
+}
+.ql-align-justify {
+  text-align: justify;
+}
+.ql-font-serif {
+  font-family: "Cardo", serif;
+}
+.ql-font-monospace {
+  font-family: monospace;
+}
+.ql-size-huge {
+  font-size: xx-large;
+}
+.ql-size-large {
+  font-size: larger;
+}
+.ql-size-small {
+  font-size: small;
+}
+.ql-indent-1 {
+  margin-left: 1rem;
+}
+.ql-indent-2 {
+  margin-left: 2rem;
+}
+.ql-indent-3 {
+  margin-left: 3rem;
+}
+.ql-indent-4 {
+  margin-left: 4rem;
+}

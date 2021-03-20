@@ -10,6 +10,26 @@
   flex-grow: 1;
 }
 
+.label {
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.title {
+  text-align: left;
+  padding: .5rem 0;
+}
+
+.smallText {
+  font-size: 80%;
+  margin: .5rem 0;
+}
+
+.buttons {
+  margin: 1rem 0;
+}
+
 .image {
   /* object-fit: contain; */
   flex-grow: 0;

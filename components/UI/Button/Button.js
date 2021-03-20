@@ -7,10 +7,11 @@ import CustomLink from "../../elements/custom-link";
 
 import classes from "./Button.module.css";
 
-const ButtonContent = ({ button, compact, logo }) => {
+const ButtonContent = ({ button, compact, logo, fromHeroSection }) => {
   {
     /* "block w-full lg:w-auto text-center uppercase tracking-wide font-semibold text-base md:text-sm border-2 rounded-md", */
   }
+  console.log("HERE: ", fromHeroSection)
   return (
     <div
       className={classNames(
@@ -31,6 +32,9 @@ const ButtonContent = ({ button, compact, logo }) => {
         // Specific to when the button is dark outlines
         {
           [classes.btnGhost]: button.type === "secondary",
+        },
+        {
+          [classes.redText]: button.type === "secondary" && fromHeroSection,
         },
         // Specific to when the button is fully white
         {
@@ -59,7 +63,7 @@ const ButtonContent = ({ button, compact, logo }) => {
   );
 };
 
-const ButtonLink = ({ button, appearance, compact = false, logo }) => {
+const ButtonLink = ({ button, appearance, compact = false, logo, fromHeroSection }) => {
   return (
     <CustomLink link={button} fromButton>
       <ButtonContent
@@ -67,6 +71,7 @@ const ButtonLink = ({ button, appearance, compact = false, logo }) => {
         appearance={appearance}
         compact={compact}
         logo={logo}
+        fromHeroSection={fromHeroSection}
       />
     </CustomLink>
   );
