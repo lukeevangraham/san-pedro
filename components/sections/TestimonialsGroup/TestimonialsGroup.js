@@ -18,12 +18,15 @@ const TestimonialsGroup = ({ data }) => {
       {/* <section className="text-center text-lg bg-gray-200 pt-12 pb-16"> */}
       <h2>{data.title}</h2>
       <div className="row">
-        <p className={classes.description}>{data.description}</p>
-        <CustomLink link={data.link}>
-          <span className="with-arrow text-blue-700 hover:underline">
-            {data.link.text}
-          </span>
-        </CustomLink>
+        <div className="col span-1-of-6"></div>
+        <div className="col span-4-of-6">
+          <p className={classes.description}>{data.description}</p>
+          <CustomLink link={data.link}>
+            <span className="with-arrow text-blue-700 hover:underline">
+              {data.link.text}
+            </span>
+          </CustomLink>
+        </div>
       </div>
       <div className="row" style={{ margin: "1rem auto" }}>
         <div className="col span-1-of-12" />
@@ -99,7 +102,6 @@ const TestimonialsGroup = ({ data }) => {
       )}
       {/* Logos list */}
       <div className="flex flex-row flex-wrap items-center gap-6 sm:gap-20 justify-center mt-10 px-6 sm:px-0">
-        {console.log("HERE: ", data.logos)}
         {data.logos.map((logo) => (
           <div
             className={classes.testLogo}

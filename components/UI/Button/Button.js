@@ -11,7 +11,6 @@ const ButtonContent = ({ button, compact, logo, fromHeroSection }) => {
   {
     /* "block w-full lg:w-auto text-center uppercase tracking-wide font-semibold text-base md:text-sm border-2 rounded-md", */
   }
-  console.log("HERE: ", fromHeroSection)
   return (
     <div
       className={classNames(
@@ -63,7 +62,13 @@ const ButtonContent = ({ button, compact, logo, fromHeroSection }) => {
   );
 };
 
-const ButtonLink = ({ button, appearance, compact = false, logo, fromHeroSection }) => {
+const ButtonLink = ({
+  button,
+  appearance,
+  compact = false,
+  logo,
+  fromHeroSection,
+}) => {
   return (
     <CustomLink link={button} fromButton>
       <ButtonContent
