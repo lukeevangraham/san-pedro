@@ -9,6 +9,24 @@ import classes from "./FeatureRowsGroup.module.css";
 const FeatureRowsGroup = ({ data }) => {
   return (
     <section>
+      {console.log("DATA: ", data)}
+      {data.title ? <h2>{data.title}</h2> : null}
+      {data.topText ? (
+        <div className="row">
+          <div className="col span-1-of-6"></div>
+          <div
+            className="col span-4-of-6"
+            style={{
+              margin: "auto",
+              textAlign: "center",
+              marginBottom: "1.75rem",
+              fontWeight: "200",
+            }}
+          >
+            <p>{data.topText}</p>
+          </div>
+        </div>
+      ) : null}
       {/* <div className="container flex flex-col gap-12 py-12"> */}
       <div className={`row ${classes.groupWrap}`}>
         {data.features.map((feature, index) => (

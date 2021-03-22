@@ -1,0 +1,9 @@
+.section {
+    background-image: linear-gradient(to bottom right, #a53d31, #791a10);
+    /* text-align: center; */
+}
+
+.buttonWrap {
+    display: flex;
+    justify-content: center;
+}

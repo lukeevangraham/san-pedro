@@ -23,13 +23,14 @@
   background-image: linear-gradient(to right bottom, #db3d2c, #9c2c1f);
   border: none;
   color: #fff;
-  margin-right: 15px;
+  margin: 0 7px;
 }
 
 .btnGhost {
   border: 1px solid #db3d2c;
   color: #fff;
   padding: 9px 29px;
+  margin: 0 7px;
 }
 
 .redText {

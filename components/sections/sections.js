@@ -4,8 +4,8 @@ import Verse from "./Verse/Verse";
 import LargeVideo from "./large-video";
 import FeatureColumnsGroup from "./FeatureColumnsGroup/FeatureColumnsGroup";
 import FeatureRowsGroup from "./FeatureRowsGroup/FeatureRowsGroup";
-import BottomActions from "./bottom-actions";
-import TestimonialsGroup from "./testimonials-group";
+import BottomActions from "./BottomActions/BottomActions";
+import TestimonialsGroup from "./TestimonialsGroup/TestimonialsGroup";
 import RichText from "./Rich-Text/rich-text";
 import Pricing from "./pricing";
 import classNames from "classnames";
@@ -19,7 +19,7 @@ const sectionComponents = {
   "sections.large-video": LargeVideo,
   "sections.feature-columns-group": FeatureColumnsGroup,
   "sections.feature-rows-group": FeatureRowsGroup,
-  // "sections.bottom-actions": BottomActions,
+  "sections.bottom-actions": BottomActions,
   "sections.testimonials-group": TestimonialsGroup,
   "sections.rich-text": RichText,
   "sections.pricing": Pricing,
