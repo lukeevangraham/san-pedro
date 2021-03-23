@@ -1,4 +1,5 @@
 import { getSortedMinistriesData, fetchAPI } from "../../lib/api";
+import { DefaultSeo } from "next-seo";
 import Link from "next/link";
 import Image from "next/image";
 import Verse from "../../components/sections/Verse/Verse";
@@ -20,9 +21,31 @@ export async function getStaticProps() {
   };
 }
 
-const Ministries = ({ allMinistriesData, ministriesPage }) => {
+const Ministries = ({ allMinistriesData, ministriesPage, global }) => {
   return (
     <>
+      <DefaultSeo
+        titleTemplate={`%s | ${global.metaTitleSuffix}`}
+        title={"Ministries"}
+        description={
+          "San Pedro Presbyterian Church in San Antonio, Texas, plans opportunities for spiritual growth through ministries"
+        }
+        openGraph={{
+          images: Object.values(global.metadata.shareImage.formats).map(
+            (image) => {
+              return {
+                url: getStrapiMedia(image.url),
+                width: image.width,
+                height: image.height,
+              };
+            }
+          ),
+        }}
+        twitter={{
+          cardType: global.metadata.twitterCardType,
+          handle: global.metadata.twitterUsername,
+        }}
+      />
       <section>
         <h2>Ministries</h2>
         <div className="row">

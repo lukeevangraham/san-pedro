@@ -1,4 +1,6 @@
 import { getSortedEventsData } from "../../lib/api";
+import { getStrapiMedia } from "../../lib/media";
+import { DefaultSeo } from "next-seo";
 import EventCard from "../../components/Events/EventCard/EventCard";
 // import faker from "faker";
 
@@ -53,6 +55,21 @@ const Events = ({ allEventsData, global }) => {
 
 //   console.log("events: ", fakeEvents);
   return (
+    <>
+    <DefaultSeo
+        titleTemplate={`%s | ${global.metaTitleSuffix}`}
+        title={"Events"}
+        description={"Events held and scheduled by San Pedro Presbyterian Church"}
+        openGraph={{
+          images: Object.values(global.metadata.shareImage.formats).map((image) => {
+            return {
+              url: getStrapiMedia(image.url),
+              width: image.width,
+              height: image.height,
+            };
+          }),
+        }}
+      />
     <section>
       <h2>Current Events</h2>
       <div className="row">
@@ -64,6 +81,7 @@ const Events = ({ allEventsData, global }) => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

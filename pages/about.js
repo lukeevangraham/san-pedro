@@ -1,3 +1,4 @@
+import { DefaultSeo } from "next-seo";
 import Layout from "../hoc/Layout/Layout";
 import Image from "next/image";
 import Markdown from "react-markdown/with-html";
@@ -20,6 +21,24 @@ export async function getStaticProps() {
 const About = ({ global, about }) => {
   return (
     <>
+    <DefaultSeo
+        titleTemplate={`%s | ${global.metaTitleSuffix}`}
+        title={about.metadata.metaTitle}
+        description={about.metadata.metaDescription}
+        openGraph={{
+          images: Object.values(about.metadata.shareImage.formats).map((image) => {
+            return {
+              url: getStrapiMedia(image.url),
+              width: image.width,
+              height: image.height,
+            };
+          }),
+        }}
+        twitter={{
+          cardType: about.metadata.twitterCardType,
+          handle: about.metadata.twitterUsername,
+        }}
+      />
       <section>
         <h2>{about.topText}</h2>
         <div

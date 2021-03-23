@@ -1,9 +1,22 @@
 import { IoLocation, IoCall, IoMail, IoGlobe } from "react-icons/io5";
 import Button from "../components/UI/Button/Button";
+import { fetchAPI } from "../lib/api";
+import { DefaultSeo } from "next-seo";
+import { getStrapiMedia } from "../lib/media";
 
 import classes from "../styles/contact.module.css";
 
-const Contact = (props) => {
+export async function getStaticProps() {
+  const contact = await fetchAPI("/contact");
+  return {
+    props: {
+      contact,
+    },
+    revalidate: 1,
+  };
+}
+
+const Contact = ({ contact, global }) => {
   const sendMessage = async (event) => {
     event.preventDefault();
 
@@ -30,6 +43,26 @@ const Contact = (props) => {
 
   return (
     <>
+      <DefaultSeo
+        titleTemplate={`%s | ${global.metaTitleSuffix}`}
+        title={contact.metadata.metaTitle}
+        description={contact.metadata.metaDescription}
+        openGraph={{
+          images: Object.values(contact.metadata.shareImage.formats).map(
+            (image) => {
+              return {
+                url: getStrapiMedia(image.url),
+                width: image.width,
+                height: image.height,
+              };
+            }
+          ),
+        }}
+        twitter={{
+          cardType: contact.metadata.twitterCardType,
+          handle: contact.metadata.twitterUsername,
+        }}
+      />
       <section>
         <h2>Contact</h2>
         <div className={`row ${classes.contactPage}`}>

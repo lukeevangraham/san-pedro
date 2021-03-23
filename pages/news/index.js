@@ -1,11 +1,11 @@
 import { getSortedNewsData, fetchAPI } from "../../lib/api";
+import { DefaultSeo } from "next-seo";
+import { getStrapiMedia } from "../../lib/media";
 
 // import faker from "faker";
 import NewsCard from "../../components/News/NewsCard/NewsCard";
-import Layout from "../../hoc/Layout/Layout";
-import { IoFileTrayStackedSharp } from "react-icons/io5";
 
-import classes from "./index.module.css"
+import classes from "./index.module.css";
 
 export async function getStaticProps() {
   const allNewsData = await getSortedNewsData();
@@ -51,18 +51,42 @@ const News = ({ allNewsData, global }) => {
 
   // console.log("article: ", fakeArticles);
   return (
-    <section>
-      <h2>Current News</h2>
-      {/* <h2>Here are the news pages:</h2> */}
-      <div className="row">
-        <div className={classes.grid}>
-          {/* {fakeArticles.map((article) => ( */}
-        {allNewsData.map((article) => (
-            <NewsCard article={article} key={article.id} />
-        ))}
+    <>
+      <DefaultSeo
+        titleTemplate={`%s | ${global.metaTitleSuffix}`}
+        title={"News"}
+        description={
+          "Keep up with the latest news from San Pedro Presbyterian Church in San Antonio, Texas"
+        }
+        openGraph={{
+          images: Object.values(global.metadata.shareImage.formats).map(
+            (image) => {
+              return {
+                url: getStrapiMedia(image.url),
+                width: image.width,
+                height: image.height,
+              };
+            }
+          ),
+        }}
+        twitter={{
+          cardType: global.metadata.twitterCardType,
+          handle: global.metadata.twitterUsername,
+        }}
+      />
+      <section>
+        <h2>Current News</h2>
+        {/* <h2>Here are the news pages:</h2> */}
+        <div className="row">
+          <div className={classes.grid}>
+            {/* {fakeArticles.map((article) => ( */}
+            {allNewsData.map((article) => (
+              <NewsCard article={article} key={article.id} />
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

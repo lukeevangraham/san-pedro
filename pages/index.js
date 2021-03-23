@@ -44,8 +44,8 @@ export default function Home(props) {
       </Head>
       <DefaultSeo
         titleTemplate={`%s | ${props.global.metaTitleSuffix}`}
-        title={"Page"}
-        discription={metadata.metaDescription}
+        title={"Home"}
+        description={metadata.metaDescription}
         openGraph={{
           images: Object.values(metadata.shareImage.formats).map((image) => {
             return {

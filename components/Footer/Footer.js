@@ -27,17 +27,21 @@ const Footer = ({ data }) => (
         <div className="row">
           <div className={`col span-1-of-${data.columns.length + 1}`}>
             <div className={classes.column}>
-              <div className={classes.horiLogo}>
-                <Image
-                  src={getStrapiMedia(data.logo.url)}
-                  width={75}
-                  height={46}
-                />
-                <div className={classes.logoText}>
-                  <div>San Pedro</div>
-                  <div>Presbyterian Church</div>
-                </div>
-              </div>
+              <Link href="/">
+                <a>
+                  <div className={classes.horiLogo}>
+                    <Image
+                      src={getStrapiMedia(data.logo.url)}
+                      width={75}
+                      height={46}
+                    />
+                    <div className={classes.logoText}>
+                      <div>San Pedro</div>
+                      <div>Presbyterian Church</div>
+                    </div>
+                  </div>
+                </a>
+              </Link>
               <ul>
                 <li>
                   <IoLocation /> {data.streetAddress}
@@ -80,7 +84,7 @@ const Footer = ({ data }) => (
         <div className={["row", classes.bottomRow].join(" ")}>
           <div className={`col span-2-of-3 ${classes.copyrightBlock}`}>
             <div>
-              Copyright &copy; {new Date().getFullYear()} All rights reserved 
+              Copyright &copy; {new Date().getFullYear()} All rights reserved
             </div>
             <div>{" | "}</div>
             <div>

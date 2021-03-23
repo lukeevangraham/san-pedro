@@ -1,4 +1,6 @@
 import { fetchAPI } from "../lib/api";
+import { DefaultSeo } from "next-seo";
+import { getStrapiMedia } from "../lib/media";
 import Image from "next/image";
 import Button from "../components/UI/Button/Button";
 import Markdown from "react-markdown";
@@ -27,6 +29,26 @@ const Giving = ({ global, giving }) => {
 
   return (
     <>
+    <DefaultSeo
+        titleTemplate={`%s | ${global.metaTitleSuffix}`}
+        title={giving.metadata.metaTitle}
+        description={giving.metadata.metaDescription}
+        openGraph={{
+          images: Object.values(giving.metadata.shareImage.formats).map(
+            (image) => {
+              return {
+                url: getStrapiMedia(image.url),
+                width: image.width,
+                height: image.height,
+              };
+            }
+          ),
+        }}
+        twitter={{
+          cardType: giving.metadata.twitterCardType,
+          handle: giving.metadata.twitterUsername,
+        }}
+      />
       <section style={{ background: "#fff" }}>
         <h2>{giving.givingPageTitle}</h2>
         <div className="row">

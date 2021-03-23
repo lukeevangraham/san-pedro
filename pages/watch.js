@@ -1,6 +1,8 @@
 import Markdown from "react-markdown/with-html";
 import Verse from "../components/sections/Verse/Verse";
 import { fetchAPI } from "../lib/api";
+import { getStrapiMedia } from "../lib/media";
+import { DefaultSeo } from "next-seo";
 
 import classes from "../styles/watch.module.css";
 
@@ -14,8 +16,26 @@ export async function getStaticProps() {
   };
 }
 
-const Watch = ({ watch }) => (
+const Watch = ({ watch, global }) => (
   <>
+  <DefaultSeo
+        titleTemplate={`%s | ${global.metaTitleSuffix}`}
+        title={watch.metadata.metaTitle}
+        description={watch.metadata.metaDescription}
+        openGraph={{
+          images: Object.values(watch.metadata.shareImage.formats).map((image) => {
+            return {
+              url: getStrapiMedia(image.url),
+              width: image.width,
+              height: image.height,
+            };
+          }),
+        }}
+        twitter={{
+          cardType: watch.metadata.twitterCardType,
+          handle: watch.metadata.twitterUsername,
+        }}
+      />
     <section style={{ textAlign: "center" }}>
       <h2>{watch.pageTitle}</h2>
       <div className="row">
