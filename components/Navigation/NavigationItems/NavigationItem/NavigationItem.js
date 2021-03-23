@@ -12,11 +12,6 @@ const navigationItem = (props) => {
     router.pathname.includes(props.link) ? classes.active : null,
   ];
 
-  console.log("PATH: ", router.pathname)
-  console.log("LINK: ", props.link)
-
-  console.log("TEST: ", router.pathname.includes(props.link))
-
 
 
   return (
