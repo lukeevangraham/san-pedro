@@ -18,7 +18,6 @@ const Pages = ({ allPageData, global }) => (
     <section>
       <div className="row">
         <div>All Pages</div>
-        {console.log("data: ", allPageData)}
         {allPageData.map((page) => (
           <div key={page.id}>{page.shortName}</div>
         ))}

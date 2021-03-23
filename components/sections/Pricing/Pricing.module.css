@@ -4,6 +4,7 @@
   background-image: linear-gradient(to bottom right, rgb(228, 228, 228), rgb(245, 245, 245));
   padding: .6rem;
   border-radius: 5%;
+  line-height: 1.5;
 }
 
 .price {
@@ -25,4 +26,8 @@
 .listItem {
   display: flex;
   align-items: center;
+}
+
+.listItem svg {
+  margin: 0 1rem 0 .5rem;
 }

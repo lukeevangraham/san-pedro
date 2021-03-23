@@ -20,7 +20,6 @@ const Contact = (props) => {
     });
 
     const result = await res.json();
-    console.log("res: ", result);
     // const message = {
     //   name: event.target.name.value,
     //   email: event.target.email.value,

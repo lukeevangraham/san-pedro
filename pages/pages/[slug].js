@@ -3,7 +3,6 @@ import Sections from "../../components/sections/sections";
 
 export async function getStaticPaths() {
   const paths = await getAllPageSlugs();
-  console.log("paths: ", paths);
   return {
     paths,
     fallback: false,
@@ -32,7 +31,6 @@ export default function Page({ pageData }) {
 
   return (
     <>
-      {console.log("DATA: ", pageData)}
       <section style={{ paddingBottom: 0 }}>
         <h2>{pageData.shortName}</h2>
       </section>

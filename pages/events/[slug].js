@@ -9,7 +9,6 @@ import classes from "./slug.module.css";
 
 export async function getStaticPaths() {
   const paths = await getAllEventsSlugs();
-  console.log("paths: ", paths);
   return {
     paths,
     fallback: false,
