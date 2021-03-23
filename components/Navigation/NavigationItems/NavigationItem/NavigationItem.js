@@ -9,7 +9,7 @@ const navigationItem = (props) => {
   let attachedClasses = [
     classes.NavigationItem,
     props.sticky ? classes.sticky : null,
-    router.pathname.includes(props.link) ? classes.active : null,
+    router.pathname.startsWith(props.link) ? classes.active : null,
   ];
 
 
