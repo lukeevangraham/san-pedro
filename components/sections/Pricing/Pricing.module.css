@@ -1,0 +1,28 @@
+.planBox {
+  width: 90%;
+  margin-left: 5%;
+  background-image: linear-gradient(to bottom right, rgb(228, 228, 228), rgb(245, 245, 245));
+  padding: .6rem;
+  border-radius: 5%;
+}
+
+.price {
+  margin-top: .75rem;
+  font-size: 300%;
+  font-weight: 200;
+  color: #90291D;
+}
+
+.price span {
+  font-size: 50%;
+}
+
+.planBox ul {
+  margin-top: .75rem;
+  list-style: none;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+}

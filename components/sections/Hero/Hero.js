@@ -1,6 +1,7 @@
 // import Markdown from "react-markdown";
 // import ButtonLink from "../../elements/button-link";
-import Image from "../../elements/image";
+// import Image from "../../elements/image";
+import Image from "next/image";
 import Button from "../../UI/Button/Button";
 // import Image from "next/image"
 // import { getButtonAppearance } from "utils/button";
@@ -14,7 +15,7 @@ const Hero = ({ data }) => {
         {/* <div className="col span-1-of-2"> */}
         {/* <section className="container flex flex-col md:flex-row items-center justify-between py-12"> */}
         {/* Left column for content */}
-        <div className={`flex-1 sm:pr-8 ${classes.leftCol}`}>
+        <div className={`col span-1-of-2 ${classes.leftCol}`}>
           {/* Hero section label */}
           <p className={classes.label}>{data.label}</p>
           {/* Big title */}
@@ -46,10 +47,17 @@ const Hero = ({ data }) => {
             objectPosition="right top"
             className="flex-shrink-0 object-contain w-full md:w-6/12 mt-6 md:mt-0"
           /> */}
-        <Image
-          media={data.picture}
-          className={`flex-shrink-0 object-contain w-full md:w-6/12 mt-6 md:mt-0 ${classes.image}`}
-        />
+        <div className={`col span-1-of-2`}>
+          <div
+            style={{
+              width: "100%",
+              height: "383px",
+              position: "relative",
+            }}
+          >
+            <Image src={data.picture.url} layout="fill" objectFit="contain" />
+          </div>
+        </div>
       </div>
       {/* </div> */}
     </section>

@@ -5,6 +5,7 @@
   text-decoration: none;
   border-radius: 200px;
   transition: all 0.2s;
+  text-align: center;
 }
 
 .btnSmall {

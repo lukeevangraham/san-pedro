@@ -75,3 +75,13 @@
 .selectedTest {
   background-color: #90291d;
 }
+
+@media only screen and (max-width: 480px) {
+  .testimonyWrap {
+    flex-direction: column;
+  }
+  .bigImageWrap {
+    width: 100%;
+    height: 350px;
+  }
+}

@@ -7,7 +7,7 @@ import FeatureRowsGroup from "./FeatureRowsGroup/FeatureRowsGroup";
 import BottomActions from "./BottomActions/BottomActions";
 import TestimonialsGroup from "./TestimonialsGroup/TestimonialsGroup";
 import RichText from "./Rich-Text/rich-text";
-import Pricing from "./pricing";
+import Pricing from "./Pricing/Pricing";
 import classNames from "classnames";
 
 import classes from "./sections.module.css";
