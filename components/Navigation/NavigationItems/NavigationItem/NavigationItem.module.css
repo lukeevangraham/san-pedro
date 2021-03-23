@@ -37,7 +37,7 @@
     color: #555;
   }
 
-  .NavigationItem a:hover,
+  .NavigationItem:not(.active) a:hover,
   .NavigationItem a:active {
     border-bottom: 2px solid #db3d2c;
   }
