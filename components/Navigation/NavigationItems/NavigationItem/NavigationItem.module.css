@@ -43,9 +43,10 @@
   }
 }
 
-.active {
-  border-bottom: 2px solid #db3d2c;
-  padding-top: 2px;
-  transition: all .2s;
+@media (min-width: 768px) {
+  .active {
+    border-bottom: 2px solid #db3d2c;
+    padding-top: 2px;
+    transition: all 0.2s;
+  }
 }
-
