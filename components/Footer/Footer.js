@@ -79,10 +79,15 @@ const Footer = ({ data }) => (
         </div>
         <div className={["row", classes.bottomRow].join(" ")}>
           <div className={`col span-2-of-3 ${classes.copyrightBlock}`}>
-            Copyright &copy; {new Date().getFullYear()} All rights reserved |
-            <a href="http://grahamwebdesign.com" target="_blank">
-              Graham Web Design
-            </a>
+            <div>
+              Copyright &copy; {new Date().getFullYear()} All rights reserved 
+            </div>
+            <div>{" | "}</div>
+            <div>
+              <a href="http://grahamwebdesign.com" target="_blank">
+                Graham Web Design
+              </a>
+            </div>
           </div>
           <div className="col span-1-of-3">
             <div className={classes.socialIcons}>

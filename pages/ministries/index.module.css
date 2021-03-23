@@ -1,3 +1,8 @@
+.topInfo {
+  display: flex;
+  align-items: center;
+}
+
 .ministriesContainer {
   margin: 2rem auto;
   display: flex;
@@ -53,4 +58,10 @@
   .ministry {
     margin: 0.25rem;
   }
+}
+
+@media only screen and (max-width: 480px) {
+.topInfo {
+  flex-direction: column;
+}
 }

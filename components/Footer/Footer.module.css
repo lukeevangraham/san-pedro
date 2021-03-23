@@ -55,6 +55,12 @@
 
 .copyrightBlock {
   opacity: 0.7;
+  display: flex;
+}
+
+.copyrightBlock div:first-child {
+/* border-right: 1px solid #fff; */
+margin-right: .1rem;
 }
 
 .copyrightBlock a:link, .copyrightBlock a:visited {
@@ -111,11 +117,16 @@
   }
   .socialIcons ul {
     justify-content: center;
+    margin-top: .2rem;
   }
   .socialIcons ul li a:link, .socialIcons ul li a:visited {
     margin: 0 .5rem;
   }
   .copyrightBlock {
     text-align: center;
+    flex-direction: column;
+  }
+  .copyrightBlock div:nth-child(2) {
+    display: none;
   }
 }
