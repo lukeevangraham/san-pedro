@@ -13,7 +13,6 @@ import classes from "./slug.module.css";
 
 export async function getStaticPaths() {
   const paths = await getAllNewsSlugs();
-  console.log("paths: ", paths);
   return {
     paths,
     fallback: false,

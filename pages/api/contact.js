@@ -23,7 +23,6 @@ export default function handler(req, res) {
     ${req.body.message}`,
     });
 
-    console.log("Message sent: %s", info.messageId);
 
     transporter.verify(function (error, success) {
       if (error) {
