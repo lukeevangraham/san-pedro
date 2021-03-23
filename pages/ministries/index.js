@@ -25,10 +25,9 @@ const Ministries = ({ allMinistriesData, ministriesPage }) => {
     <>
       <section>
         <h2>Ministries</h2>
-        <div className="row">
+        <div className="row" style={{ display: "flex", alignItems: "center" }}>
           <div className="col span-1-of-8" />
           <div
-            className="col span-4-of-8"
             className={`col span-4-of-8 box ${classes.description}`}
           >
             <div dangerouslySetInnerHTML={{ __html: ministriesPage.topText }} />

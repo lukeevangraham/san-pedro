@@ -39,6 +39,7 @@
   /* margin-left: auto !important;
     margin: auto;
     float: unset; */
+  margin: auto inherit;
   text-align: justify;
   line-height: 1.5;
 }
