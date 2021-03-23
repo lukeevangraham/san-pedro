@@ -125,7 +125,7 @@ margin-right: .1rem;
   }
   .copyrightBlock {
     text-align: center;
-    flex-direction: column;
+    flex-direction: column !important;
   }
   .copyrightBlock div:nth-child(2) {
     display: none;
