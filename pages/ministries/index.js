@@ -25,23 +25,25 @@ const Ministries = ({ allMinistriesData, ministriesPage }) => {
     <>
       <section>
         <h2>Ministries</h2>
-        <div className="row" style={{ display: "flex", alignItems: "center" }}>
-          <div className="col span-1-of-8" />
-          <div
-            className={`col span-4-of-8 box ${classes.description}`}
-          >
-            <div dangerouslySetInnerHTML={{ __html: ministriesPage.topText }} />
-          </div>
-          <div className={`col span-2-of-8 box`}>
-            {ministriesPage.topImage ? (
-              <Image
-                src={getStrapiMedia(ministriesPage.topImage.url)}
-                width={272}
-                height={310}
-                layout="responsive"
-                className={classes.leaderPhoto}
+        <div className="row">
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <div className="col span-1-of-8" />
+            <div className={`col span-4-of-8 box ${classes.description}`}>
+              <div
+                dangerouslySetInnerHTML={{ __html: ministriesPage.topText }}
               />
-            ) : null}
+            </div>
+            <div className={`col span-2-of-8 box`}>
+              {ministriesPage.topImage ? (
+                <Image
+                  src={getStrapiMedia(ministriesPage.topImage.url)}
+                  width={272}
+                  height={310}
+                  layout="responsive"
+                  className={classes.leaderPhoto}
+                />
+              ) : null}
+            </div>
           </div>
         </div>
         <div className={`row ${classes.ministriesContainer}`}>

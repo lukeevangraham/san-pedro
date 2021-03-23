@@ -39,7 +39,8 @@
   /* margin-left: auto !important;
     margin: auto;
     float: unset; */
-  margin: auto inherit;
+  /* padding-top: 50px;
+  padding-bottom: 50px; */
   text-align: justify;
   line-height: 1.5;
 }
