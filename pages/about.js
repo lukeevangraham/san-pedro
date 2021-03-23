@@ -134,14 +134,12 @@ const About = ({ global, about }) => {
             <div style={{ height: "70px", width: "70px", position: "relative", margin: "0 auto .5rem auto" }}>
               <Image src={getStrapiMedia(ministry.icon.url)} layout="fill" />
             </div>
-            {console.log("HERE: ", ministry)}
               <h3>{ministry.title}</h3>
               <p>{ministry.description}</p>
             </div>
           ))}
         </div>
       </section>
-      {console.log(about)}
     </>
   );
 };

@@ -4,7 +4,7 @@
 }
 
 .NavigationItem a {
-  color: #90291D;
+  color: #90291d;
   text-decoration: none;
   text-transform: uppercase;
   width: 100%;
@@ -13,7 +13,7 @@
 
 .NavigationItem a:hover,
 .NavigationItem a:active {
-  color: #DB3D2C;
+  color: #db3d2c;
   transition: color 0.2s;
 }
 
@@ -39,6 +39,13 @@
 
   .NavigationItem a:hover,
   .NavigationItem a:active {
-    border-bottom: 2px solid #DB3D2C;
+    border-bottom: 2px solid #db3d2c;
   }
 }
+
+.active {
+  border-bottom: 2px solid #db3d2c;
+  padding-top: 2px;
+  transition: all .2s;
+}
+
