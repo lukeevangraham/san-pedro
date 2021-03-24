@@ -37,17 +37,21 @@ export default function Page({ pageData, global }) {
         titleTemplate={`%s | ${global.metaTitleSuffix}`}
         title={pageData.metadata.metaTitle}
         description={pageData.metadata.metaDescription}
-        openGraph={{
-          images: Object.values(pageData.metadata.shareImage.formats).map(
-            (image) => {
-              return {
-                url: getStrapiMedia(image.url),
-                width: image.width,
-                height: image.height,
-              };
-            }
-          ),
-        }}
+        openGraph={
+          pageData.metadata.shareImage && pageData.metadata.shareImage.formats
+            ? {
+                images: Object.values(pageData.metadata.shareImage.formats).map(
+                  (image) => {
+                    return {
+                      url: getStrapiMedia(image.url),
+                      width: image.width,
+                      height: image.height,
+                    };
+                  }
+                ),
+              }
+            : null
+        }
         twitter={{
           cardType: pageData.metadata.twitterCardType,
           handle: pageData.metadata.twitterUsername,
