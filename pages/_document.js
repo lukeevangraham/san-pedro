@@ -24,12 +24,12 @@ class MyDocument extends Document {
         `,
             }}
           />
-          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          {/* <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
             rel="preload"
             href="https://fonts.googleapis.com/css2?family=Cardo&family=Source+Sans+Pro:wght@200;400;600&family=Bodoni+Moda:wght@500&display=swap"
             rel="stylesheet"
-          />
+          /> */}
         </Head>
         <body>
           <Main />

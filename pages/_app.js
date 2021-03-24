@@ -1,14 +1,16 @@
+import "@fontsource/cardo";
+import "@fontsource/source-sans-pro";
 import "../styles/globals.css";
 import "../styles/grid.css";
 import "../styles/queries.css";
-import "../styles/quill.css"
+import "../styles/quill.css";
 
 import App from "next/app";
 import Layout from "../hoc/Layout/Layout";
 import { createContext } from "react";
 import { getStrapiMedia } from "../lib/media";
 import { fetchAPI } from "../lib/api";
-import { useRouter } from "next/router"
+import { useRouter } from "next/router";
 
 // Store Strapi Global object in context
 export const GlobalContext = createContext({});
@@ -18,7 +20,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <GlobalContext.Provider value={global}>
-      <Layout global={global} home={useRouter().pathname === '/'}>
+      <Layout global={global} home={useRouter().pathname === "/"}>
         {/* {console.log("GLOBAL: ", global)} */}
         <Component {...pageProps} />
       </Layout>

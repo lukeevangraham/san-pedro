@@ -8,6 +8,8 @@
     "start": "next start -p 3058"
   },
   "dependencies": {
+    "@fontsource/cardo": "^4.2.2",
+    "@fontsource/source-sans-pro": "^4.2.2",
     "classnames": "^2.2.6",
     "faker": "^5.4.0",
     "next": "10.0.5",
