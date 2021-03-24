@@ -24,8 +24,8 @@ const NewsCard = ({ article }) => {
   return (
     <div className={classes.newsCard}>
       <Fade>
-        <Link aria-label={article.title} href={`/news/${article.slug}`}>
-          <a>
+        <Link href={`/news/${article.slug}`}>
+          <a aria-label={article.title}>
             <div className={classes.ratioWrapper}>
               <Image
                 src={getStrapiMedia(article.image.url)}
