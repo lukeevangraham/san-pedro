@@ -24,7 +24,7 @@ const NewsCard = ({ article }) => {
   return (
     <div className={classes.newsCard}>
       <Fade>
-        <Link href={`/news/${article.slug}`}>
+        <Link aria-label={article.title} href={`/news/${article.slug}`}>
           <a>
             <div className={classes.ratioWrapper}>
               <Image
