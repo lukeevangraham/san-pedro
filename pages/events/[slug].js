@@ -45,6 +45,7 @@ export default function Event({ eventData, global }) {
                     alt={eventData.eventImage.alternativeText}
                     layout="fill"
                     objectFit="cover"
+                    priority={true}
                   />
                 ) : null}
               </div>
@@ -58,7 +59,7 @@ export default function Event({ eventData, global }) {
                     </div>
                   </Fade>
                   <div className={classes.topInfo}>
-                    <Fade >
+                    <Fade>
                       <TopInfo event={eventData} />
                     </Fade>
                   </div>
