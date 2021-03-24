@@ -57,6 +57,7 @@ const About = ({ global, about }) => {
               height={470}
               className={classes.topImage}
               priority={true}
+              layout="intrinsic"
             />
           </div>
           <div className={`col span-1-of-2 box ${classes.historyText}`}>
