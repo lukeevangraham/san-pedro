@@ -89,7 +89,7 @@ const Footer = ({ data }) => (
             </div>
             <div>{" | "}</div>
             <div>
-              <a href="http://grahamwebdesign.com" target="_blank">
+              <a href="http://grahamwebdesign.com" target="_blank" rel="noopener">
                 Graham Web Design
               </a>
             </div>
@@ -101,6 +101,7 @@ const Footer = ({ data }) => (
                   <a aria-label="San Pedro Presbyterian Church Facebook Page"
                     href="https://www.facebook.com/SanPedroPresbyterianChurch"
                     target="_blank"
+                    rel="noopener"
                   >
                     <IoLogoFacebook />
                   </a>
@@ -110,6 +111,7 @@ const Footer = ({ data }) => (
                   aria-label="San Pedro Presbyterian Church LinkedIn Page"
                     href="https://www.linkedin.com/company/san-pedro-presbyterian-church/"
                     target="_blank"
+                    rel="noopener"
                   >
                     <IoLogoLinkedin />
                   </a>
@@ -119,6 +121,7 @@ const Footer = ({ data }) => (
                   aria-label="San Pedro Presbyterian Church YouTube Channel"
                     href="https://www.youtube.com/channel/UCvIdCpNuCMjS0JAkHvZqbkA"
                     target="_blank"
+                    rel="noopener"
                   >
                     <IoLogoYoutube />
                   </a>
