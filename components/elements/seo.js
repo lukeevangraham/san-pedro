@@ -4,13 +4,13 @@ import PropTypes from "prop-types";
 import { getStrapiMedia } from "../../lib/media";
 // import { mediaPropTypes } from "utils/types";
 
-const Seo = ({ metadata, global }) => {
+const Seo = ({ metadata, global, referer }) => {
   // Prevent errors if no metadata was set
   if (!metadata)
     return (
       <DefaultSeo
         titleTemplate={`%s | ${global.metaTitleSuffix}`}
-        title={"News"}
+        title={referer}
         description={
           "Keep up with the latest news from San Pedro Presbyterian Church in San Antonio, Texas"
         }

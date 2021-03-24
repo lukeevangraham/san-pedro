@@ -28,11 +28,11 @@ export async function getStaticProps({ params }) {
   };
 }
 
-export default function Event({ eventData }) {
+export default function Event({ eventData, global }) {
   keepEventsCurrent([eventData]);
   return (
     <>
-      <Seo metadata={eventData.metadata} />
+      <Seo metadata={eventData.metadata} global={global} referer="Events" />
       <section style={{ padding: 0 }}>
         <div className={["row", classes.event].join(" ")}>
           <h1>Upcoming Event</h1>
