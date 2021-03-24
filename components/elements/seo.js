@@ -1,11 +1,46 @@
 import { NextSeo } from "next-seo";
+import { DefaultSeo } from "next-seo";
 import PropTypes from "prop-types";
 import { getStrapiMedia } from "../../lib/media";
 // import { mediaPropTypes } from "utils/types";
 
-const Seo = ({ metadata }) => {
+const Seo = ({ metadata, global }) => {
   // Prevent errors if no metadata was set
-  if (!metadata) return null;
+  if (!metadata)
+    return (
+      <DefaultSeo
+        titleTemplate={`%s | ${global.metaTitleSuffix}`}
+        title={"News"}
+        description={
+          "Keep up with the latest news from San Pedro Presbyterian Church in San Antonio, Texas"
+        }
+        openGraph={
+          global.metadata &&
+          global.metadata.shareImage &&
+          global.metadata.shareImage.formats
+            ? {
+                images: Object.values(global.metadata.shareImage.formats).map(
+                  (image) => {
+                    return {
+                      url: getStrapiMedia(image.url),
+                      width: image.width,
+                      height: image.height,
+                    };
+                  }
+                ),
+              }
+            : null
+        }
+        twitter={
+          global.metadata && global.metadata.twitter
+            ? {
+                cardType: global.metadata.twitterCardType,
+                handle: global.metadata.twitterUsername,
+              }
+            : null
+        }
+      />
+    );
 
   return (
     <NextSeo

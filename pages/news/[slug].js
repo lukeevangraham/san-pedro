@@ -8,7 +8,7 @@ import { getStrapiMedia } from "../../lib/media";
 import { getAllNewsSlugs, getNewsData, fetchAPI } from "../../lib/api";
 import { IoPerson, IoLogoFacebook } from "react-icons/io5";
 import Head from "next/head";
-import Fade from "react-reveal/Fade";
+import Pulse from "react-reveal/Pulse";
 
 import classes from "./slug.module.css";
 
@@ -35,12 +35,12 @@ export async function getStaticProps({ params }) {
 export default function News(props) {
   return (
     <>
-      <Seo metadata={props.newsData.metadata} />
+      <Seo metadata={props.newsData.metadata} global={props.global} />
       {/* <section style={{ backgroundColor: "rgb(252, 252, 252)" }}> */}
       <section style={{ padding: 0 }}>
         <div className={["row", classes.article].join(" ")}>
           <div className={classes.topInfo}>
-            <Fade top>
+            <Pulse>
               <div className={classes.dateBox}>
                 <div className={classes.day}>
                   {new Date(props.newsData.published_at).toLocaleDateString(
@@ -59,7 +59,7 @@ export default function News(props) {
                   )}
                 </div>
               </div>
-            </Fade>
+            </Pulse>
             <div className={classes.authorAndTitle}>
               <div className={classes.title}>{props.newsData.title}</div>
 
