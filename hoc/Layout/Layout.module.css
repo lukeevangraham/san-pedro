@@ -9,11 +9,11 @@
   /* display: flex;
   flex-direction: column; */
   /* justify-content: center; */
+  transition: height 999999s;
 }
 
 .Fixed img {
   position: fixed !important;
-  transition: height 999999s;
 }
 
 .heroBgImage {
