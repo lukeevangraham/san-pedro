@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import Head from "next/head";
 import { Waypoint } from "react-waypoint";
+import { getStrapiMedia } from "../../lib/media";
 
 import Image from "next/image";
 import classes from "./Layout.module.css";
@@ -28,6 +30,9 @@ const Layout = (props) => {
 
   return (
     <Aux>
+      <Head>
+        <link rel="icon" href={getStrapiMedia(props.global.favicon.url)} />
+      </Head>
       {notificationBanner && bannerIsShown && (
         <NotificationBanner
           data={notificationBanner}

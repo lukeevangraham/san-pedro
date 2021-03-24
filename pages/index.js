@@ -39,9 +39,9 @@ export default function Home(props) {
 
   return (
     <>
-      <Head>
+      {/* <Head>
         <link rel="icon" href={getStrapiMedia(props.global.favicon.url)} />
-      </Head>
+      </Head> */}
       <DefaultSeo
         titleTemplate={`%s | ${props.global.metaTitleSuffix}`}
         title={"Home"}
