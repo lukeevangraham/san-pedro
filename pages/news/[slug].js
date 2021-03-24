@@ -82,6 +82,7 @@ export default function News(props) {
               layout="fill"
               objectFit="cover"
               alt={props.newsData.image.alternativeText}
+              priority={true}
             />
           </div>
           {/* <img
