@@ -32,6 +32,7 @@ const Footer = ({ data }) => (
                   <div className={classes.horiLogo}>
                     <Image
                       src={getStrapiMedia(data.logo.url)}
+                      alt={data.logo.alternativeText}
                       width={75}
                       height={46}
                     />

@@ -62,6 +62,7 @@ export default function Ministry({ ministryData }) {
             {ministryData.leaderPhoto ? (
               <Image
                 src={getStrapiMedia(ministryData.leaderPhoto.url)}
+                alt={ministryData.leaderPhoto.alternativeText}
                 width={272}
                 height={310}
                 layout="responsive"

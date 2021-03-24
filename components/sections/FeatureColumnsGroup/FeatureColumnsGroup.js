@@ -41,6 +41,7 @@ const FeatureColumnsGroup = ({ data }) => {
               >
                 <Image
                   src={feature.icon.url}
+                  alt={feature.icon.alternativeText}
                   layout="fill"
                   objectFit="contain"
                 />

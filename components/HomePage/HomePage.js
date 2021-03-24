@@ -95,6 +95,7 @@ const HomePage = ({ data }) => {
                 {/* <img src={getStrapiMedia(photo.url)} alt=""/> */}
                 <Image
                   src={getStrapiMedia(photo.url)}
+                  alt={photo.alternativeText}
                   width={800}
                   height={600}
                 />

@@ -55,7 +55,7 @@ const Hero = ({ data }) => {
               position: "relative",
             }}
           >
-            <Image src={data.picture.url} layout="fill" objectFit="contain" />
+            <Image src={data.picture.url} layout="fill" objectFit="contain" alt={data.picture.alternativeText} />
           </div>
         </div>
       </div>

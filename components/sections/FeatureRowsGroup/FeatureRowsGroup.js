@@ -62,6 +62,7 @@ const FeatureRowsGroup = ({ data }) => {
                   <div className={classes.imageWrap}>
                     <Image
                       src={feature.media.url}
+                      alt={feature.media.alternativeText}
                       layout="fill"
                       objectFit="contain"
                     />

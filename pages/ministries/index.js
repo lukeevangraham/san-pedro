@@ -61,6 +61,7 @@ const Ministries = ({ allMinistriesData, ministriesPage, global }) => {
               {ministriesPage.topImage ? (
                 <Image
                   src={getStrapiMedia(ministriesPage.topImage.url)}
+                  alt={ministriesPage.topImage.alternativeText}
                   width={272}
                   height={310}
                   layout="responsive"
@@ -78,6 +79,7 @@ const Ministries = ({ allMinistriesData, ministriesPage, global }) => {
                 <a className={classes.ministry}>
                   <Image
                     src={ministry.icon.url}
+                    alt={ministry.icon.alternativeText}
                     width={80}
                     height={80}
                     className={classes.ministryIcon}

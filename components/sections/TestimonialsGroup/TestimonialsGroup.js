@@ -37,6 +37,7 @@ const TestimonialsGroup = ({ data }) => {
             <div className={classes.bigImageWrap}>
               <Image
                 src={getStrapiMedia(selectedTestimonial.picture.url)}
+                alt={selectedTestimonial.picture.alternativeText}
                 layout="fill"
                 objectFit="cover"
                 className="w-full md:w-4/12 object-cover flex-shrink-0"
@@ -48,6 +49,7 @@ const TestimonialsGroup = ({ data }) => {
                 <div className={classes.testLogo}>
                   <Image
                     src={getStrapiMedia(selectedTestimonial.logo.url)}
+                    alt={selectedTestimonial.logo.alternativeText}
                     layout="fill"
                     objectFit="contain"
                   />
@@ -110,6 +112,7 @@ const TestimonialsGroup = ({ data }) => {
           >
             <Image
               src={getStrapiMedia(logo.logo.url)}
+              alt={logo.logo.alternativeText}
               layout="fill"
               objectFit="contain"
             />

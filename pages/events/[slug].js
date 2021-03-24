@@ -42,6 +42,7 @@ export default function Event({ eventData }) {
                 {eventData.eventImage ? (
                   <Image
                     src={eventData.eventImage.url}
+                    alt={eventData.eventImage.alternativeText}
                     layout="fill"
                     objectFit="cover"
                   />

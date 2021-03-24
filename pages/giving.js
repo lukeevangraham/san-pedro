@@ -77,6 +77,7 @@ const Giving = ({ global, giving }) => {
               >
                 <Image
                   src={givingMethod.icon.url}
+                  alt={givingMethod.icon.alternativeText}
                   width={55}
                   height={55}
                   className={classes.icon}

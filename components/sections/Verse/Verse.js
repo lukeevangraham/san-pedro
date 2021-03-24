@@ -18,6 +18,7 @@ const Verse = ({ data, global, whiteBg }) => {
           <div className={classes.verseWrapper}>
             <Image
               src={`https://res.cloudinary.com/diqgdacjy/image/upload/v1614294191/logo_Black_46cf7633db.jpg`}
+              alt={"San Pedro Presbyterian Church Logo"}
               width={203}
               height={125}
             />

@@ -52,6 +52,7 @@ const About = ({ global, about }) => {
           <div className="col span-1-of-2" style={{ textAlign: "center" }}>
             <Image
               src={about.topSideImage.url}
+              alt={about.topSideImage.alternativeText}
               width={450}
               height={470}
               className={classes.topImage}
@@ -149,6 +150,7 @@ const About = ({ global, about }) => {
                 >
                   <Image
                     src={getStrapiMedia(ministry.icon.url)}
+                    alt={ministry.icon.alternativeText}
                     layout="fill"
                   />
                 </div>

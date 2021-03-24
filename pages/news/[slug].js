@@ -79,6 +79,7 @@ export default function News(props) {
           <div className={classes.imageWrap}>
             <Image
               src={getStrapiMedia(props.newsData.image.url)}
+              alt={props.newsData.image.alternativeText}
               layout="fill"
               objectFit="cover"
               alt={props.newsData.image.alternativeText}
