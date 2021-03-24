@@ -51,7 +51,7 @@ export default function Event({ eventData }) {
             <div className="col span-1-of-2 box">
               <div className={classes.rightColumn}>
                 <div className={classes.topRight}>
-                  <Fade top>
+                  <Fade>
                     <div className={classes.dateBoxContainer}>
                       <DateBox event={eventData} />
                     </div>
