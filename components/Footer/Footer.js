@@ -98,7 +98,7 @@ const Footer = ({ data }) => (
             <div className={classes.socialIcons}>
               <ul>
                 <li>
-                  <a
+                  <a aria-label="San Pedro Presbyterian Church Facebook Page"
                     href="https://www.facebook.com/SanPedroPresbyterianChurch"
                     target="_blank"
                   >
@@ -107,6 +107,7 @@ const Footer = ({ data }) => (
                 </li>
                 <li>
                   <a
+                  aria-label="San Pedro Presbyterian Church LinkedIn Page"
                     href="https://www.linkedin.com/company/san-pedro-presbyterian-church/"
                     target="_blank"
                   >
@@ -115,6 +116,7 @@ const Footer = ({ data }) => (
                 </li>
                 <li>
                   <a
+                  aria-label="San Pedro Presbyterian Church YouTube Channel"
                     href="https://www.youtube.com/channel/UCvIdCpNuCMjS0JAkHvZqbkA"
                     target="_blank"
                   >
