@@ -6,6 +6,7 @@ import Image from "next/image";
 import DateBox from "../../components/Events/DateBox/DateBox";
 import TopInfo from "../../components/Events/TopInfo/TopInfo";
 import classes from "./slug.module.css";
+import Fade from "react-reveal/Fade";
 
 export async function getStaticPaths() {
   const paths = await getAllEventsSlugs();
@@ -50,11 +51,15 @@ export default function Event({ eventData }) {
             <div className="col span-1-of-2 box">
               <div className={classes.rightColumn}>
                 <div className={classes.topRight}>
-                  <div className={classes.dateBoxContainer}>
-                    <DateBox event={eventData} />
-                  </div>
+                  <Fade top>
+                    <div className={classes.dateBoxContainer}>
+                      <DateBox event={eventData} />
+                    </div>
+                  </Fade>
                   <div className={classes.topInfo}>
-                    <TopInfo event={eventData} />
+                    <Fade >
+                      <TopInfo event={eventData} />
+                    </Fade>
                   </div>
                 </div>
                 <div className={classes.description}>

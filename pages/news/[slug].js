@@ -8,6 +8,7 @@ import { getStrapiMedia } from "../../lib/media";
 import { getAllNewsSlugs, getNewsData, fetchAPI } from "../../lib/api";
 import { IoPerson, IoLogoFacebook } from "react-icons/io5";
 import Head from "next/head";
+import Fade from "react-reveal/Fade";
 
 import classes from "./slug.module.css";
 
@@ -39,29 +40,39 @@ export default function News(props) {
       <section style={{ padding: 0 }}>
         <div className={["row", classes.article].join(" ")}>
           <div className={classes.topInfo}>
-            <div className={classes.dateBox}>
-              <div className={classes.day}>
-                {new Date(props.newsData.published_at).toLocaleDateString(
-                  "en-US",
-                  {
-                    day: "numeric",
-                  }
-                )}
+            <Fade top>
+              <div className={classes.dateBox}>
+                <div className={classes.day}>
+                  {new Date(props.newsData.published_at).toLocaleDateString(
+                    "en-US",
+                    {
+                      day: "numeric",
+                    }
+                  )}
+                </div>
+                <div className={classes.month}>
+                  {new Date(props.newsData.published_at).toLocaleDateString(
+                    "en-US",
+                    {
+                      month: "short",
+                    }
+                  )}
+                </div>
               </div>
-              <div className={classes.month}>
-                {new Date(props.newsData.published_at).toLocaleDateString(
-                  "en-US",
-                  {
-                    month: "short",
-                  }
-                )}
-              </div>
-            </div>
+            </Fade>
             <div className={classes.authorAndTitle}>
-              <div className={classes.title}>{props.newsData.title}</div>
-              <div className={classes.author}>
-                <IoPerson /> {props.newsData.author}
-              </div>
+              <Fade left cascade>
+                <div className={classes.title}>{props.newsData.title}</div>
+              </Fade>
+
+              <Fade left cascade>
+                <div className={classes.author}>
+                  <IoPerson />
+                  <Fade left cascade>
+                    {props.newsData.author}
+                  </Fade>
+                </div>
+              </Fade>
             </div>
           </div>
           <div className={classes.imageWrap}>
@@ -79,7 +90,9 @@ export default function News(props) {
           <div className={classes.belowPhoto}>
             <div className={classes.body}>
               {/* <Markdown source={props.newsData.body} allowDangerousHtml /> */}
-              <div dangerouslySetInnerHTML={{__html: props.newsData.body}}></div>
+              <div
+                dangerouslySetInnerHTML={{ __html: props.newsData.body }}
+              ></div>
             </div>
           </div>
           <div className={classes.btnContainer}>

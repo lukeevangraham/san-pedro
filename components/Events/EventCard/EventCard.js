@@ -3,32 +3,34 @@ import Link from "next/link";
 import DateBox from "../DateBox/DateBox";
 import TopInfo from "../TopInfo/TopInfo";
 import { IoCalendarClearOutline, IoLocationOutline } from "react-icons/io5";
+import Fade from "react-reveal/Fade";
 
 import classes from "./EventCard.module.css";
 
 const EventCard = ({ event, index }) => (
   <div className={classes.eventsCard}>
-    <Link href={`/events/${event.slug}`}>
-      <a>
-        <div className={classes.ratioWrapper}>
-          {event.eventImage ? (
-            <Image
-              src={event.eventImage.url}
-              alt={event.eventImage.alternativeText}
-              layout="fill"
-              sizes="(max-width: 480px) 100vw, 33vw"
-            />
-          ) : null}
-        </div>
-      </a>
-    </Link>
-    <div className={classes.belowPicture}>
-      <DateBox event={event} />
+    <Fade>
+      <Link href={`/events/${event.slug}`}>
+        <a>
+          <div className={classes.ratioWrapper}>
+            {event.eventImage ? (
+              <Image
+                src={event.eventImage.url}
+                alt={event.eventImage.alternativeText}
+                layout="fill"
+                sizes="(max-width: 480px) 100vw, 33vw"
+              />
+            ) : null}
+          </div>
+        </a>
+      </Link>
+      <div className={classes.belowPicture}>
+        <DateBox event={event} />
 
-      <div className={classes.topInfoContainer}>
-        <TopInfo event={event} index={index} />
-      </div>
-      {/* <div className={classes.moreInfo}>
+        <div className={classes.topInfoContainer}>
+          <TopInfo event={event} index={index} />
+        </div>
+        {/* <div className={classes.moreInfo}>
         <Link href={`/events/${event.slug}`}>
           <a className={classes.title}>{event.title}</a>
         </Link>
@@ -45,10 +47,10 @@ const EventCard = ({ event, index }) => (
         </div>
       </div> */}
 
-      {/* <p className={classes.excerpt}>
+        {/* <p className={classes.excerpt}>
           {truncate(event.body, 100, true)}&hellip;
         </p> */}
-      {/* <div className={classes.moreInfo}>
+        {/* <div className={classes.moreInfo}>
           {event.ministries ? (
             event.ministries.length ? (
               <div className={classes.moreInfoDetail}>
@@ -71,8 +73,9 @@ const EventCard = ({ event, index }) => (
             })}
           </div>
         </div> */}
-    </div>
-    {/* {console.log("e: ", event)} */}
+      </div>
+      {/* {console.log("e: ", event)} */}
+    </Fade>
   </div>
 );
 

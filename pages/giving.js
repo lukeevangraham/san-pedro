@@ -6,6 +6,7 @@ import Button from "../components/UI/Button/Button";
 import Markdown from "react-markdown";
 import Sections from "../components/sections/sections";
 import Verse from "../components/sections/Verse/Verse";
+import Fade from "react-reveal/Fade"
 
 import classes from "../styles/giving.module.css";
 
@@ -29,7 +30,7 @@ const Giving = ({ global, giving }) => {
 
   return (
     <>
-    <DefaultSeo
+      <DefaultSeo
         titleTemplate={`%s | ${global.metaTitleSuffix}`}
         title={giving.metadata.metaTitle}
         description={giving.metadata.metaDescription}
@@ -54,7 +55,7 @@ const Giving = ({ global, giving }) => {
         <div className="row">
           {console.log("giving: ", giving)}
           <div className={classes.topText}>
-            <div dangerouslySetInnerHTML={{__html: giving.topText}} />
+            <div dangerouslySetInnerHTML={{ __html: giving.topText }} />
             <div className={classes.topButtons}>
               {giving.topButton.map((button) => (
                 <Button button={button} key={button.id} />
@@ -68,23 +69,26 @@ const Giving = ({ global, giving }) => {
       </section>
       <section>
         <div className="row">
-          {giving.moreWaysToGive.map((givingMethod, index, array) => (
-            <div
-              className={`col span-1-of-${array.length}`}
-              key={givingMethod.id}
-            >
-              <Image
-                src={givingMethod.icon.url}
-                width={55}
-                height={55}
-                className={classes.icon}
-              />
-              <div className={classes.methodTitle}>{givingMethod.title}</div>
-              <div dangerouslySetInnerHTML={{__html: givingMethod.description}}
-                className={classes.methodDescription}
-              />
-            </div>
-          ))}
+          <Fade>
+            {giving.moreWaysToGive.map((givingMethod, index, array) => (
+              <div
+                className={`col span-1-of-${array.length}`}
+                key={givingMethod.id}
+              >
+                <Image
+                  src={givingMethod.icon.url}
+                  width={55}
+                  height={55}
+                  className={classes.icon}
+                />
+                <div className={classes.methodTitle}>{givingMethod.title}</div>
+                <div
+                  dangerouslySetInnerHTML={{ __html: givingMethod.description }}
+                  className={classes.methodDescription}
+                />
+              </div>
+            ))}
+          </Fade>
         </div>
       </section>
       <Verse data={giving.bottomVerse} />

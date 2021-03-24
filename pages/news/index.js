@@ -1,6 +1,7 @@
 import { getSortedNewsData, fetchAPI } from "../../lib/api";
 import { DefaultSeo } from "next-seo";
 import { getStrapiMedia } from "../../lib/media";
+import Fade from "react-reveal/Fade";
 
 // import faker from "faker";
 import NewsCard from "../../components/News/NewsCard/NewsCard";

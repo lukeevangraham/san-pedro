@@ -2,6 +2,7 @@ import ButtonLink from "../../elements/button-link";
 import Image from "next/image";
 // import { getButtonAppearance } from "utils/button";
 import classes from "./Verse.module.css";
+import Fade from "react-reveal/Fade";
 
 const Verse = ({ data, global, whiteBg }) => {
   return (
@@ -9,8 +10,10 @@ const Verse = ({ data, global, whiteBg }) => {
       <div className="row">
         <div className={classes.container}>
           <div className={classes.text}>
-            <div dangerouslySetInnerHTML={{ __html: data.scripture }} />
-            <div className={classes.reference}>{data.reference}</div>
+            <Fade top>
+              <div dangerouslySetInnerHTML={{ __html: data.scripture }} />
+              <div className={classes.reference}>{data.reference}</div>
+            </Fade>
           </div>
           <div className={classes.verseWrapper}>
             <Image

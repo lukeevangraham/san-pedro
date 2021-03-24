@@ -58,6 +58,7 @@ const TopCountdown = ({ event }) => {
             <div className={classes.num}>{secs}</div>
             <div className={classes.label}>Sec</div>
           </div>
+          
         </div>
       </div>
     </div>

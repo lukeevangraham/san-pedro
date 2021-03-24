@@ -9,6 +9,9 @@ import EventCard from "../Events/EventCard/EventCard";
 import TopCountdown from "./TopCountdown/TopCountdown";
 import Verse from "../sections/Verse/Verse";
 import classes from "./HomePage.module.css";
+import Fade from "react-reveal/Fade";
+import Flip from "react-reveal/Flip";
+import Zoom from "react-reveal/Zoom";
 
 const HomePage = ({ data }) => {
   let videoUrl = data.topVideoEmbed.split(`src="`);
@@ -35,20 +38,24 @@ const HomePage = ({ data }) => {
         <h2>{data.introTitle}</h2>
         <div className={["row", classes.welcomeWrap].join(" ")}>
           <div className="col span-1-of-2">
-            <div className={classes.videoWrapper}>
-              <iframe
-                className={classes.responsiveIframe}
-                width="560"
-                height="315"
-                src={`${videoUrl[1].split(`" `)[0]}?modestbranding=1`}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            </div>
+            <Fade>
+              <div className={classes.videoWrapper}>
+                <iframe
+                  className={classes.responsiveIframe}
+                  width="560"
+                  height="315"
+                  src={`${videoUrl[1].split(`" `)[0]}?modestbranding=1`}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            </Fade>
           </div>
           <div className={`col span-1-of-2 box ${classes.introBox}`}>
-            <div dangerouslySetInnerHTML={{__html: data.introBox}} />
+            <Fade>
+              <div dangerouslySetInnerHTML={{ __html: data.introBox }} />
+            </Fade>
           </div>
         </div>
       </section>
@@ -59,11 +66,13 @@ const HomePage = ({ data }) => {
             <h2>Featured Events</h2>
             {/* <div className="row"> */}
             <div className={classes.grid}>
-              {sortedEvents.map((event, index) =>
-                index < 3 ? (
-                  <EventCard event={event} key={event.id} index={true} />
-                ) : null
-              )}
+              <Zoom>
+                {sortedEvents.map((event, index) =>
+                  index < 3 ? (
+                    <EventCard event={event} key={event.id} index={true} />
+                  ) : null
+                )}
+              </Zoom>
             </div>
           </div>
         </div>
@@ -119,6 +128,7 @@ const HomePage = ({ data }) => {
           <div className="col">
             <h2>Featured News</h2>
             {/* <div className="row"> */}
+
             <div className={classes.grid}>
               {sortedArticles.map((article, index) =>
                 index < 3 ? (
