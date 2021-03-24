@@ -64,15 +64,16 @@ export default function News(props) {
               <Fade left cascade>
                 <div className={classes.title}>{props.newsData.title}</div>
               </Fade>
-
-              <Fade left cascade>
-                <div className={classes.author}>
-                  <IoPerson />
-                  <Fade left cascade>
-                    {props.newsData.author}
-                  </Fade>
-                </div>
-              </Fade>
+              {props.newsData.author ? (
+                <Fade left cascade>
+                  <div className={classes.author}>
+                    <IoPerson />
+                    <Fade left cascade>
+                      {props.newsData.author}
+                    </Fade>
+                  </div>
+                </Fade>
+              ) : null}
             </div>
           </div>
           <div className={classes.imageWrap}>

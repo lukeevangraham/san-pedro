@@ -33,7 +33,7 @@ export default function Page({ pageData, global }) {
 
   return (
     <>
-    <DefaultSeo
+      <DefaultSeo
         titleTemplate={`%s | ${global.metaTitleSuffix}`}
         title={pageData.metadata.metaTitle}
         description={pageData.metadata.metaDescription}
