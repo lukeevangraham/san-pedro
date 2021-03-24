@@ -10,7 +10,6 @@ import classes from "./FeatureRowsGroup.module.css";
 const FeatureRowsGroup = ({ data }) => {
   return (
     <section>
-      {console.log("DATA: ", data)}
       {data.title ? <h2>{data.title}</h2> : null}
       {data.topText ? (
         <div className="row">

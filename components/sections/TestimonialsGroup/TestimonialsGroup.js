@@ -90,6 +90,7 @@ const TestimonialsGroup = ({ data }) => {
           {data.testimonials.map((testimonial, index) => (
             <button
               onClick={() => setSelectedTestimonialIndex(index)}
+              aria-label={testimonial.authorName}
               className={classNames(
                 // Common classes
                 classes.paginationButton,

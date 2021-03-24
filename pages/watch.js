@@ -39,7 +39,6 @@ const Watch = ({ watch, global }) => (
     <section style={{ textAlign: "center" }}>
       <h2>{watch.pageTitle}</h2>
       <div className="row">
-        {console.log("watch: ", watch.topText === `<p><br></p>`)}
         {watch.topText !== `<p><br></p>` ? (
           <div className="col span-2-of-2">
             <div style={{ marginBottom: "2.5rem" }}>
