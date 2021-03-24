@@ -32,6 +32,7 @@ const NewsCard = ({ article }) => {
                 alt={article.image.alternativeText}
                 layout="fill"
                 sizes="(max-width: 480px) 100vw, 33vw"
+                className={classes.rounded}
               />
               {/* <img
               className="responsiveImage"

@@ -21,6 +21,7 @@
   overflow: hidden;
   position: relative;
   padding-bottom: 56.25%;
+  border-radius: 5px 5px 0 0;
 }
 
 .belowPicture {
@@ -71,4 +72,9 @@
 .moreInfo svg {
   margin-right: 0.2rem;
   color: #db3d2c;
+}
+
+.rounded {
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
 }

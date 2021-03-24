@@ -9,10 +9,13 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  
+}
+.eventWrap {
   transition: transform 0.2s;
 }
 
-.eventsCard:hover {
+.eventWrap:hover {
   transform: scale(1.05);
 }
 
