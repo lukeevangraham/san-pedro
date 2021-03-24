@@ -10,7 +10,7 @@ import classes from "./EventCard.module.css";
 const EventCard = ({ event, index }) => (
   <div className={classes.eventsCard}>
     <Fade>
-      <Link href={`/events/${event.slug}`}>
+      <Link aria-label={event.title} href={`/events/${event.slug}`}>
         <a>
           <div className={classes.ratioWrapper}>
             {event.eventImage ? (
