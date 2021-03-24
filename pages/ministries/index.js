@@ -66,6 +66,7 @@ const Ministries = ({ allMinistriesData, ministriesPage, global }) => {
                   height={310}
                   layout="responsive"
                   className={classes.leaderPhoto}
+                  priority={true}
                 />
               ) : null}
             </div>
