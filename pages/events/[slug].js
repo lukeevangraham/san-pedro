@@ -1,3 +1,4 @@
+import "@fontsource/cardo";
 import { getAllEventsSlugs, getEventData } from "../../lib/api";
 import { keepEventsCurrent } from "../../lib/events";
 import Seo from "../../components/elements/seo";

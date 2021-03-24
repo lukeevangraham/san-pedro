@@ -25,7 +25,6 @@ function MyApp({ Component, pageProps }) {
   return (
     <GlobalContext.Provider value={global}>
       <Layout global={global} home={useRouter().pathname === "/"}>
-        {/* {console.log("GLOBAL: ", global)} */}
         <Component {...pageProps} />
       </Layout>
     </GlobalContext.Provider>

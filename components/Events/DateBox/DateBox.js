@@ -1,3 +1,4 @@
+import "@fontsource/source-sans-pro/200.css";
 import classNames from "classnames";
 import classes from "./DateBox.module.css";
 

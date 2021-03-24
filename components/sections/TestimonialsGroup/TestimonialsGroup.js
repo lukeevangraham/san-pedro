@@ -1,4 +1,5 @@
 import classNames from "classnames";
+import "@fontsource/source-sans-pro/200.css";
 import { useState } from "react";
 import { getStrapiMedia } from "../../../lib/media";
 // import Image from "../../elements/image";

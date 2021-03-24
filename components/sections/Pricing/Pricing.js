@@ -1,5 +1,6 @@
 import { MdCheckBox } from "react-icons/md";
 import classNames from "classnames";
+import "@fontsource/source-sans-pro/200.css";
 
 import classes from "./Pricing.module.css";
 
@@ -28,10 +29,7 @@ const Pricing = ({ data }) => {
               </p>
               <ul className="mt-4 flex flex-col gap-3">
                 {plan.features.map((feature) => (
-                  <li
-                    className={classes.listItem}
-                    key={feature.id}
-                  >
+                  <li className={classes.listItem} key={feature.id}>
                     <MdCheckBox className="h-6 w-auto text-gray-900" />
                     <span>{feature.name}</span>
                   </li>

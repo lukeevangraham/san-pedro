@@ -1,4 +1,6 @@
 // import Head from "next/head";
+import "@fontsource/source-sans-pro/200.css";
+import "@fontsource/cardo";
 import Seo from "../../components/elements/seo";
 import Markdown from "react-markdown/with-html";
 import Layout from "../../hoc/Layout/Layout";

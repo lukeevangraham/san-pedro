@@ -1,3 +1,4 @@
+import "@fontsource/cardo";
 import ButtonLink from "../../elements/button-link";
 import Image from "next/image";
 // import { getButtonAppearance } from "utils/button";
