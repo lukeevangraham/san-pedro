@@ -9,13 +9,13 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  transition: transform 0.2s;
   
 }
 .eventWrap {
-  transition: transform 0.2s;
 }
 
-.eventWrap:hover {
+.eventsCard:hover {
   transform: scale(1.05);
 }
 
@@ -37,4 +37,6 @@
 
 .topInfoContainer {
   padding: .75rem;
+  display: flex;
+  align-items: center;
 }
