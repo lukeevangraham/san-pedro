@@ -5,16 +5,14 @@ import { stringify } from "qs";
 import { getStrapiMedia } from "../../lib/media";
 // import { mediaPropTypes } from "utils/types";
 
-const Seo = ({ metadata, global, referer }) => {
+const Seo = ({ metadata, global, referer, description }) => {
   // Prevent errors if no metadata was set
   if (!metadata)
     return (
       <DefaultSeo
         titleTemplate={`%s | ${global.metaTitleSuffix}`}
         title={referer}
-        description={
-          "Keep up with the latest news from San Pedro Presbyterian Church in San Antonio, Texas"
-        }
+        description={description}
         openGraph={
           global.metadata &&
           global.metadata.shareImage &&
@@ -45,7 +43,9 @@ const Seo = ({ metadata, global, referer }) => {
 
   return (
     <NextSeo
-      title={metadata.metaTitle.charAt(0).toUpperCase() + metadata.metaTitle.slice(1)}
+      title={
+        metadata.metaTitle.charAt(0).toUpperCase() + metadata.metaTitle.slice(1)
+      }
       description={metadata.metaDescription}
       openGraph={{
         // Title and description are mandatory

@@ -1,6 +1,7 @@
 .eventsCard {
   /* flex-grow: 1; */
   /* margin-bottom: 2rem; */
+  /* margin: auto 0; */
   background-color: #fff;
   margin: 10px;
   box-shadow: 0 0px 9px 6px rgba(0, 0, 0, 0.1);

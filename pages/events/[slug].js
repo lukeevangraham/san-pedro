@@ -33,7 +33,7 @@ export default function Event({ eventData, global }) {
   keepEventsCurrent([eventData]);
   return (
     <>
-      <Seo metadata={eventData.metadata} global={global} referer="Events" />
+      <Seo metadata={eventData.metadata} global={global} referer="Events" description={eventData.description} />
       <section style={{ padding: 0 }}>
         <div className={["row", classes.event].join(" ")}>
           <h1>Upcoming Event</h1>

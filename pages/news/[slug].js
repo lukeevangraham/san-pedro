@@ -37,7 +37,7 @@ export async function getStaticProps({ params }) {
 export default function News(props) {
   return (
     <>
-      <Seo metadata={props.newsData.metadata} global={props.global} referer="News" />
+      <Seo metadata={props.newsData.metadata} global={props.global} referer="News" description={props.newsData.title} />
       {/* <section style={{ backgroundColor: "rgb(252, 252, 252)" }}> */}
       <section style={{ padding: 0 }}>
         <div className={["row", classes.article].join(" ")}>
