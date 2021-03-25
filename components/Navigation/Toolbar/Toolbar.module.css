@@ -24,7 +24,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding: 0 2%;
+  /* padding: 0 2%; */
   background-color: rgba(255, 255, 255, 0.973);
   box-shadow: 0 2px 2px rgb(204, 204, 204);
   z-index: 99;
@@ -86,8 +86,8 @@
   } */
 }
 
-@media only screen and (max-width: 850px) {
+/* @media only screen and (max-width: 850px) {
   .Sticky {
     padding: 0 4%;
   }
-}
+} */
