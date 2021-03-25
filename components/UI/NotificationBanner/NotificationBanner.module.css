@@ -5,7 +5,7 @@
 .inside {
     display: flex;
     align-items: center;
-    padding: .5rem;
+    padding: .5rem !important;
     color: rgb(238, 238, 238);
 }
 
