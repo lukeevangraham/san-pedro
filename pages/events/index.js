@@ -3,6 +3,7 @@ import { getStrapiMedia } from "../../lib/media";
 import { DefaultSeo } from "next-seo";
 import EventCard from "../../components/Events/EventCard/EventCard";
 // import faker from "faker";
+import Zoom from "react-reveal/Zoom"
 
 import classes from "./index.module.css";
 
