@@ -35,7 +35,7 @@ const Logo = (props) => {
               objectPosition="left center"
               sizes="33vw"
               priority="true"
-              loading="earger"
+              loading="eager"
             />
           </div>
           {/* <img
