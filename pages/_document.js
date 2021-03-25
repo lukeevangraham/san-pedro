@@ -10,6 +10,7 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+        <link rel="shortcut icon" href={"https://admin.sanpedropc.org/uploads/logo_color_eb957aee2e.png"} type="image/x-icon" />
           <script
             async
             src="https://www.googletagmanager.com/gtag/js?id=G-ZBX8ZQEVT0"
