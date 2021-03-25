@@ -1,6 +1,7 @@
 import { NextSeo } from "next-seo";
 import { DefaultSeo } from "next-seo";
 import PropTypes from "prop-types";
+import { stringify } from "qs";
 import { getStrapiMedia } from "../../lib/media";
 // import { mediaPropTypes } from "utils/types";
 
@@ -44,7 +45,7 @@ const Seo = ({ metadata, global, referer }) => {
 
   return (
     <NextSeo
-      title={metadata.metaTitle}
+      title={metadata.metaTitle.charAt(0).toUpperCase() + metadata.metaTitle.slice(1)}
       description={metadata.metaDescription}
       openGraph={{
         // Title and description are mandatory
