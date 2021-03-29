@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { IoLocation, IoCall, IoMail, IoGlobe } from "react-icons/io5";
 import Button from "../components/UI/Button/Button";
 import { fetchAPI } from "../lib/api";
@@ -17,8 +18,12 @@ export async function getStaticProps() {
 }
 
 const Contact = ({ contact, global }) => {
+  let [messageStatus, setMessageStatus] = useState();
+
   const sendMessage = async (event) => {
     event.preventDefault();
+
+    setMessageStatus(1);
 
     const res = await fetch("/api/contact", {
       body: JSON.stringify({
@@ -33,6 +38,8 @@ const Contact = ({ contact, global }) => {
     });
 
     const result = await res.json();
+    console.log("RES: ", result);
+    result.status == 200 ? setMessageStatus(200) : null;
     // const message = {
     //   name: event.target.name.value,
     //   email: event.target.email.value,
@@ -40,6 +47,58 @@ const Contact = ({ contact, global }) => {
     // }
     // console.log("HI THERE", message);
   };
+
+  let messageForm = "";
+
+  switch (messageStatus) {
+    case 0:
+      break;
+    case 200:
+      messageForm = (
+        <div className={classes.successParent}>
+          {console.log("redefining message form")}
+          <h3>Your message was successfully delivered</h3>
+        </div>
+      );
+      break;
+    case 1:
+      messageForm = <div className={classes.successParent}>Sending...</div>;
+      break;
+
+    default:
+      messageForm = (
+        <>
+          <h3 style={{ textAlign: "center" }}>We're happy to hear from you</h3>
+          <form onSubmit={sendMessage} className={classes.contactForm}>
+            <div className="row">
+              <div className="col span-1-of-2">
+                <input type="text" name="name" placeholder="Your name" />
+              </div>
+              <div className="col span-1-of-2">
+                <input type="email" name="email" placeholder="Your email" />
+              </div>
+            </div>
+            <div className="row">
+              <div className="col span-2-of-2">
+                <textarea
+                  name="message"
+                  id=""
+                  cols="30"
+                  rows="4"
+                  placeholder="Your Message"
+                ></textarea>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col span-2-of-2">
+                <button type="submit">Send</button>
+              </div>
+            </div>
+          </form>
+        </>
+      );
+      break;
+  }
 
   return (
     <>
@@ -94,49 +153,7 @@ const Contact = ({ contact, global }) => {
               </li>
             </ul>
           </div>
-          <div className="col span-1-of-2">
-            <h3 style={{ textAlign: "center" }}>
-              We're happy to hear from you
-            </h3>
-            <form onSubmit={sendMessage} className={classes.contactForm}>
-              <div className="row">
-                <div className="col span-1-of-2">
-                  <input type="text" name="name" placeholder="Your name" />
-                </div>
-                <div className="col span-1-of-2">
-                  <input type="email" name="email" placeholder="Your email" />
-                </div>
-              </div>
-              <div className="row">
-                <div className="col span-2-of-2">
-                  <textarea
-                    name="message"
-                    id=""
-                    cols="30"
-                    rows="4"
-                    placeholder="Your Message"
-                  ></textarea>
-                </div>
-              </div>
-              <div className="row">
-                <div className="col span-2-of-2">
-                  <button type="submit">Send</button>
-                  {/* <div type="submit">
-                  <Button
-                    button={{
-                      url: `#`,
-                      // newTab: true,
-                      text: "Send",
-                      type: "primary",
-                    }}
-                    // compact={true}
-                    // logo={"Facebook"}
-                  />
-                </div> */}
-                </div>
-              </div>
-            </form>
-          </div>
+          <div className="col span-1-of-2">{messageForm}</div>
         </div>
       </section>
       <section className={classes.mapContainer}>

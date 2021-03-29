@@ -65,6 +65,12 @@
   padding: 0;
 }
 
+.successParent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media only screen and (min-width: 480px) {
   .contactPage {
     display: flex;

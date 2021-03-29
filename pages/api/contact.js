@@ -1,7 +1,7 @@
 const nodemailer = require("nodemailer");
 
 export default function handler(req, res) {
-  res.status(200).json({ user: "Ada Lovelace" });
+  res.status(200).json({ status: 200 });
 
   async function main() {
     let transporter = nodemailer.createTransport({
@@ -17,6 +17,7 @@ export default function handler(req, res) {
     let info = await transporter.sendMail({
       from: '"SANPEDROPC.ORG" <donotreply@sanpedropc.org>',
       to: "sppchurch@sppcsa.com",
+      // to: "luke@grahamwebdesign.com",
       subject: "Message from sanpedropc.org",
       text: `${req.body.name} (${req.body.email}) just sent this message via www.sanpedropc.org:
     
@@ -28,7 +29,7 @@ export default function handler(req, res) {
       if (error) {
         console.log(error);
       } else {
-        console.log("Server is ready to take our messages");
+        console.log("Server is ready to take our messages", success);
       }
     });
   }
