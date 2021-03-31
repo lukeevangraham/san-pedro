@@ -56,7 +56,6 @@ const About = ({ global, about }) => {
               width={450}
               height={470}
               className={classes.topImage}
-              priority={true}
               layout="intrinsic"
             />
           </div>

@@ -12,12 +12,16 @@ const navigationItem = (props) => {
     router.pathname.startsWith(props.link) ? classes.active : null,
   ];
 
-
-
   return (
     <li className={attachedClasses.join(" ")}>
       <Link href={props.link}>
-        <a className={classes.left}>{props.children}</a>
+        <a
+          className={
+            !router.pathname.startsWith(props.link) ? classes.left : null
+          }
+        >
+          {props.children}
+        </a>
       </Link>
     </li>
   );

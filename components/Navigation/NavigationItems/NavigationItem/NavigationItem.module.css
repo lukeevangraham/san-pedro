@@ -28,7 +28,7 @@
     color: #fff;
     text-decoration: none;
     font-size: 90%;
-    border-bottom: 2px solid transparent;
+    /* border-bottom: 2px solid transparent; */
     transition: border-bottom 0.2;
   }
 
@@ -52,7 +52,7 @@
   position: absolute;
   width: 0;
   height: 2px;
-  bottom: 0;
+  bottom: -2px;
   left: 0;
   background-color: #db3d2c;
   visibility: hidden;

@@ -10,7 +10,7 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-        <link rel="shortcut icon" href="/static/favicon.ico" />
+        {/* <link rel="shortcut icon" href="/static/favicon.ico" /> */}
           <script
             async
             src="https://www.googletagmanager.com/gtag/js?id=G-ZBX8ZQEVT0"
