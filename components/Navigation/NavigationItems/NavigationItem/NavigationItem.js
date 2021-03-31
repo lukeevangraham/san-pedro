@@ -17,7 +17,7 @@ const navigationItem = (props) => {
   return (
     <li className={attachedClasses.join(" ")}>
       <Link href={props.link}>
-        <a>{props.children}</a>
+        <a className={classes.left}>{props.children}</a>
       </Link>
     </li>
   );

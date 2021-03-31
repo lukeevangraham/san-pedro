@@ -39,8 +39,29 @@
 
   .NavigationItem:not(.active) a:hover,
   .NavigationItem a:active {
-    border-bottom: 2px solid #db3d2c;
+    /* border-bottom: 2px solid #db3d2c; */
   }
+}
+
+.left {
+  position: relative;
+}
+
+.left:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #db3d2c;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.left:hover:before {
+  visibility: visible;
+  width: 100%;
 }
 
 @media (min-width: 768px) {
