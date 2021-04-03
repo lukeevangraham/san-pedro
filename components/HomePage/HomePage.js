@@ -67,13 +67,13 @@ const HomePage = ({ data }) => {
             <h2>Featured Events</h2>
             {/* <div className="row"> */}
             <div className={classes.grid}>
-              <Zoom style={{ margin: "auto 0" }}>
+              {/* <Zoom style={{ margin: "auto 0" }}> */}
                 {sortedEvents.map((event, index) =>
                   index < 3 ? (
                     <EventCard event={event} key={event.id} index={true} />
                   ) : null
                 )}
-              </Zoom>
+              {/* </Zoom> */}
             </div>
           </div>
         </div>

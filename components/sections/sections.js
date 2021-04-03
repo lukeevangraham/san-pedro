@@ -67,10 +67,9 @@ const Sections = ({ sections, preview, home }) => {
       {preview && <PreviewModeBanner />}
       {/* Show the actual sections */}
       {sections.map((section) => (
-        <div className={classes.section}>
+        <div className={classes.section} key={`${section.__component}${section.id}`}>
           <Section
             sectionData={section}
-            key={`${section.__component}${section.id}`}
           />
         </div>
       ))}
