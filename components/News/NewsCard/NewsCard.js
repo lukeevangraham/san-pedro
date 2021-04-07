@@ -27,13 +27,16 @@ const NewsCard = ({ article }) => {
         <Link href={`/news/${article.slug}`}>
           <a aria-label={article.title}>
             <div className={classes.ratioWrapper}>
-              <Image
-                src={getStrapiMedia(article.image.url)}
-                alt={article.image.alternativeText}
-                layout="fill"
-                sizes="(max-width: 480px) 100vw, 33vw"
-                className={classes.rounded}
-              />
+              {article.image ? (
+                <Image
+                  src={getStrapiMedia(article.image.url)}
+                  alt={article.image.alternativeText}
+                  layout="fill"
+                  sizes="(max-width: 480px) 100vw, 33vw"
+                  className={classes.rounded}
+                />
+              ) : null}
+
               {/* <img
               className="responsiveImage"
               src={getStrapiMedia(article.image.formats.medium.url)}

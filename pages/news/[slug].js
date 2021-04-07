@@ -45,7 +45,7 @@ export default function News(props) {
             <Pulse>
               <div className={classes.dateBox}>
                 <div className={classes.day}>
-                  {new Date(props.newsData.published_at).toLocaleDateString(
+                  {new Date(props.newsData.dateline).toLocaleDateString(
                     "en-US",
                     {
                       day: "numeric",
@@ -53,7 +53,7 @@ export default function News(props) {
                   )}
                 </div>
                 <div className={classes.month}>
-                  {new Date(props.newsData.published_at).toLocaleDateString(
+                  {new Date(props.newsData.dateline).toLocaleDateString(
                     "en-US",
                     {
                       month: "short",
