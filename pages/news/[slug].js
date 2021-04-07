@@ -37,7 +37,12 @@ export async function getStaticProps({ params }) {
 export default function News(props) {
   return (
     <>
-      <Seo metadata={props.newsData.metadata} global={props.global} referer="News" description={props.newsData.title} />
+      <Seo
+        metadata={props.newsData.metadata}
+        global={props.global}
+        referer="News"
+        description={props.newsData.title}
+      />
       {/* <section style={{ backgroundColor: "rgb(252, 252, 252)" }}> */}
       <section style={{ padding: 0 }}>
         <div className={["row", classes.article].join(" ")}>
@@ -45,12 +50,14 @@ export default function News(props) {
             <Pulse>
               <div className={classes.dateBox}>
                 <div className={classes.day}>
-                  {new Date(props.newsData.dateline).toLocaleDateString(
-                    "en-US",
-                    {
-                      day: "numeric",
-                    }
-                  )}
+                  {parseInt(
+                    new Date(props.newsData.dateline).toLocaleDateString(
+                      "en-US",
+                      {
+                        day: "numeric",
+                      }
+                    )
+                  ) + 1}
                 </div>
                 <div className={classes.month}>
                   {new Date(props.newsData.dateline).toLocaleDateString(
