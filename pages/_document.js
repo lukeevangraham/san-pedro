@@ -11,6 +11,7 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
         <link rel="shortcut icon" href="/static/favicon.ico" />
+        <link rel="apple-touch-icon" href="/static/apple-touch-icon.png"/>
           <script
             async
             src="https://www.googletagmanager.com/gtag/js?id=G-ZBX8ZQEVT0"
