@@ -37,6 +37,5 @@
 @media (max-width: 767px) {
   .homeHeader {
     background-attachment: scroll;
-    height: 100vh;
   }
 }
