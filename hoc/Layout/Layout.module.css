@@ -9,7 +9,6 @@
   /* display: flex;
   flex-direction: column; */
   /* justify-content: center; */
-  transition: height .5s;
 }
 
 .Fixed img {
@@ -38,5 +37,6 @@
 @media (max-width: 767px) {
   .homeHeader {
     background-attachment: scroll;
+    height: 100vh;
   }
 }
