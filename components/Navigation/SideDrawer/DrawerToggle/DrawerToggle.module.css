@@ -2,9 +2,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  /* height: 50px; */
   padding: 0 .5rem;
-  padding-top: -10px;
   border-radius: 5px;
   box-shadow: 0 0 10px -1px #fff;
 }
