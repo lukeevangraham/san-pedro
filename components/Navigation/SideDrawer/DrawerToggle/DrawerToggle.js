@@ -12,6 +12,7 @@ const DrawerToggle = (props) => {
     <div className={attachedClasses.join(" ")} onClick={props.clicked}>
       {/* <div className={attachedClasses.join(" ")} onClick={props.clicked}> */}
       <IoMenuOutline />
+      <div className={classes.menu}>Menu</div>
       {/* <div></div>
       <div></div>
       <div></div> */}

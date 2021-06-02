@@ -1,7 +1,24 @@
+.newDrawerToggle {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  /* height: 50px; */
+  padding: 0 .5rem;
+  padding-top: -10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px -1px #fff;
+}
+
 .newDrawerToggle svg {
   width: 40px;
-  height: 60px;
+  height: 45px;
   color: rgb(238, 238, 238);
+}
+
+.menu {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 17.5px;
 }
 
 .DrawerToggle {
@@ -23,7 +40,16 @@
 }
 
 .Sticky svg {
-  color: #1d1d1d !important;
+  /* color: #1d1d1d !important; */
+}
+
+.Sticky .menu {
+  /* color: #000; */
+}
+
+.Sticky {
+  background-image: linear-gradient(to bottom right, #90281dd0, #7e2015d5);
+  /* box-shadow: 0 0 10px -1px rgba(0, 0, 0, 0.6); */
 }
 
 @media (min-width: 768px) {
