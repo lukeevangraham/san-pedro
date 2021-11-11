@@ -8,7 +8,7 @@ import Sections from "../components/sections/sections";
 import Verse from "../components/sections/Verse/Verse";
 import Fade from "react-reveal/Fade"
 
-import classes from "../styles/giving.module.css";
+import classes from "../styles/giving.module.scss";
 
 export async function getStaticProps() {
   const giving = await fetchAPI("/giving");
@@ -69,27 +69,29 @@ const Giving = ({ global, giving }) => {
       </section>
       <section>
         <div className="row">
-          <Fade>
-            {giving.moreWaysToGive.map((givingMethod, index, array) => (
-              <div
-                className={`col span-1-of-${array.length}`}
-                key={givingMethod.id}
-              >
-                <Image
-                  src={givingMethod.icon.url}
-                  alt={givingMethod.icon.alternativeText}
-                  width={55}
-                  height={55}
-                  className={classes.icon}
-                />
-                <div className={classes.methodTitle}>{givingMethod.title}</div>
+          <div className={`${classes.offeringOptions}`}>
+            <Fade>
+              {giving.moreWaysToGive.map((givingMethod, index, array) => (
                 <div
-                  dangerouslySetInnerHTML={{ __html: givingMethod.description }}
-                  className={classes.methodDescription}
-                />
-              </div>
-            ))}
-          </Fade>
+                  className={``}
+                  key={givingMethod.id}
+                >
+                  <Image
+                    src={givingMethod.icon.url}
+                    alt={givingMethod.icon.alternativeText}
+                    width={55}
+                    height={55}
+                    className={classes.icon}
+                  />
+                  <div className={classes.methodTitle}>{givingMethod.title}</div>
+                  <div
+                    dangerouslySetInnerHTML={{ __html: givingMethod.description }}
+                    className={classes.methodDescription}
+                  />
+                </div>
+              ))}
+            </Fade>
+          </div>
         </div>
       </section>
       <Verse data={giving.bottomVerse} />
