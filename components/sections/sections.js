@@ -7,6 +7,7 @@ import FeatureRowsGroup from "./FeatureRowsGroup/FeatureRowsGroup";
 import BottomActions from "./BottomActions/BottomActions";
 import TestimonialsGroup from "./TestimonialsGroup/TestimonialsGroup";
 import RichText from "./Rich-Text/rich-text";
+import Embed from "./Embed/Embed";
 import Pricing from "./Pricing/Pricing";
 import classNames from "classnames";
 
@@ -23,6 +24,7 @@ const sectionComponents = {
   "sections.testimonials-group": TestimonialsGroup,
   "sections.rich-text": RichText,
   "sections.pricing": Pricing,
+  "sections.embed": Embed
 };
 
 // Display a section individually
