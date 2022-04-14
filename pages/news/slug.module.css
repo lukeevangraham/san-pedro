@@ -52,15 +52,28 @@
 
 .body {
   font-family: "Cardo", serif;
-  max-width: 575px;
+  /* max-width: 575px; */
   line-height: 1.5;
   text-align: justify;
   margin: 2rem 0 0 0;
 }
 
+.body p {
+  width: fit-content;
+  max-width: 575px;
+  margin: auto;
+}
+
 /* .body p {
   margin-bottom: 1rem;
 } */
+
+.body div iframe {
+  aspect-ratio: 16 / 9;
+  /* height: 100%; */
+  width: 100vw;
+  max-width: 100%;
+}
 
 .dateBox {
   background-image: linear-gradient(to right bottom, #db3d2c, #9c2c1f);
