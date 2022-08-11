@@ -21,6 +21,7 @@
     "react-icons": "^4.2.0",
     "react-markdown": "^5.0.3",
     "react-reveal": "^1.2.2",
+    "react-social-media-embed": "^2.2.2",
     "react-waypoint": "^9.0.3",
     "sass": "^1.43.4",
     "sharp": "^0.29.2"

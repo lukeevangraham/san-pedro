@@ -7,6 +7,7 @@ import { keepEventsCurrent, compareAndSortDates } from "../../lib/events";
 import { compareAndSortArticlesByDate } from "../../lib/news";
 import { getStrapiMedia } from "../../lib/media";
 import { getAllMinistriesSlugs, getMinistryData } from "../../lib/api";
+// import { InstagramEmbed } from "react-social-media-embed";
 
 import classes from "./slug.module.css";
 
@@ -114,6 +115,16 @@ export default function Ministry({ ministryData }) {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+      ) : null}
+      {ministryData.embedCode ? (
+        <section>
+          <div className="row">
+            <div
+              style={{ margin: "auto", textAlign: "center" }}
+              dangerouslySetInnerHTML={{ __html: ministryData.embedCode }}
+            />
           </div>
         </section>
       ) : null}

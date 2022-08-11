@@ -5,7 +5,7 @@ import Image from "next/image";
 import Verse from "../../components/sections/Verse/Verse";
 import { getStrapiMedia } from "../../lib/media";
 import classNames from "classnames";
-import Fade from "react-reveal/Fade"
+import Fade from "react-reveal/Fade";
 
 import classes from "./index.module.css";
 
@@ -74,24 +74,24 @@ const Ministries = ({ allMinistriesData, ministriesPage, global }) => {
         </div>
         <div className={`row ${classes.ministriesContainer}`}>
           <Fade>
-          {allMinistriesData.map((ministry) => (
-            <div key={ministry.id}>
-              <Link href={`ministries/${ministry.slug}`}>
-                <a className={classes.ministry}>
-                  <Image
-                    src={ministry.icon.url}
-                    alt={ministry.icon.alternativeText}
-                    width={80}
-                    height={80}
-                    className={classes.ministryIcon}
-                  />
-                  <div className={classes.ministryName}>
-                    {ministry.ministryName}
-                  </div>
-                </a>
-              </Link>
-            </div>
-          ))}
+            {allMinistriesData.map((ministry) => (
+              <div key={ministry.id}>
+                <Link href={`ministries/${ministry.slug}`}>
+                  <a className={classes.ministry}>
+                    <Image
+                      src={ministry.icon.url}
+                      alt={ministry.icon.alternativeText}
+                      width={80}
+                      height={80}
+                      className={classes.ministryIcon}
+                    />
+                    <div className={classes.ministryName}>
+                      {ministry.ministryName}
+                    </div>
+                  </a>
+                </Link>
+              </div>
+            ))}
           </Fade>
         </div>
       </section>
