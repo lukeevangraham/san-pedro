@@ -50,14 +50,18 @@ const About = ({ global, about }) => {
           style={{ display: "flex", alignItems: "center", flexWrap: "wrap" }}
         >
           <div className="col span-1-of-2" style={{ textAlign: "center" }}>
-            <Image
-              src={about.topSideImage.url}
-              alt={about.topSideImage.alternativeText}
-              width={450}
-              height={470}
-              className={classes.topImage}
-              layout="intrinsic"
-            />
+            {about.topEmbed ? (
+              <div dangerouslySetInnerHTML={{ __html: about.topEmbed }}></div>
+            ) : (
+              <Image
+                src={about.topSideImage.url}
+                alt={about.topSideImage.alternativeText}
+                width={450}
+                height={470}
+                className={classes.topImage}
+                layout="intrinsic"
+              />
+            )}
           </div>
           <div className={`col span-1-of-2 box ${classes.historyText}`}>
             <div dangerouslySetInnerHTML={{ __html: about.historyText }} />

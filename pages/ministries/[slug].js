@@ -60,7 +60,12 @@ export default function Ministry({ ministryData }) {
             />
           </div>
           <div className={`col span-2-of-8 box`}>
-            {ministryData.leaderPhoto ? (
+            {ministryData.topEmbed ? (
+              <div
+                dangerouslySetInnerHTML={{ __html: ministryData.topEmbed }}
+                className={classes.topEmbed}
+              />
+            ) : ministryData.leaderPhoto ? (
               <Image
                 src={getStrapiMedia(ministryData.leaderPhoto.url)}
                 alt={ministryData.leaderPhoto.alternativeText}
