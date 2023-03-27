@@ -8,12 +8,13 @@ import DateBox from "../../components/Events/DateBox/DateBox";
 import TopInfo from "../../components/Events/TopInfo/TopInfo";
 import classes from "./slug.module.css";
 import Fade from "react-reveal/Fade";
+import { useRouter } from "next/router";
 
 export async function getStaticPaths() {
   const paths = await getAllEventsSlugs();
   return {
     paths,
-    fallback: false,
+    fallback: true,
   };
 }
 
@@ -30,10 +31,22 @@ export async function getStaticProps({ params }) {
 }
 
 export default function Event({ eventData, global }) {
+  const router = useRouter();
+
+  if (router.isFallback) {
+    return <div>Loading...</div>
+  }
+
   keepEventsCurrent([eventData]);
+  
   return (
     <>
-      <Seo metadata={eventData.metadata} global={global} referer="Events" description={eventData.description} />
+      <Seo
+        metadata={eventData.metadata}
+        global={global}
+        referer="Events"
+        description={eventData.description}
+      />
       <section style={{ padding: 0 }}>
         <div className={["row", classes.event].join(" ")}>
           <h1>Upcoming Event</h1>

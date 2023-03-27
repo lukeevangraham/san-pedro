@@ -11,6 +11,7 @@ import { getAllNewsSlugs, getNewsData, fetchAPI } from "../../lib/api";
 import { IoPerson, IoLogoFacebook } from "react-icons/io5";
 import Head from "next/head";
 import Pulse from "react-reveal/Pulse";
+import { useRouter } from "next/router";
 
 import classes from "./slug.module.css";
 
@@ -18,7 +19,7 @@ export async function getStaticPaths() {
   const paths = await getAllNewsSlugs();
   return {
     paths,
-    fallback: false,
+    fallback: true,
   };
 }
 
@@ -35,6 +36,12 @@ export async function getStaticProps({ params }) {
 }
 
 export default function News(props) {
+  const router = useRouter();
+
+  if (router.isFallback) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <>
       <Seo

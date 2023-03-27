@@ -7,6 +7,7 @@ import { keepEventsCurrent, compareAndSortDates } from "../../lib/events";
 import { compareAndSortArticlesByDate } from "../../lib/news";
 import { getStrapiMedia } from "../../lib/media";
 import { getAllMinistriesSlugs, getMinistryData } from "../../lib/api";
+import { useRouter } from "next/router"
 // import { InstagramEmbed } from "react-social-media-embed";
 
 import classes from "./slug.module.css";
@@ -15,7 +16,7 @@ export async function getStaticPaths() {
   const paths = await getAllMinistriesSlugs();
   return {
     paths,
-    fallback: false,
+    fallback: true,
   };
 }
 
@@ -30,6 +31,13 @@ export async function getStaticProps({ params }) {
 }
 
 export default function Ministry({ ministryData }) {
+
+  const router = useRouter();
+
+  if (router.isFallback) {
+    return <div>Loading...</div>
+  }
+
   // GETTING RID OF EVENTS THAT HAPPENED AND DON'T REPEAT
   const oldEventsRemoved = ministryData.events.filter(
     (event) => event.endDate >= new Date().toISOString()

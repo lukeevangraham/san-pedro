@@ -2,12 +2,13 @@ import { getAllPageSlugs, getPageData, fetchAPI } from "../../lib/api";
 import Sections from "../../components/sections/sections";
 import { DefaultSeo } from "next-seo";
 import { getStrapiMedia } from "../../lib/media";
+import { useRouter } from "next/router";
 
 export async function getStaticPaths() {
   const paths = await getAllPageSlugs();
   return {
     paths,
-    fallback: false,
+    fallback: true,
   };
 }
 
@@ -24,6 +25,12 @@ export async function getStaticProps({ params }) {
 }
 
 export default function Page({ pageData, global }) {
+  const router = useRouter();
+
+  if (router.isFallback) {
+    return <div>Loading...</div>;
+  }
+
   // Making sure we don't render the hero (first section)
   let renderSections = pageData.contentSections ? (
     <Sections sections={pageData.contentSections} preview={null} />
