@@ -38,8 +38,6 @@ export default function Event({ eventData, global }) {
   }
 
   keepEventsCurrent([eventData]);
-
-  console.log("e: ", eventData)
   
   return (
     <>
