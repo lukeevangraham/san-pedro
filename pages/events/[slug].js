@@ -1,5 +1,5 @@
 import "@fontsource/cardo";
-import { getAllEventsSlugs, getEventData } from "../../lib/api";
+import { getAllEventsSlugs, getEventData, fetchAPI } from "../../lib/api";
 import { keepEventsCurrent } from "../../lib/events";
 import Seo from "../../components/elements/seo";
 import Markdown from "react-markdown";
@@ -14,17 +14,17 @@ export async function getStaticPaths() {
   const paths = await getAllEventsSlugs();
   return {
     paths,
-    fallback: true,
+    fallback: false,
   };
 }
 
 export async function getStaticProps({ params }) {
   const eventData = await getEventData(params.slug);
-  // const global = await fetchAPI("/global");
+  const global = await fetchAPI("/global");
   return {
     props: {
       eventData,
-      // global
+      global,
     },
     revalidate: 1,
   };
@@ -34,7 +34,7 @@ export default function Event({ eventData, global }) {
   const router = useRouter();
 
   if (router.isFallback) {
-    return <div>Loading...</div>
+    return <div>Loading...</div>;
   }
 
   keepEventsCurrent([eventData]);

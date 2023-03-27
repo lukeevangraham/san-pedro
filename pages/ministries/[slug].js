@@ -6,7 +6,7 @@ import EventCard from "../../components/Events/EventCard/EventCard";
 import { keepEventsCurrent, compareAndSortDates } from "../../lib/events";
 import { compareAndSortArticlesByDate } from "../../lib/news";
 import { getStrapiMedia } from "../../lib/media";
-import { getAllMinistriesSlugs, getMinistryData } from "../../lib/api";
+import { getAllMinistriesSlugs, getMinistryData, fetchAPI } from "../../lib/api";
 import { useRouter } from "next/router"
 // import { InstagramEmbed } from "react-social-media-embed";
 
@@ -16,21 +16,23 @@ export async function getStaticPaths() {
   const paths = await getAllMinistriesSlugs();
   return {
     paths,
-    fallback: true,
+    fallback: false,
   };
 }
 
 export async function getStaticProps({ params }) {
   const ministryData = await getMinistryData(params.slug);
+  const global = await fetchAPI("/global");
   return {
     props: {
       ministryData,
+      global
     },
     revalidate: 1,
   };
 }
 
-export default function Ministry({ ministryData }) {
+export default function Ministry({ ministryData, global }) {
 
   const router = useRouter();
 

@@ -3,7 +3,7 @@ import "@fontsource/source-sans-pro/200.css";
 import "@fontsource/cardo";
 import Seo from "../../components/elements/seo";
 import Markdown from "react-markdown/with-html";
-import Layout from "../../hoc/Layout/Layout";
+// import Layout from "../../hoc/Layout/Layout";
 import Button from "../../components/UI/Button/Button";
 import Image from "next/image";
 import { getStrapiMedia } from "../../lib/media";
@@ -19,17 +19,17 @@ export async function getStaticPaths() {
   const paths = await getAllNewsSlugs();
   return {
     paths,
-    fallback: true,
+    fallback: false,
   };
 }
 
 export async function getStaticProps({ params }) {
   const newsData = await getNewsData(params.slug);
-  // const global = await fetchAPI("/global");
+  const global = await fetchAPI("/global");
   return {
     props: {
       newsData,
-      // global
+      global
     },
     revalidate: 1,
   };

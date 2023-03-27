@@ -53,7 +53,6 @@ const Giving = ({ global, giving }) => {
       <section style={{ background: "#fff" }}>
         <h2>{giving.givingPageTitle}</h2>
         <div className="row">
-          {console.log("giving: ", giving)}
           <div className={classes.topText}>
             <div dangerouslySetInnerHTML={{ __html: giving.topText }} />
             <div className={classes.topButtons}>

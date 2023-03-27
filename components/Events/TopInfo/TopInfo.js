@@ -15,10 +15,7 @@ const TopInfo = ({ event, index, fromHome }) => (
     )}
     <div className={classNames(classes.time, { [classes.fromHome]: fromHome })}>
       <IoCalendarClearOutline />
-      {new Date(event.startDate).toLocaleTimeString("en-US", {
-        hour: "numeric",
-        minute: "numeric",
-      })}
+      {event.time}
       {/* {console.log("DATE: ", event.startDate)}
       {console.log("FORMATTED: ", new Date(event.startDate).toLocaleTimeString("en-US", {
         hour: "numeric",

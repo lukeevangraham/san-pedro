@@ -8,7 +8,7 @@ export async function getStaticPaths() {
   const paths = await getAllPageSlugs();
   return {
     paths,
-    fallback: true,
+    fallback: false,
   };
 }
 
@@ -24,7 +24,7 @@ export async function getStaticProps({ params }) {
   };
 }
 
-export default function Page({ pageData, global }) {
+export default function Page({ pageData }) {
   const router = useRouter();
 
   if (router.isFallback) {
