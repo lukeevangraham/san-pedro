@@ -6,8 +6,12 @@ import EventCard from "../../components/Events/EventCard/EventCard";
 import { keepEventsCurrent, compareAndSortDates } from "../../lib/events";
 import { compareAndSortArticlesByDate } from "../../lib/news";
 import { getStrapiMedia } from "../../lib/media";
-import { getAllMinistriesSlugs, getMinistryData, fetchAPI } from "../../lib/api";
-import { useRouter } from "next/router"
+import {
+  getAllMinistriesSlugs,
+  getMinistryData,
+  fetchAPI,
+} from "../../lib/api";
+import { useRouter } from "next/router";
 // import { InstagramEmbed } from "react-social-media-embed";
 
 import classes from "./slug.module.css";
@@ -23,21 +27,21 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const ministryData = await getMinistryData(params.slug);
   const global = await fetchAPI("/global");
+
   return {
     props: {
       ministryData,
-      global
+      global,
     },
     revalidate: 1,
   };
 }
 
 export default function Ministry({ ministryData, global }) {
-
   const router = useRouter();
 
   if (router.isFallback) {
-    return <div>Loading...</div>
+    return <div>Loading...</div>;
   }
 
   // GETTING RID OF EVENTS THAT HAPPENED AND DON'T REPEAT
