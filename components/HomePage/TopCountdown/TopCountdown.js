@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { keepEventsCurrent } from "../../../lib/events";
+import { keepEventsCurrent, combineDateAndTime } from "../../../lib/events";
 
 import DateBox from "../../Events/DateBox/DateBox";
 import TopInfo from "../../Events/TopInfo/TopInfo";
@@ -13,7 +13,19 @@ const TopCountdown = ({ event }) => {
 
   keepEventsCurrent([event]);
 
-  const dateToCountTo = new Date(event.startDate).getTime();
+  let reg = /-|:|T|\+/; //The regex on which matches the string should be split (any used delimiter) -> could also be written like /[.:T\+]/
+
+  const dateBeforeConversionToJs = combineDateAndTime(event).split(reg);
+
+  const dateToCountTo = new Date(
+    dateBeforeConversionToJs[0],
+    dateBeforeConversionToJs[1] - 1,
+    dateBeforeConversionToJs[2],
+    dateBeforeConversionToJs[3],
+    dateBeforeConversionToJs[4],
+    dateBeforeConversionToJs[5]
+  );
+
   useEffect(() => {
     let timer = setInterval(() => {
       let currentDate = new Date().getTime();
@@ -58,7 +70,6 @@ const TopCountdown = ({ event }) => {
             <div className={classes.num}>{secs}</div>
             <div className={classes.label}>Sec</div>
           </div>
-          
         </div>
       </div>
     </div>
