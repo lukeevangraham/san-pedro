@@ -12,13 +12,15 @@ import classes from "./HomePage.module.css";
 import Fade from "react-reveal/Fade";
 import Flip from "react-reveal/Flip";
 import Zoom from "react-reveal/Zoom";
+import moment from "moment-timezone";
 
 const HomePage = ({ data }) => {
   let videoUrl = data.topVideoEmbed.split(`src="`);
 
   // GETTING RID OF EVENTS THAT HAPPENED AND DON'T REPEAT
   const oldEventsRemoved = data.featuredEvents.filter(
-    (event) => event.endDate >= new Date().toISOString()
+    (event) =>
+      event.endDate >= moment().tz("America/Chicago").format("YYYY-MM-DD")
   );
 
   // BRINGING REPEATING EVENTS UP TO CURRENT ITERATION
@@ -68,11 +70,11 @@ const HomePage = ({ data }) => {
             {/* <div className="row"> */}
             <div className={classes.grid}>
               {/* <Zoom style={{ margin: "auto 0" }}> */}
-                {sortedEvents.map((event, index) =>
-                  index < 3 ? (
-                    <EventCard event={event} key={event.id} index={true} />
-                  ) : null
-                )}
+              {sortedEvents.map((event, index) =>
+                index < 3 ? (
+                  <EventCard event={event} key={event.id} index={true} />
+                ) : null
+              )}
               {/* </Zoom> */}
             </div>
           </div>
