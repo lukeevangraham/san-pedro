@@ -38,7 +38,7 @@ const Footer = ({ data }) => (
                     />
                     <div className={classes.logoText}>
                       <div>San Pedro</div>
-                      <div>Presbyterian Church</div>
+                      {/* <div>Presbyterian Church</div> */}
                     </div>
                   </div>
                 </a>

@@ -39,7 +39,7 @@
 
 .logoText div:first-child {
   line-height: 118%;
-  border-bottom: 1px solid white;
+  /* border-bottom: 1px solid white; */
   font-family: "Bodoni Moda", serif;
   font-weight: 500;
   font-size: 158%;
