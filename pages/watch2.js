@@ -1,4 +1,4 @@
-import classes from "../styles/Watch2.module.css"
+import classes from "../styles/watch2.module.css"
 
 const Watch2 = () => (
     <div className={classes.Watch}>
