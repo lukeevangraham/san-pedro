@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://sanpedropc.org
+
+# Sitemaps
+Sitemap: https://sanpedropc.org/sitemap.xml

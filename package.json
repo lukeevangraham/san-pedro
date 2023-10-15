@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "next-sitemap",
     "start": "next start -p 3058"
   },
   "dependencies": {
@@ -17,8 +18,9 @@
     "moment-timezone": "^0.5.43",
     "next": "10.0.5",
     "next-seo": "^4.17.0",
+    "next-sitemap": "^4.2.3",
     "nodemailer": "^6.5.0",
-    "qs": "^6.9.6",
+    "qs": "^6.11.2",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-icons": "^4.2.0",
@@ -27,6 +29,6 @@
     "react-social-media-embed": "^2.2.2",
     "react-waypoint": "^9.0.3",
     "sass": "^1.43.4",
-    "sharp": "^0.29.2"
+    "sharp": "^0.32.6"
   }
 }
