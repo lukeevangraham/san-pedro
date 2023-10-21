@@ -43,8 +43,8 @@ export default function Home(props) {
         <link rel="icon" href={getStrapiMedia(props.global.favicon.url)} />
       </Head> */}
       <DefaultSeo
-        titleTemplate={`%s | ${props.global.metaTitleSuffix}`}
-        title={"Home"}
+        // titleTemplate={`%s | ${props.global.metaTitleSuffix}`}
+        title={`Home | ${props.global.metaTitleSuffix}`}
         description={metadata.metaDescription}
         openGraph={{
           images: Object.values(metadata.shareImage.formats).map((image) => {

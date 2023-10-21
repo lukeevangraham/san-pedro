@@ -31,8 +31,8 @@ const Giving = ({ global, giving }) => {
   return (
     <>
       <DefaultSeo
-        titleTemplate={`%s | ${global.metaTitleSuffix}`}
-        title={giving.metadata.metaTitle}
+        // titleTemplate={`%s | ${global.metaTitleSuffix}`}
+        title={`${giving.metadata.metaTitle} | ${global.metaTitleSuffix}`}
         description={giving.metadata.metaDescription}
         openGraph={{
           images: Object.values(giving.metadata.shareImage.formats).map(

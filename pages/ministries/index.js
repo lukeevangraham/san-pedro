@@ -26,8 +26,8 @@ const Ministries = ({ allMinistriesData, ministriesPage, global }) => {
   return (
     <>
       <DefaultSeo
-        titleTemplate={`%s | ${global.metaTitleSuffix}`}
-        title={"Ministries"}
+        // titleTemplate={`%s | ${global.metaTitleSuffix}`}
+        title={`Ministries | ${global.metaTitleSuffix}`}
         description={
           "San Pedro Presbyterian Church in San Antonio, Texas, plans opportunities for spiritual growth through ministries"
         }

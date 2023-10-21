@@ -7,11 +7,12 @@ import { getStrapiMedia } from "../../lib/media";
 
 const Seo = ({ metadata, global, referer, description }) => {
   // Prevent errors if no metadata was set
+
   if (!metadata)
     return (
       <DefaultSeo
-        titleTemplate={`%s | ${global.metaTitleSuffix}`}
-        title={referer}
+        // titleTemplate={`%s | ${global.metaTitleSuffix}`}
+        title={`${referer} | ${global.metaTitleSuffix}`}
         description={description}
         openGraph={
           global.metadata &&
@@ -44,7 +45,9 @@ const Seo = ({ metadata, global, referer, description }) => {
   return (
     <NextSeo
       title={
-        metadata.metaTitle.charAt(0).toUpperCase() + metadata.metaTitle.slice(1)
+        metadata.metaTitle.charAt(0).toUpperCase() +
+        metadata.metaTitle.slice(1) +
+        ` | ${global.metaTitleSuffix}`
       }
       description={metadata.metaDescription}
       openGraph={{

@@ -60,7 +60,7 @@ export default function Ministry({ ministryData, global }) {
 
   return (
     <>
-      <Seo metadata={ministryData.metadata} />
+      <Seo metadata={ministryData.metadata} global={global} />
       <section>
         <h2 className={classes.topInfo}>
           {ministryData.ministryName} Ministry

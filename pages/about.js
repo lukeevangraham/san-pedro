@@ -24,8 +24,8 @@ const About = ({ global, about }) => {
   return (
     <>
       <DefaultSeo
-        titleTemplate={`%s | ${global.metaTitleSuffix}`}
-        title={about.metadata.metaTitle}
+        // titleTemplate={`%s | ${global.metaTitleSuffix}`}
+        title={`${about.metadata.metaTitle} | ${global.metaTitleSuffix}`}
         description={about.metadata.metaDescription}
         openGraph={{
           images: Object.values(about.metadata.shareImage.formats).map(

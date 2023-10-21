@@ -58,8 +58,7 @@ const Events = ({ allEventsData, global }) => {
   return (
     <>
     <DefaultSeo
-        titleTemplate={`%s | ${global.metaTitleSuffix}`}
-        title={"Events"}
+        title={`Events | ${global.metaTitleSuffix}`}
         description={"Events held and scheduled by San Pedro Presbyterian Church"}
         openGraph={{
           images: Object.values(global.metadata.shareImage.formats).map((image) => {

@@ -18,24 +18,26 @@ export async function getStaticProps() {
 
 const Watch = ({ watch, global }) => (
   <>
-  <DefaultSeo
-        titleTemplate={`%s | ${global.metaTitleSuffix}`}
-        title={watch.metadata.metaTitle}
-        description={watch.metadata.metaDescription}
-        openGraph={{
-          images: Object.values(watch.metadata.shareImage.formats).map((image) => {
+    <DefaultSeo
+      // titleTemplate={`%s | ${global.metaTitleSuffix}`}
+      title={`${watch.metadata.metaTitle} | ${global.metaTitleSuffix}`}
+      description={watch.metadata.metaDescription}
+      openGraph={{
+        images: Object.values(watch.metadata.shareImage.formats).map(
+          (image) => {
             return {
               url: getStrapiMedia(image.url),
               width: image.width,
               height: image.height,
             };
-          }),
-        }}
-        twitter={{
-          cardType: watch.metadata.twitterCardType,
-          handle: watch.metadata.twitterUsername,
-        }}
-      />
+          }
+        ),
+      }}
+      twitter={{
+        cardType: watch.metadata.twitterCardType,
+        handle: watch.metadata.twitterUsername,
+      }}
+    />
     <section style={{ textAlign: "center" }}>
       <h2>{watch.pageTitle}</h2>
       <div className="row">

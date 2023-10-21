@@ -52,7 +52,7 @@ export default function News(props) {
       <Seo
         metadata={props.newsData.metadata}
         global={props.global}
-        referer="News"
+        referer={props.newsData.title}
         description={props.newsData.title}
       />
       {/* <section style={{ backgroundColor: "rgb(252, 252, 252)" }}> */}

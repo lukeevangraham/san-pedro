@@ -103,8 +103,8 @@ const Contact = ({ contact, global }) => {
   return (
     <>
       <DefaultSeo
-        titleTemplate={`%s | ${global.metaTitleSuffix}`}
-        title={contact.metadata.metaTitle}
+        // titleTemplate={`%s | ${global.metaTitleSuffix}`}
+        title={`${contact.metadata.metaTitle} | ${global.metaTitleSuffix}`}
         description={contact.metadata.metaDescription}
         openGraph={{
           images: Object.values(contact.metadata.shareImage.formats).map(

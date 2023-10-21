@@ -54,8 +54,8 @@ const News = ({ allNewsData, global }) => {
   return (
     <>
       <DefaultSeo
-        titleTemplate={`%s | ${global.metaTitleSuffix}`}
-        title={"News"}
+        // titleTemplate={`%s | ${global.metaTitleSuffix}`}
+        title={`News | ${global.metaTitleSuffix}`}
         description={
           "Keep up with the latest news from San Pedro Presbyterian Church in San Antonio, Texas"
         }

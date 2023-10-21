@@ -14,17 +14,17 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const pageData = await getPageData(params.slug);
-  // const global = await fetchAPI("/global");
+  const global = await fetchAPI("/global");
   return {
     props: {
       pageData,
-      // global
+      global,
     },
     revalidate: 1,
   };
 }
 
-export default function Page({ pageData }) {
+export default function Page({ pageData, global }) {
   const router = useRouter();
 
   if (router.isFallback) {
@@ -41,8 +41,8 @@ export default function Page({ pageData }) {
   return (
     <>
       <DefaultSeo
-        titleTemplate={`%s | ${global.metaTitleSuffix}`}
-        title={pageData.metadata.metaTitle}
+        // titleTemplate={`%s | ${global.metaTitleSuffix}`}
+        title={`${pageData.metadata.metaTitle} | ${global.metaTitleSuffix}`}
         description={pageData.metadata.metaDescription}
         openGraph={
           pageData.metadata.shareImage && pageData.metadata.shareImage.formats
