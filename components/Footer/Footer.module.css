@@ -60,17 +60,19 @@
 }
 
 .copyrightBlock div:first-child {
-/* border-right: 1px solid #fff; */
-margin-right: .1rem;
+  /* border-right: 1px solid #fff; */
+  margin-right: 0.1rem;
 }
 
-.copyrightBlock a:link, .copyrightBlock a:visited {
+.copyrightBlock a:link,
+.copyrightBlock a:visited {
   color: #fff;
   margin-left: 0.1rem;
   transition: all 0.2s;
 }
 
-.copyrightBlock a:hover, .copyrightBlock a:active {
+.copyrightBlock a:hover,
+.copyrightBlock a:active {
   text-shadow: 0 0 3px rgb(189, 189, 189);
 }
 
@@ -84,12 +86,14 @@ margin-right: .1rem;
   justify-content: flex-end;
 }
 
-.socialIcons ul li a:link, .socialIcons ul li a:visited {
+.socialIcons ul li a:link,
+.socialIcons ul li a:visited {
   color: #fff;
   margin-left: 1rem;
 }
 
-.socialIcons ul li a:hover, .socialIcons ul li a:active {
+.socialIcons ul li a:hover,
+.socialIcons ul li a:active {
   color: #90291d;
 }
 
@@ -101,11 +105,13 @@ margin-right: .1rem;
   font-weight: 400;
 }
 
-.linkColumn ul a:link, .linkColumn ul a:visited {
+.linkColumn ul a:link,
+.linkColumn ul a:visited {
   color: #fff;
 }
 
-.linkColumn ul a:hover, .linkColumn ul a:active {
+.linkColumn ul a:hover,
+.linkColumn ul a:active {
   color: #90291d;
 }
 
@@ -118,10 +124,11 @@ margin-right: .1rem;
   }
   .socialIcons ul {
     justify-content: center;
-    margin-top: .2rem;
+    margin-top: 0.2rem;
   }
-  .socialIcons ul li a:link, .socialIcons ul li a:visited {
-    margin: 0 .5rem;
+  .socialIcons ul li a:link,
+  .socialIcons ul li a:visited {
+    margin: 0 0.5rem;
   }
   .copyrightBlock {
     text-align: center;
@@ -129,5 +136,10 @@ margin-right: .1rem;
   }
   .copyrightBlock div:nth-child(2) {
     display: none;
+  }
+  .linkColumn ul li {
+    min-height: 2rem;
+    display: flex;
+    align-items: center;
   }
 }
