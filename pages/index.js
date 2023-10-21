@@ -5,7 +5,7 @@ import HomePage from "../components/HomePage/HomePage";
 import NewsCard from "../components/News/NewsCard/NewsCard";
 import Sections from "../components/sections/sections";
 import { getStrapiMedia } from "../lib/media";
-import { fetchAPI } from "../lib/api";
+import { fetchAPI, siteAddress } from "../lib/api";
 // import { render } from "react-dom";
 
 // import styles from '../styles/Home.module.css'
@@ -59,6 +59,7 @@ export default function Home(props) {
           cardType: metadata.twitterCardType,
           handle: metadata.twitterUsername,
         }}
+        canonical={`${siteAddress}/`}
       />
 
       <h1 style={{ display: "none" }}>A church for San Antonio</h1>

@@ -1,4 +1,4 @@
-import { getSortedEventsData } from "../../lib/api";
+import { getSortedEventsData, siteAddress } from "../../lib/api";
 import { getStrapiMedia } from "../../lib/media";
 import { DefaultSeo } from "next-seo";
 import EventCard from "../../components/Events/EventCard/EventCard";
@@ -73,6 +73,7 @@ const Events = ({ allEventsData, global }) => {
             }
           ),
         }}
+        canonical={`${siteAddress}/events`}
       />
       <section>
         <h1 style={{ display: "none" }}>Current Events of San Pedro</h1>

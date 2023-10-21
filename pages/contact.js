@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { IoLocation, IoCall, IoMail, IoGlobe } from "react-icons/io5";
 import Button from "../components/UI/Button/Button";
-import { fetchAPI } from "../lib/api";
+import { fetchAPI, siteAddress } from "../lib/api";
 import { DefaultSeo } from "next-seo";
 import { getStrapiMedia } from "../lib/media";
 
@@ -121,6 +121,7 @@ const Contact = ({ contact, global }) => {
           cardType: contact.metadata.twitterCardType,
           handle: contact.metadata.twitterUsername,
         }}
+        canonical={`${siteAddress}/contact`}
       />
       <section>
         <h1 style={{ display: "none" }}>Contact</h1>

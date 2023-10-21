@@ -1,4 +1,4 @@
-import { fetchAPI } from "../lib/api";
+import { fetchAPI, siteAddress } from "../lib/api";
 import { DefaultSeo } from "next-seo";
 import { getStrapiMedia } from "../lib/media";
 import Image from "next/image";
@@ -49,6 +49,7 @@ const Giving = ({ global, giving }) => {
           cardType: giving.metadata.twitterCardType,
           handle: giving.metadata.twitterUsername,
         }}
+        canonical={`${siteAddress}/giving`}
       />
       <section style={{ background: "#fff" }}>
         <h1 style={{ display: "none" }}>{giving.givingPageTitle}</h1>

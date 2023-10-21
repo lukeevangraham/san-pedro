@@ -5,7 +5,7 @@ import { stringify } from "qs";
 import { getStrapiMedia } from "../../lib/media";
 // import { mediaPropTypes } from "utils/types";
 
-const Seo = ({ metadata, global, referer, description }) => {
+const Seo = ({ metadata, global, referer, description, canonical }) => {
   // Prevent errors if no metadata was set
 
   if (!metadata)
@@ -71,6 +71,7 @@ const Seo = ({ metadata, global, referer, description }) => {
         ...(metadata.twitterCardType && { cardType: metadata.twitterCardType }),
         ...(metadata.twitterUsername && { cardType: metadata.twitterUsername }),
       }}
+      canonical={canonical}
     />
   );
 };

@@ -1,4 +1,4 @@
-import { getSortedMinistriesData, fetchAPI } from "../../lib/api";
+import { getSortedMinistriesData, fetchAPI, siteAddress } from "../../lib/api";
 import { DefaultSeo } from "next-seo";
 import Link from "next/link";
 import Image from "next/image";
@@ -46,8 +46,10 @@ const Ministries = ({ allMinistriesData, ministriesPage, global }) => {
           cardType: global.metadata.twitterCardType,
           handle: global.metadata.twitterUsername,
         }}
+        canonical={`${siteAddress}/ministries`}
       />
       <section>
+        <h1 style={{ display: "none" }}>Ministries</h1>
         <h2>Ministries</h2>
         <div className="row">
           <div className={classes.topInfo}>

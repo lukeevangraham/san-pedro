@@ -1,4 +1,4 @@
-import { getSortedNewsData, fetchAPI } from "../../lib/api";
+import { getSortedNewsData, fetchAPI, siteAddress } from "../../lib/api";
 import { DefaultSeo } from "next-seo";
 import { getStrapiMedia } from "../../lib/media";
 import Fade from "react-reveal/Fade";
@@ -74,6 +74,7 @@ const News = ({ allNewsData, global }) => {
           cardType: global.metadata.twitterCardType,
           handle: global.metadata.twitterUsername,
         }}
+        canonical={`${siteAddress}/news`}
       />
       <section>
         <h1 style={{ display: "none" }}>Current News</h1>

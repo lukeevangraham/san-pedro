@@ -7,7 +7,12 @@ import Markdown from "react-markdown/with-html";
 import Button from "../../components/UI/Button/Button";
 import Image from "next/image";
 import { getStrapiMedia } from "../../lib/media";
-import { getAllNewsSlugs, getNewsData, fetchAPI } from "../../lib/api";
+import {
+  getAllNewsSlugs,
+  getNewsData,
+  fetchAPI,
+  siteAddress,
+} from "../../lib/api";
 import { IoPerson, IoLogoFacebook } from "react-icons/io5";
 import Head from "next/head";
 import Pulse from "react-reveal/Pulse";
@@ -54,6 +59,7 @@ export default function News(props) {
         global={props.global}
         referer={props.newsData.title}
         description={props.newsData.title}
+        canonical={`${siteAddress}/news/${props.newsData.slug}`}
       />
       <h1 style={{ display: "none" }}>{props.newsData.title}</h1>
       {/* <section style={{ backgroundColor: "rgb(252, 252, 252)" }}> */}

@@ -1,4 +1,4 @@
-import { getAllPageSlugs, getPageData, fetchAPI } from "../../lib/api";
+import { getAllPageSlugs, getPageData, fetchAPI, siteAddress } from "../../lib/api";
 import Sections from "../../components/sections/sections";
 import { DefaultSeo } from "next-seo";
 import { getStrapiMedia } from "../../lib/media";
@@ -63,6 +63,7 @@ export default function Page({ pageData, global }) {
           cardType: pageData.metadata.twitterCardType,
           handle: pageData.metadata.twitterUsername,
         }}
+        canonical={`${siteAddress}/pages/${pageData.slug}`}
       />
       <section style={{ paddingBottom: 0 }}>
         {pageData.metadata.metaTitle ? (

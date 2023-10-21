@@ -3,7 +3,7 @@ import Layout from "../hoc/Layout/Layout";
 import Image from "next/image";
 import Markdown from "react-markdown/with-html";
 import { IoMailOutline, IoCallOutline } from "react-icons/io5";
-import { fetchAPI } from "../lib/api";
+import { fetchAPI, siteAddress } from "../lib/api";
 import Zoom from "react-reveal/Zoom";
 import Fade from "react-reveal/Fade";
 
@@ -42,6 +42,7 @@ const About = ({ global, about }) => {
           cardType: about.metadata.twitterCardType,
           handle: about.metadata.twitterUsername,
         }}
+        canonical={`${siteAddress}/about`}
       />
       <section>
         <h1 style={{ display: "none" }}>{about.topText}</h1>

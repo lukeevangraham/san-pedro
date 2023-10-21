@@ -6,6 +6,7 @@ import EventCard from "../../components/Events/EventCard/EventCard";
 import { keepEventsCurrent, compareAndSortDates } from "../../lib/events";
 import { compareAndSortArticlesByDate } from "../../lib/news";
 import { getStrapiMedia } from "../../lib/media";
+import { siteAddress } from "../../lib/api";
 import {
   getAllMinistriesSlugs,
   getMinistryData,
@@ -60,7 +61,11 @@ export default function Ministry({ ministryData, global }) {
 
   return (
     <>
-      <Seo metadata={ministryData.metadata} global={global} />
+      <Seo
+        metadata={ministryData.metadata}
+        global={global}
+        canonical={`${siteAddress}/ministries/${ministryData.slug}`}
+      />
       <section>
         <h1 style={{ display: "none" }}>
           {ministryData.ministryName} Ministry

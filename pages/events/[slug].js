@@ -1,5 +1,5 @@
 import "@fontsource/cardo";
-import { getAllEventsSlugs, getEventData, fetchAPI } from "../../lib/api";
+import { getAllEventsSlugs, getEventData, fetchAPI, siteAddress } from "../../lib/api";
 import { keepEventsCurrent } from "../../lib/events";
 import Seo from "../../components/elements/seo";
 import Markdown from "react-markdown";
@@ -46,6 +46,7 @@ export default function Event({ eventData, global }) {
         global={global}
         referer={eventData.title}
         description={eventData.description}
+        canonical={`${siteAddress}/events/${eventData.slug}`}
       />
       <section style={{ padding: 0 }}>
         <div className={["row", classes.event].join(" ")}>

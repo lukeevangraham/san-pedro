@@ -1,6 +1,6 @@
 import Markdown from "react-markdown/with-html";
 import Verse from "../components/sections/Verse/Verse";
-import { fetchAPI } from "../lib/api";
+import { fetchAPI, siteAddress } from "../lib/api";
 import { getStrapiMedia } from "../lib/media";
 import { DefaultSeo } from "next-seo";
 
@@ -37,8 +37,10 @@ const Watch = ({ watch, global }) => (
         cardType: watch.metadata.twitterCardType,
         handle: watch.metadata.twitterUsername,
       }}
+      canonical={`${siteAddress}/watch`}
     />
     <section style={{ textAlign: "center" }}>
+      <h1 style={{ display: "none" }}>{watch.pageTitle}</h1>
       <h2>{watch.pageTitle}</h2>
       <div className="row">
         {watch.topText !== `<p><br></p>` ? (
