@@ -89,7 +89,7 @@ const Footer = ({ data }) => (
             </div>
             <div>{" | "}</div>
             <div>
-              <a href="http://grahamwebworks.com" target="_blank" rel="noopener">
+              <a href="https://grahamwebworks.com" target="_blank" rel="noopener">
                 Graham Web Works
               </a>
             </div>
