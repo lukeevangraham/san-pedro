@@ -55,6 +55,7 @@ export default function News(props) {
         referer={props.newsData.title}
         description={props.newsData.title}
       />
+      <h1 style={{ display: "none" }}>{props.newsData.title}</h1>
       {/* <section style={{ backgroundColor: "rgb(252, 252, 252)" }}> */}
       <section style={{ padding: 0 }}>
         <div className={["row", classes.article].join(" ")}>

@@ -61,6 +61,8 @@ export default function Home(props) {
         }}
       />
 
+      <h1 style={{ display: "none" }}>A church for San Antonio</h1>
+
       <HomePage data={props.homeData} />
       {/* {renderSections} */}
 

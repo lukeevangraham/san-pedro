@@ -6,7 +6,7 @@ import Button from "../components/UI/Button/Button";
 import Markdown from "react-markdown";
 import Sections from "../components/sections/sections";
 import Verse from "../components/sections/Verse/Verse";
-import Fade from "react-reveal/Fade"
+import Fade from "react-reveal/Fade";
 
 import classes from "../styles/giving.module.scss";
 
@@ -51,6 +51,7 @@ const Giving = ({ global, giving }) => {
         }}
       />
       <section style={{ background: "#fff" }}>
+        <h1 style={{ display: "none" }}>{giving.givingPageTitle}</h1>
         <h2>{giving.givingPageTitle}</h2>
         <div className="row">
           <div className={classes.topText}>
@@ -71,10 +72,7 @@ const Giving = ({ global, giving }) => {
           <div className={`${classes.offeringOptions}`}>
             <Fade>
               {giving.moreWaysToGive.map((givingMethod, index, array) => (
-                <div
-                  className={``}
-                  key={givingMethod.id}
-                >
+                <div className={``} key={givingMethod.id}>
                   <Image
                     src={givingMethod.icon.url}
                     alt={givingMethod.icon.alternativeText}
@@ -82,9 +80,13 @@ const Giving = ({ global, giving }) => {
                     height={55}
                     className={classes.icon}
                   />
-                  <div className={classes.methodTitle}>{givingMethod.title}</div>
+                  <div className={classes.methodTitle}>
+                    {givingMethod.title}
+                  </div>
                   <div
-                    dangerouslySetInnerHTML={{ __html: givingMethod.description }}
+                    dangerouslySetInnerHTML={{
+                      __html: givingMethod.description,
+                    }}
                     className={classes.methodDescription}
                   />
                 </div>

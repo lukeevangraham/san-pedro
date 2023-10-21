@@ -123,6 +123,7 @@ const Contact = ({ contact, global }) => {
         }}
       />
       <section>
+        <h1 style={{ display: "none" }}>Contact</h1>
         <h2>Contact</h2>
         <div className={`row ${classes.contactPage}`}>
           <div className={`col span-1-of-2 ${classes.addressInfo}`}>

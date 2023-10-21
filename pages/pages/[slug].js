@@ -65,6 +65,10 @@ export default function Page({ pageData, global }) {
         }}
       />
       <section style={{ paddingBottom: 0 }}>
+        {pageData.metadata.metaTitle ? (
+          <h1 style={{ display: "none" }}>{pageData.metadata.metaTitle}</h1>
+        ) : null}
+
         <h2>{pageData.shortName}</h2>
       </section>
       {renderSections}

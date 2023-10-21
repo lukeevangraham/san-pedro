@@ -62,6 +62,9 @@ export default function Ministry({ ministryData, global }) {
     <>
       <Seo metadata={ministryData.metadata} global={global} />
       <section>
+        <h1 style={{ display: "none" }}>
+          {ministryData.ministryName} Ministry
+        </h1>
         <h2 className={classes.topInfo}>
           {ministryData.ministryName} Ministry
         </h2>

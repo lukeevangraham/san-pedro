@@ -44,6 +44,7 @@ const About = ({ global, about }) => {
         }}
       />
       <section>
+        <h1 style={{ display: "none" }}>{about.topText}</h1>
         <h2>{about.topText}</h2>
         <div
           className="row"

@@ -76,6 +76,7 @@ const News = ({ allNewsData, global }) => {
         }}
       />
       <section>
+        <h1 style={{ display: "none" }}>Current News</h1>
         <h2>Current News</h2>
         {/* <h2>Here are the news pages:</h2> */}
         <div className="row">

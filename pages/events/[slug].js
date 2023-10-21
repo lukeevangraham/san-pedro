@@ -49,6 +49,7 @@ export default function Event({ eventData, global }) {
       />
       <section style={{ padding: 0 }}>
         <div className={["row", classes.event].join(" ")}>
+          <h1 style={{ display: "none" }}>{eventData.title}</h1>
           <h2>Upcoming Event</h2>
           <div className="row">
             <div className="col span-1-of-2 box">
