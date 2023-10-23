@@ -37,6 +37,7 @@ const About = ({ global, about }) => {
               };
             }
           ),
+          type: "website"
         }}
         twitter={{
           cardType: about.metadata.twitterCardType,

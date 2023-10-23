@@ -41,6 +41,7 @@ const Ministries = ({ allMinistriesData, ministriesPage, global }) => {
               };
             }
           ),
+          type: "website"
         }}
         twitter={{
           cardType: global.metadata.twitterCardType,

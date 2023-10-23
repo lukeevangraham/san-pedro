@@ -116,6 +116,7 @@ const Contact = ({ contact, global }) => {
               };
             }
           ),
+          type: "website"
         }}
         twitter={{
           cardType: contact.metadata.twitterCardType,

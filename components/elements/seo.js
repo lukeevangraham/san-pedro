@@ -65,6 +65,7 @@ const Seo = ({ metadata, global, referer, description, canonical }) => {
             };
           }),
         }),
+        type: "website"
       }}
       // Only included Twitter data if we have it
       twitter={{

@@ -54,6 +54,7 @@ export default function Home(props) {
               height: image.height,
             };
           }),
+          type: "website"
         }}
         twitter={{
           cardType: metadata.twitterCardType,

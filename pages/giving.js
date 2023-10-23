@@ -44,6 +44,7 @@ const Giving = ({ global, giving }) => {
               };
             }
           ),
+          type: "website"
         }}
         twitter={{
           cardType: giving.metadata.twitterCardType,

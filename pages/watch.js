@@ -32,6 +32,7 @@ const Watch = ({ watch, global }) => (
             };
           }
         ),
+        type: "website",
       }}
       twitter={{
         cardType: watch.metadata.twitterCardType,

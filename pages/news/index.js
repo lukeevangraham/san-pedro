@@ -69,6 +69,7 @@ const News = ({ allNewsData, global }) => {
               };
             }
           ),
+          type: "website"
         }}
         twitter={{
           cardType: global.metadata.twitterCardType,

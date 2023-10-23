@@ -72,6 +72,7 @@ const Events = ({ allEventsData, global }) => {
               };
             }
           ),
+          type: "website"
         }}
         canonical={`${siteAddress}/events`}
       />
