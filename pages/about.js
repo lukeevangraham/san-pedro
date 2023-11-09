@@ -12,9 +12,11 @@ import { getStrapiMedia } from "../lib/media";
 
 export async function getStaticProps() {
   const about = await fetchAPI("/about");
+  const global = await fetchAPI("/global");
   return {
     props: {
       about,
+      global,
     },
     revalidate: 1,
   };
@@ -22,7 +24,7 @@ export async function getStaticProps() {
 
 const About = ({ global, about }) => {
   return (
-    <>
+    <Layout global={global}>
       <DefaultSeo
         // titleTemplate={`%s | ${global.metaTitleSuffix}`}
         title={`${about.metadata.metaTitle} | ${global.metaTitleSuffix}`}
@@ -37,7 +39,7 @@ const About = ({ global, about }) => {
               };
             }
           ),
-          type: "website"
+          type: "website",
         }}
         twitter={{
           cardType: about.metadata.twitterCardType,
@@ -169,7 +171,7 @@ const About = ({ global, about }) => {
           </Zoom>
         </div>
       </section>
-    </>
+    </Layout>
   );
 };
 

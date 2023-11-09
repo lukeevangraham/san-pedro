@@ -4,6 +4,7 @@ import { DefaultSeo } from "next-seo";
 import HomePage from "../components/HomePage/HomePage";
 import NewsCard from "../components/News/NewsCard/NewsCard";
 import Sections from "../components/sections/sections";
+import Layout from "../hoc/Layout/Layout";
 import { getStrapiMedia } from "../lib/media";
 import { fetchAPI, siteAddress } from "../lib/api";
 // import { render } from "react-dom";
@@ -12,11 +13,11 @@ import { fetchAPI, siteAddress } from "../lib/api";
 
 export async function getStaticProps() {
   const homeData = await fetchAPI("/home");
-  // const global = await fetchAPI("/global");
+  const global = await fetchAPI("/global");
   return {
     props: {
       homeData,
-      // global
+      global,
     },
     revalidate: 1,
   };
@@ -39,36 +40,37 @@ export default function Home(props) {
 
   return (
     <>
-      {/* <Head>
+      <Layout global={props.global} home homeData={props.homeData}>
+        {/* <Head>
         <link rel="icon" href={getStrapiMedia(props.global.favicon.url)} />
       </Head> */}
-      <DefaultSeo
-        // titleTemplate={`%s | ${props.global.metaTitleSuffix}`}
-        title={`Home | ${props.global.metaTitleSuffix}`}
-        description={metadata.metaDescription}
-        openGraph={{
-          images: Object.values(metadata.shareImage.formats).map((image) => {
-            return {
-              url: getStrapiMedia(image.url),
-              width: image.width,
-              height: image.height,
-            };
-          }),
-          type: "website"
-        }}
-        twitter={{
-          cardType: metadata.twitterCardType,
-          handle: metadata.twitterUsername,
-        }}
-        canonical={`${siteAddress}/`}
-      />
+        <DefaultSeo
+          // titleTemplate={`%s | ${props.global.metaTitleSuffix}`}
+          title={`Home | ${props.global.metaTitleSuffix}`}
+          description={metadata.metaDescription}
+          openGraph={{
+            images: Object.values(metadata.shareImage.formats).map((image) => {
+              return {
+                url: getStrapiMedia(image.url),
+                width: image.width,
+                height: image.height,
+              };
+            }),
+            type: "website",
+          }}
+          twitter={{
+            cardType: metadata.twitterCardType,
+            handle: metadata.twitterUsername,
+          }}
+          canonical={`${siteAddress}/`}
+        />
 
-      <h1 style={{ display: "none" }}>A church for San Antonio</h1>
+        <h1 style={{ display: "none" }}>A church for San Antonio</h1>
 
-      <HomePage data={props.homeData} />
-      {/* {renderSections} */}
+        <HomePage data={props.homeData} />
+        {/* {renderSections} */}
 
-      {/* <main className={styles.main}>
+        {/* <main className={styles.main}>
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
@@ -119,6 +121,7 @@ export default function Home(props) {
           <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
         </a>
       </footer> */}
+      </Layout>
     </>
   );
 }

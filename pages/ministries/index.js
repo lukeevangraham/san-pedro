@@ -1,6 +1,7 @@
 import { getSortedMinistriesData, fetchAPI, siteAddress } from "../../lib/api";
 import { DefaultSeo } from "next-seo";
 import Link from "next/link";
+import Layout from "../../hoc/Layout/Layout";
 import Image from "next/image";
 import Verse from "../../components/sections/Verse/Verse";
 import { getStrapiMedia } from "../../lib/media";
@@ -12,11 +13,13 @@ import classes from "./index.module.css";
 export async function getStaticProps() {
   const allMinistriesData = await getSortedMinistriesData();
   const ministriesPage = await fetchAPI("/ministries-page");
+  const global = await fetchAPI("/global");
 
   return {
     props: {
       allMinistriesData,
       ministriesPage,
+      global,
     },
     revalidate: 1,
   };
@@ -24,7 +27,7 @@ export async function getStaticProps() {
 
 const Ministries = ({ allMinistriesData, ministriesPage, global }) => {
   return (
-    <>
+    <Layout global={global}>
       <DefaultSeo
         // titleTemplate={`%s | ${global.metaTitleSuffix}`}
         title={`Ministries | ${global.metaTitleSuffix}`}
@@ -41,7 +44,7 @@ const Ministries = ({ allMinistriesData, ministriesPage, global }) => {
               };
             }
           ),
-          type: "website"
+          type: "website",
         }}
         twitter={{
           cardType: global.metadata.twitterCardType,
@@ -99,7 +102,7 @@ const Ministries = ({ allMinistriesData, ministriesPage, global }) => {
         </div>
       </section>
       <Verse data={ministriesPage.verse} />
-    </>
+    </Layout>
   );
 };
 

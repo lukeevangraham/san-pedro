@@ -1,5 +1,6 @@
 import Markdown from "react-markdown/with-html";
 import Verse from "../components/sections/Verse/Verse";
+import Layout from "../hoc/Layout/Layout";
 import { fetchAPI, siteAddress } from "../lib/api";
 import { getStrapiMedia } from "../lib/media";
 import { DefaultSeo } from "next-seo";
@@ -8,16 +9,18 @@ import classes from "../styles/watch.module.css";
 
 export async function getStaticProps() {
   const watch = await fetchAPI("/watch");
+  const global = await fetchAPI("/global");
   return {
     props: {
       watch,
+      global,
     },
     revalidate: 1,
   };
 }
 
 const Watch = ({ watch, global }) => (
-  <>
+  <Layout global={global}>
     <DefaultSeo
       // titleTemplate={`%s | ${global.metaTitleSuffix}`}
       title={`${watch.metadata.metaTitle} | ${global.metaTitleSuffix}`}
@@ -67,7 +70,7 @@ const Watch = ({ watch, global }) => (
       </div>
     </section>
     <Verse data={watch.verse} />
-  </>
+  </Layout>
 );
 
 export default Watch;

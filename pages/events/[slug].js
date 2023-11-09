@@ -1,6 +1,7 @@
 import "@fontsource/cardo";
 import { getAllEventsSlugs, getEventData, fetchAPI, siteAddress } from "../../lib/api";
 import { keepEventsCurrent } from "../../lib/events";
+import Layout from "../../hoc/Layout/Layout";
 import Seo from "../../components/elements/seo";
 import Markdown from "react-markdown";
 import Image from "next/image";
@@ -40,7 +41,7 @@ export default function Event({ eventData, global }) {
   keepEventsCurrent([eventData]);
 
   return (
-    <>
+    <Layout global={global}>
       <Seo
         metadata={eventData.metadata}
         global={global}
@@ -93,6 +94,6 @@ export default function Event({ eventData, global }) {
           ) : null}
         </div>
       </section>
-    </>
+    </Layout>
   );
 }

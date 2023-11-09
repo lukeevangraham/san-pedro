@@ -1,5 +1,6 @@
 import { getSortedNewsData, fetchAPI, siteAddress } from "../../lib/api";
 import { DefaultSeo } from "next-seo";
+import Layout from "../../hoc/Layout/Layout";
 import { getStrapiMedia } from "../../lib/media";
 import Fade from "react-reveal/Fade";
 
@@ -10,12 +11,12 @@ import classes from "./index.module.css";
 
 export async function getStaticProps() {
   const allNewsData = await getSortedNewsData();
-  // const global = await fetchAPI("/global");
+  const global = await fetchAPI("/global");
 
   return {
     props: {
       allNewsData,
-      // global
+      global,
     },
     revalidate: 1,
   };
@@ -52,7 +53,7 @@ const News = ({ allNewsData, global }) => {
 
   // console.log("article: ", fakeArticles);
   return (
-    <>
+    <Layout global={global}>
       <DefaultSeo
         // titleTemplate={`%s | ${global.metaTitleSuffix}`}
         title={`News | ${global.metaTitleSuffix}`}
@@ -69,7 +70,7 @@ const News = ({ allNewsData, global }) => {
               };
             }
           ),
-          type: "website"
+          type: "website",
         }}
         twitter={{
           cardType: global.metadata.twitterCardType,
@@ -90,7 +91,7 @@ const News = ({ allNewsData, global }) => {
           </div>
         </div>
       </section>
-    </>
+    </Layout>
   );
 };
 

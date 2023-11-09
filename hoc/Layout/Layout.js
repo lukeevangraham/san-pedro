@@ -35,7 +35,6 @@ const Layout = (props) => {
           closeSelf={() => setBannerIsShown(false)}
         />
       )}
-
       {props.home ? (
         <Waypoint
           topOffset={"65px"}
@@ -45,10 +44,8 @@ const Layout = (props) => {
           <div className={classes.homeHeader}>
             <div className={classes.Fixed}>
               <Image
-                src={props.children.props.homeData.homeHero.picture.url}
-                alt={
-                  props.children.props.homeData.homeHero.picture.alternativeText
-                }
+                src={props.homeData.homeHero.picture.url}
+                alt={props.homeData.homeHero.picture.alternativeText}
                 layout="fill"
                 objectFit="cover"
                 objectPosition="center center"
@@ -63,10 +60,10 @@ const Layout = (props) => {
               home={true}
             />
             {/* <Sections
-              sections={[props.children.props.homeData.contentSections[0]]}
+              sections={[props.homeData.contentSections[0]]}
               home
             /> */}
-            <HomeHero data={props.children.props.homeData.homeHero} />
+            <HomeHero data={props.homeData.homeHero} />
           </div>
         </Waypoint>
       ) : (

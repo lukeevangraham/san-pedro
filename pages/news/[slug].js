@@ -3,7 +3,7 @@ import "@fontsource/source-sans-pro/200.css";
 import "@fontsource/cardo";
 import Seo from "../../components/elements/seo";
 import Markdown from "react-markdown/with-html";
-// import Layout from "../../hoc/Layout/Layout";
+import Layout from "../../hoc/Layout/Layout";
 import Button from "../../components/UI/Button/Button";
 import Image from "next/image";
 import { getStrapiMedia } from "../../lib/media";
@@ -53,7 +53,7 @@ export default function News(props) {
   }
 
   return (
-    <>
+    <Layout global={props.global}>
       <Seo
         metadata={props.newsData.metadata}
         global={props.global}
@@ -135,6 +135,6 @@ export default function News(props) {
           </div>
         </div>
       </section>
-    </>
+    </Layout>
   );
 }

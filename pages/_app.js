@@ -10,7 +10,7 @@ import "../styles/queries.css";
 import "../styles/quill.css";
 
 import App from "next/app";
-import Layout from "../hoc/Layout/Layout";
+// import Layout from "../hoc/Layout/Layout";
 import { createContext } from "react";
 import { getStrapiMedia } from "../lib/media";
 import { fetchAPI } from "../lib/api";
@@ -24,20 +24,20 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <GlobalContext.Provider value={global}>
-      <Layout global={global} home={useRouter().pathname === "/"}>
-        <Component {...pageProps} />
-      </Layout>
+      {/* <Layout global={global} home={useRouter().pathname === "/"}> */}
+      <Component {...pageProps} />
+      {/* </Layout> */}
     </GlobalContext.Provider>
   );
 }
 
-MyApp.getInitialProps = async (ctx) => {
-  // Calls page's `getInitialProps` and fills `appProps.pageProps`
-  const appProps = await App.getInitialProps(ctx);
-  // Fetch global site settings from Strapi
-  const global = await fetchAPI("/global");
-  // Pass the data to our page via props
-  return { ...appProps, pageProps: { global } };
-};
+// MyApp.getInitialProps = async (ctx) => {
+//   // Calls page's `getInitialProps` and fills `appProps.pageProps`
+//   const appProps = await App.getInitialProps(ctx);
+//   // Fetch global site settings from Strapi
+//   const global = await fetchAPI("/global");
+//   // Pass the data to our page via props
+//   return { ...appProps, pageProps: { global } };
+// };
 
 export default MyApp;

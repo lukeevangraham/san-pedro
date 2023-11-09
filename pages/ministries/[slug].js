@@ -1,6 +1,7 @@
 import Markdown from "react-markdown/with-html";
 import Seo from "../../components/elements/seo";
 import Image from "next/image";
+import Layout from "../../hoc/Layout/Layout";
 import NewsCard from "../../components/News/NewsCard/NewsCard";
 import EventCard from "../../components/Events/EventCard/EventCard";
 import { keepEventsCurrent, compareAndSortDates } from "../../lib/events";
@@ -60,7 +61,7 @@ export default function Ministry({ ministryData, global }) {
   const sortedArticles = ministryData.news.sort(compareAndSortArticlesByDate);
 
   return (
-    <>
+    <Layout global={global}>
       <Seo
         metadata={ministryData.metadata}
         global={global}
@@ -155,6 +156,6 @@ export default function Ministry({ ministryData, global }) {
           </div>
         </section>
       ) : null}
-    </>
+    </Layout>
   );
 }

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { IoLocation, IoCall, IoMail, IoGlobe } from "react-icons/io5";
 import Button from "../components/UI/Button/Button";
+import Layout from "../hoc/Layout/Layout";
 import { fetchAPI, siteAddress } from "../lib/api";
 import { DefaultSeo } from "next-seo";
 import { getStrapiMedia } from "../lib/media";
@@ -9,9 +10,11 @@ import classes from "../styles/contact.module.css";
 
 export async function getStaticProps() {
   const contact = await fetchAPI("/contact");
+  const global = await fetchAPI("/global");
   return {
     props: {
       contact,
+      global,
     },
     revalidate: 1,
   };
@@ -102,76 +105,78 @@ const Contact = ({ contact, global }) => {
 
   return (
     <>
-      <DefaultSeo
-        // titleTemplate={`%s | ${global.metaTitleSuffix}`}
-        title={`${contact.metadata.metaTitle} | ${global.metaTitleSuffix}`}
-        description={contact.metadata.metaDescription}
-        openGraph={{
-          images: Object.values(contact.metadata.shareImage.formats).map(
-            (image) => {
-              return {
-                url: getStrapiMedia(image.url),
-                width: image.width,
-                height: image.height,
-              };
-            }
-          ),
-          type: "website"
-        }}
-        twitter={{
-          cardType: contact.metadata.twitterCardType,
-          handle: contact.metadata.twitterUsername,
-        }}
-        canonical={`${siteAddress}/contact`}
-      />
-      <section>
-        <h1 style={{ display: "none" }}>Contact</h1>
-        <h2>Contact</h2>
-        <div className={`row ${classes.contactPage}`}>
-          <div className={`col span-1-of-2 ${classes.addressInfo}`}>
-            <ul>
-              <li>
-                <div className={classes.iconBg}>
-                  <IoLocation />
-                </div>
-                <div>14900 San Pedro Ave, San Antonio, TX 78232</div>
-              </li>
-              <li>
-                <div className={classes.iconBg}>
-                  <IoCall />
-                </div>
-                <div>(210)494-6560</div>
-              </li>
-              <li>
-                <div className={classes.iconBg}>
-                  <IoMail />
-                </div>
-                <div>sppchurch@sppcsa.com</div>
-              </li>
-              <li>
-                <div className={classes.iconBg}>
-                  <IoGlobe />{" "}
-                </div>
-                <div>www.sanpedropc.org</div>
-              </li>
-            </ul>
+      <Layout global={global}>
+        <DefaultSeo
+          // titleTemplate={`%s | ${global.metaTitleSuffix}`}
+          title={`${contact.metadata.metaTitle} | ${global.metaTitleSuffix}`}
+          description={contact.metadata.metaDescription}
+          openGraph={{
+            images: Object.values(contact.metadata.shareImage.formats).map(
+              (image) => {
+                return {
+                  url: getStrapiMedia(image.url),
+                  width: image.width,
+                  height: image.height,
+                };
+              }
+            ),
+            type: "website",
+          }}
+          twitter={{
+            cardType: contact.metadata.twitterCardType,
+            handle: contact.metadata.twitterUsername,
+          }}
+          canonical={`${siteAddress}/contact`}
+        />
+        <section>
+          <h1 style={{ display: "none" }}>Contact</h1>
+          <h2>Contact</h2>
+          <div className={`row ${classes.contactPage}`}>
+            <div className={`col span-1-of-2 ${classes.addressInfo}`}>
+              <ul>
+                <li>
+                  <div className={classes.iconBg}>
+                    <IoLocation />
+                  </div>
+                  <div>14900 San Pedro Ave, San Antonio, TX 78232</div>
+                </li>
+                <li>
+                  <div className={classes.iconBg}>
+                    <IoCall />
+                  </div>
+                  <div>(210)494-6560</div>
+                </li>
+                <li>
+                  <div className={classes.iconBg}>
+                    <IoMail />
+                  </div>
+                  <div>sppchurch@sppcsa.com</div>
+                </li>
+                <li>
+                  <div className={classes.iconBg}>
+                    <IoGlobe />{" "}
+                  </div>
+                  <div>www.sanpedropc.org</div>
+                </li>
+              </ul>
+            </div>
+            <div className="col span-1-of-2">{messageForm}</div>
           </div>
-          <div className="col span-1-of-2">{messageForm}</div>
-        </div>
-      </section>
-      <section className={classes.mapContainer}>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3469.9075441037994!2d-98.47911278446566!3d29.57729328205462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x865c8a708f3a58cf%3A0x62003f4e3fb955a0!2sSan%20Pedro%20Presbyterian%20Church!5e0!3m2!1sen!2sus!4v1616105690710!5m2!1sen!2sus"
-          width="100%"
-          height="500"
-          frameBorder="0"
-          style={{ border: 0 }}
-          allowFullScreen=""
-          aria-hidden="false"
-          tabIndex="0"
-          loading="lazy"
-        ></iframe>
-      </section>
+        </section>
+        <section className={classes.mapContainer}>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3469.9075441037994!2d-98.47911278446566!3d29.57729328205462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x865c8a708f3a58cf%3A0x62003f4e3fb955a0!2sSan%20Pedro%20Presbyterian%20Church!5e0!3m2!1sen!2sus!4v1616105690710!5m2!1sen!2sus"
+            width="100%"
+            height="500"
+            frameBorder="0"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            aria-hidden="false"
+            tabIndex="0"
+            loading="lazy"
+          ></iframe>
+        </section>
+      </Layout>
     </>
   );
 };

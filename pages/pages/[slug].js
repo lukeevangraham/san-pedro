@@ -1,5 +1,11 @@
-import { getAllPageSlugs, getPageData, fetchAPI, siteAddress } from "../../lib/api";
+import {
+  getAllPageSlugs,
+  getPageData,
+  fetchAPI,
+  siteAddress,
+} from "../../lib/api";
 import Sections from "../../components/sections/sections";
+import Layout from "../../hoc/Layout/Layout";
 import { DefaultSeo } from "next-seo";
 import { getStrapiMedia } from "../../lib/media";
 import { useRouter } from "next/router";
@@ -39,7 +45,7 @@ export default function Page({ pageData, global }) {
   );
 
   return (
-    <>
+    <Layout global={global}>
       <DefaultSeo
         // titleTemplate={`%s | ${global.metaTitleSuffix}`}
         title={`${pageData.metadata.metaTitle} | ${global.metaTitleSuffix}`}
@@ -73,6 +79,6 @@ export default function Page({ pageData, global }) {
         <h2>{pageData.shortName}</h2>
       </section>
       {renderSections}
-    </>
+    </Layout>
   );
 }
