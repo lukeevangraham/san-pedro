@@ -30,6 +30,16 @@ export default function handler(req, res) {
     },
     data: data,
   };
+
+  axios
+    .request(config)
+    .then((response) => {
+      console.log(JSON.stringify(response.data));
+      res.status(200).json({ status: 200 });
+    })
+    .catch((error) => {
+      console.log(error);
+    });
 }
 
 // NODEMAILER CODE
