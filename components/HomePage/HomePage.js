@@ -60,7 +60,7 @@ const HomePage = ({ data }) => {
               <div dangerouslySetInnerHTML={{ __html: data.introBox }} />
             </Fade>
             <div>
-              <div className={classes.QuickLinkTitle}>Quick Links</div>
+              <p className={classes.QuickLinkTitle}>Quick Links</p>
               {data.HomeQuickLink.map((link) => (
                 <div key={link.id} className={classes.QuickLink}>
                   <div className={classes.QuickLinkImage}>
