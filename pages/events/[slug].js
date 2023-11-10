@@ -15,7 +15,7 @@ export async function getStaticPaths() {
   const paths = await getAllEventsSlugs();
   return {
     paths,
-    fallback: false,
+    fallback: true,
   };
 }
 
