@@ -55,10 +55,35 @@ const HomePage = ({ data }) => {
               </div>
             </Fade>
           </div>
+          {console.log("D: ", data)}
           <div className={`col span-1-of-2 box ${classes.introBox}`}>
             <Fade>
               <div dangerouslySetInnerHTML={{ __html: data.introBox }} />
             </Fade>
+            <div>
+              <div className={classes.QuickLinkTitle}>Quick Links</div>
+              {data.HomeQuickLink.map((link) => (
+                <div key={link.id} className={classes.QuickLink}>
+                  <div className={classes.QuickLinkImage}>
+                    <Image
+                      src={link.Image.url}
+                      alt={link.Image.alternativeText}
+                      height="16px"
+                      width="16px"
+                    />
+                  </div>
+                  <div className={classes.QuickLinkText}>
+                    {link.Name} -{" "}
+                    <a
+                      href={link.Link.url}
+                      target={link.Link.newTab ? "_blank" : "_self"}
+                    >
+                      {link.Link.text}
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

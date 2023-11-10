@@ -1,5 +1,9 @@
 .HomePage {
-  background-image: linear-gradient( rgba(0, 0, 0, 0.33), rgba(255, 255, 255, 0.33)), url(http://sanpedroadmin.lukegraham.us/uploads/home_Hero_5241e16bd5.jpg);
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.33),
+      rgba(255, 255, 255, 0.33)
+    ),
+    url(http://sanpedroadmin.lukegraham.us/uploads/home_Hero_5241e16bd5.jpg);
   background-size: cover;
   background-position: center;
   height: 80vh;
@@ -93,6 +97,35 @@
 .showcasePhoto img:hover {
   transform: scale(1.03);
   opacity: 1;
+}
+
+.QuickLinkTitle {
+margin-bottom: 4px;
+}
+
+.QuickLink {
+  /* display: inline; */
+  /* flex-wrap: wrap; */
+  display: flex;
+  /* background-color: yellowgreen; */
+  /* display: grid;
+  grid-auto-rows: 100px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+}
+
+.QuickLink a {
+  text-transform: uppercase;
+}
+
+.QuickLinkImage {
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+
+.QuickLinkText {
+  margin-left: 15px;
+  /* background-color: orangered; */
 }
 
 @media only screen and (max-width: 767px) {
