@@ -55,7 +55,6 @@ const HomePage = ({ data }) => {
               </div>
             </Fade>
           </div>
-          {console.log("D: ", data)}
           <div className={`col span-1-of-2 box ${classes.introBox}`}>
             <Fade>
               <div dangerouslySetInnerHTML={{ __html: data.introBox }} />
