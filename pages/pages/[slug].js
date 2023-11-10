@@ -14,7 +14,7 @@ export async function getStaticPaths() {
   const paths = await getAllPageSlugs();
   return {
     paths,
-    fallback: false,
+    fallback: true,
   };
 }
 

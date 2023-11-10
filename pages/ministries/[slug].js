@@ -22,7 +22,7 @@ export async function getStaticPaths() {
   const paths = await getAllMinistriesSlugs();
   return {
     paths,
-    fallback: false,
+    fallback: true,
   };
 }
 
