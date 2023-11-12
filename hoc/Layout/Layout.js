@@ -43,14 +43,25 @@ const Layout = (props) => {
         >
           <div className={classes.homeHeader}>
             <div className={classes.Fixed}>
-              <Image
-                src={props.homeData.homeHero.picture.url}
-                alt={props.homeData.homeHero.picture.alternativeText}
-                layout="fill"
-                objectFit="cover"
-                objectPosition="center center"
-                className={classes.heroBgImage}
-              />
+              {props.videoTest ? (
+                <video autoPlay loop muted className={classes.heroBgVideo}>
+                  <source src="https://res.cloudinary.com/diqgdacjy/video/upload/v1699661747/sanPedro/coverr_flicking_through_bible_pages_3558_1080p_21225c5ae5.mp4" />
+                </video>
+              ) : props.homeData.homeHero.picture.provider_metadata
+                  .resource_type === "video" ? (
+                <video autoPlay loop muted className={classes.heroBgVideo}>
+                  <source src={props.homeData.homeHero.picture.url} />
+                </video>
+              ) : (
+                <Image
+                  src={props.homeData.homeHero.picture.url}
+                  alt={props.homeData.homeHero.picture.alternativeText}
+                  layout="fill"
+                  objectFit="cover"
+                  objectPosition="center center"
+                  className={classes.heroBgImage}
+                />
+              )}
             </div>
 
             <Toolbar

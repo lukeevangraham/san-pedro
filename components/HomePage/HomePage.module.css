@@ -105,13 +105,8 @@
 }
 
 .QuickLink {
-  /* display: inline; */
-  /* flex-wrap: wrap; */
   display: flex;
-  /* background-color: yellowgreen; */
-  /* display: grid;
-  grid-auto-rows: 100px;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+/* align-items: center; */
 }
 
 .QuickLink a {
@@ -120,6 +115,7 @@
 
 .QuickLinkImage {
   position: relative;
+  /* background-color: orangered; */
   width: 16px;
   height: 16px;
 }

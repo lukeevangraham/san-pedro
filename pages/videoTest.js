@@ -40,7 +40,7 @@ export default function Home(props) {
 
   return (
     <>
-      <Layout global={props.global} home homeData={props.homeData} test>
+      <Layout global={props.global} home homeData={props.homeData} videoTest>
         {/* <Head>
         <link rel="icon" href={getStrapiMedia(props.global.favicon.url)} />
       </Head> */}
