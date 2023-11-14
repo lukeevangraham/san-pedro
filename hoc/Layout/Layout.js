@@ -3,7 +3,7 @@ import { Waypoint } from "react-waypoint";
 import { getStrapiMedia } from "../../lib/media";
 
 import Image from "next/image";
-import classes from "./Layout.module.css";
+import classes from "./Layout.module.scss";
 import Aux from "../Aux/Aux";
 import NotificationBanner from "../../components/UI/NotificationBanner/NotificationBanner";
 import Toolbar from "../../components/Navigation/Toolbar/Toolbar";

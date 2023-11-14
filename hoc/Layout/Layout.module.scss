@@ -1,3 +1,5 @@
+@import "../../styles/abstracts/variables";
+
 .homeHeader {
   background-size: cover;
   background-position: center;
@@ -7,7 +9,7 @@
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
   /* width: 100%; */
   /* display: flex;
-  flex-direction: column; */
+    flex-direction: column; */
   /* justify-content: center; */
 }
 
@@ -33,15 +35,15 @@
 
 .Content {
   /* background-image: linear-gradient(to top right, #8d7169, #f8e0da), url("/images/stucco.png"); */
-  background-image: linear-gradient(to top right, #8d71698c, #f8e0da7c),
+  background-image: linear-gradient(to top right, transparentize($color-primary, .9), transparentize($color-ternary, .9)),
     url("/images/stucco.png");
   /* background-image: linear-gradient(to top right, #8d71698c, #f8e0da7c),
-    url("/images/stucco.png"); */
+      url("/images/stucco.png"); */
   /* background-image: linear-gradient(
-      rgba(0, 0, 0, 0.4),
-      rgba(0, 0, 0, 0.4)
-    ),
-    url(https://sanpedroadmin.lukegraham.us${props.children.props.homeData.contentSections[0].picture.url}); */
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.4)
+      ),
+      url(https://sanpedroadmin.lukegraham.us${props.children.props.homeData.contentSections[0].picture.url}); */
 }
 
 .stickyContent {
