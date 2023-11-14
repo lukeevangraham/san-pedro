@@ -2,7 +2,7 @@ import { MdCheckBox } from "react-icons/md";
 import classNames from "classnames";
 import "@fontsource/source-sans-pro/200.css";
 
-import classes from "./Pricing.module.css";
+import classes from "./Pricing.module.scss";
 
 const Pricing = ({ data }) => {
   return (

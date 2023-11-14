@@ -1,0 +1,75 @@
+@import "../../../../styles/abstracts/variables";
+
+.NavigationItem {
+  margin: 10px 0;
+  display: block;
+}
+
+.NavigationItem a {
+  color: $color-primary;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
+  display: block;
+}
+
+.NavigationItem a:hover,
+.NavigationItem a:active {
+  color: $color-secondary;
+  transition: color 0.2s;
+}
+
+@media (min-width: 768px) {
+  .NavigationItem {
+    margin-left: 40px;
+  }
+
+  .NavigationItem a:link,
+  .NavigationItem a:visited {
+    padding: 8px 0;
+    color: #fff;
+    text-decoration: none;
+    font-size: 90%;
+    /* border-bottom: 2px solid transparent; */
+    transition: border-bottom 0.2;
+  }
+
+  .sticky a:link,
+  .sticky a:visited {
+    color: #555;
+  }
+
+  .NavigationItem:not(.active) a:hover,
+  .NavigationItem a:active {
+    /* border-bottom: 2px solid #db3d2c; */
+  }
+}
+
+.left {
+  position: relative;
+}
+
+.left:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: $color-secondary;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.left:hover:before {
+  visibility: visible;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .active {
+    border-bottom: 2px solid $color-secondary;
+    padding-top: 2px;
+    transition: all 0.2s;
+  }
+}

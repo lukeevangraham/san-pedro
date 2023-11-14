@@ -2,7 +2,7 @@ import Link from "next/link";
 import classNames from "classnames";
 import { IoCalendarClearOutline, IoLocationOutline } from "react-icons/io5";
 
-import classes from "./TopInfo.module.css";
+import classes from "./TopInfo.module.scss";
 
 const TopInfo = ({ event, index, fromHome }) => (
   <div className={classes.moreInfo}>

@@ -6,7 +6,7 @@ import { fetchAPI, siteAddress } from "../lib/api";
 import { DefaultSeo } from "next-seo";
 import { getStrapiMedia } from "../lib/media";
 
-import classes from "../styles/contact.module.css";
+import classes from "../styles/contact.module.scss";
 
 export async function getStaticProps() {
   const contact = await fetchAPI("/contact");

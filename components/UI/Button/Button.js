@@ -5,7 +5,7 @@ import { IoLogoFacebook } from "react-icons/io5";
 import Link from "next/link";
 import CustomLink from "../../elements/custom-link";
 
-import classes from "./Button.module.css";
+import classes from "./Button.module.scss";
 
 const ButtonContent = ({ button, compact, logo, fromHeroSection }) => {
   {

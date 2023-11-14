@@ -1,0 +1,48 @@
+@import "../../../styles/abstracts/variables";
+
+.bg {
+    background-image: linear-gradient(to right bottom, $color-secondary, $color-ternary);
+}
+
+.inside {
+    display: flex;
+    align-items: center;
+    padding: .5rem !important;
+    color: rgb(238, 238, 238);
+}
+
+.text {
+    flex-grow: 1;
+    padding: .25rem;
+}
+
+.text a {
+    /* vertical-align: -1px; */
+    /* text-decoration: underline 1px; */
+}
+
+.button {
+    padding: .12rem 0;
+    background-color: transparent;
+    border: none;
+}
+
+.button :hover {
+    cursor: pointer;
+}
+
+.icon {
+    height: 30px;
+    width: auto;
+    color: rgb(238, 238, 238);
+}
+
+.text a:link, .text a:visited {
+    color: rgb(238, 238, 238);
+    border-bottom: 1px solid rgb(238, 238, 238);
+}
+
+.text a:hover, .text a:active {
+    color: rgb(238, 238, 238);
+    border-bottom: 1px solid transparent;
+}

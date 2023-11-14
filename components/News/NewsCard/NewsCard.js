@@ -4,7 +4,7 @@ import Link from "next/link";
 import { IoCalendarOutline, IoPeopleCircleOutline } from "react-icons/io5";
 import Fade from "react-reveal/Fade";
 
-import classes from "./NewsCard.module.css";
+import classes from "./NewsCard.module.scss";
 
 const NewsCard = ({ article }) => {
   const truncate = (str, n, useWordBoundary) => {

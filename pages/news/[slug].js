@@ -18,7 +18,7 @@ import Head from "next/head";
 import Pulse from "react-reveal/Pulse";
 import { useRouter } from "next/router";
 
-import classes from "./slug.module.css";
+import classes from "./slug.module.scss";
 
 export async function getStaticPaths() {
   const paths = await getAllNewsSlugs();

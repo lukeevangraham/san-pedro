@@ -4,7 +4,7 @@ import "@fontsource/source-sans-pro/300.css";
 import "@fontsource/source-sans-pro/400.css";
 import "@fontsource/source-sans-pro/600.css";
 import "@fontsource/bodoni-moda/500.css";
-import "../styles/globals.css";
+import "../styles/globals.scss";
 import "../styles/grid.css";
 import "../styles/queries.css";
 import "../styles/quill.css";

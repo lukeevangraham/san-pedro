@@ -1,0 +1,132 @@
+@import "../../styles/abstracts/variables";
+
+.article {
+    text-align: center;
+    background-color: rgb(252, 252, 252);
+  }
+  
+  .topInfo {
+    display: flex;
+    margin: 1rem 0;
+    padding-top: 80px;
+    align-items: center;
+  }
+  
+  .title {
+    font-size: 150%;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    text-align: left;
+  }
+  
+  .author {
+    font-size: 90%;
+    display: flex;
+    align-items: center;
+    color: rgb(85, 85, 85);
+    font-family: "Cardo", serif;
+  }
+  
+  .author svg {
+    margin-right: 7px;
+    color: $color-primary;
+  }
+  
+  .belowPhoto {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+  }
+  
+  .image {
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .imageWrap {
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    /* height: auto; */
+    padding-bottom: 56.25%;
+    /* width: 100%; */
+  }
+  
+  .body {
+    font-family: "Cardo", serif;
+    /* max-width: 575px; */
+    line-height: 1.5;
+    text-align: justify;
+    margin: 2rem 0 0 0;
+  }
+  
+  .body p {
+    width: fit-content;
+    max-width: 575px;
+    margin: auto;
+  }
+  
+  /* .body p {
+    margin-bottom: 1rem;
+  } */
+  
+  .body div iframe {
+    aspect-ratio: 16 / 9;
+    /* height: 100%; */
+    width: 100vw;
+    max-width: 100%;
+  }
+  
+  .dateBox {
+    background-image: linear-gradient(to right bottom, $color-secondary, $color-ternary);
+    color: #fff;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 1rem;
+    border-radius: 5px;
+    /* padding: 0 20px; */
+    padding: 10px;
+    flex-shrink: 0;
+  }
+  
+  .day {
+    font-size: 190%;
+    font-weight: 200;
+    margin-top: -5px;
+    margin-bottom: -5px;
+  }
+  
+  .month {
+    font-weight: 600;
+    /* font-size: 98%; */
+  }
+  
+  .authorAndTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: .4rem;
+  }
+  
+  .btnContainer {
+    text-align: left;
+    max-width: 575px;
+    margin: 2rem auto 4rem auto;
+  }
+  
+  @media only screen and (min-width: 850px) {
+    .article {
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
+    .day {
+      font-size: 153%;
+    }
+    .month {
+      font-size: 86%;
+    }
+  }
+  

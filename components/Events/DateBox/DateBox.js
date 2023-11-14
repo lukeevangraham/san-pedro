@@ -1,7 +1,7 @@
 import "@fontsource/source-sans-pro/200.css";
 import moment from "moment";
 import classNames from "classnames";
-import classes from "./DateBox.module.css";
+import classes from "./DateBox.module.scss";
 
 const DateBox = ({ event, fromHome }) => {
 

@@ -2,8 +2,9 @@ import "@fontsource/cardo";
 import ButtonLink from "../../elements/button-link";
 import Image from "next/image";
 // import { getButtonAppearance } from "utils/button";
-import classes from "./Verse.module.css";
 import Fade from "react-reveal/Fade";
+
+import classes from "./Verse.module.scss";
 
 const Verse = ({ data, global, whiteBg }) => {
   return (

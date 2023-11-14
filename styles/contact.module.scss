@@ -1,0 +1,87 @@
+@import "../styles/abstracts/variables";
+
+.addressInfo {
+  margin-bottom: 1.7rem;
+}
+
+.addressInfo ul {
+  list-style-type: none;
+}
+
+.addressInfo ul li {
+  display: flex;
+  align-items: center;
+}
+
+.iconBg {
+  background-image: linear-gradient(
+    to right bottom,
+    $color-secondary,
+    $color-ternary
+  );
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.33rem 0.33rem 0.33rem 0;
+}
+
+.iconBg svg {
+  color: #fff;
+}
+
+.contactForm input[type="text"],
+.contactForm input[type="email"],
+.contactForm textarea {
+  width: 100%;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid rgb(180, 180, 180);
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 95%;
+}
+
+.contactForm *:focus {
+  outline: none;
+}
+
+.contactForm button[type="submit"] {
+  display: inline-block;
+  padding: 10px 30px;
+  font-weight: 300;
+  font-family: "Source Sans Pro", sans-serif;
+  text-decoration: none;
+  border-radius: 200px;
+  transition: all 0.2s;
+
+  background-image: linear-gradient(to right bottom, $color-secondary, $color-ternary);
+  border: none;
+  color: #fff;
+  margin-right: 15px;
+  cursor: pointer;
+  font-size: 95%;
+}
+
+.contactForm button:hover {
+  transform: scale(1.05);
+}
+
+.mapContainer {
+  height: 500px;
+  padding: 0;
+}
+
+.successParent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 480px) {
+  .contactPage {
+    display: flex;
+    align-items: center;
+  }
+}

@@ -2,7 +2,7 @@ import Markdown from "react-markdown";
 import classNames from "classnames";
 import { IoCloseOutline } from "react-icons/io5";
 
-import classes from "./NotificationBanner.module.css";
+import classes from "./NotificationBanner.module.scss";
 
 const NotificationBanner = ({ data: { text, type }, closeSelf }) => {
   return (

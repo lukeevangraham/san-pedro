@@ -12,17 +12,17 @@ import {
 } from "react-icons/io5";
 import { getStrapiMedia } from "../../lib/media";
 
-import classes from "./Footer.module.css";
+import classes from "./Footer.module.scss";
 
 const Footer = ({ data }) => (
   <footer>
     <div
       className={classes.footer}
       style={{
-        backgroundImage: `linear-gradient(to bottom right, #752017de, #4f161079),
-    url(${data.bgImage.url})`,
+        backgroundImage: `url(${data.bgImage.url})`,
       }}
     >
+      <div className={classes.footer__Colors} />
       <div className={classes.bgImage}>
         <div className="row">
           <div className={`col span-1-of-${data.columns.length + 1}`}>
@@ -89,7 +89,11 @@ const Footer = ({ data }) => (
             </div>
             <div>{" | "}</div>
             <div>
-              <a href="https://grahamwebworks.com" target="_blank" rel="noopener">
+              <a
+                href="https://grahamwebworks.com"
+                target="_blank"
+                rel="noopener"
+              >
                 Graham Web Works
               </a>
             </div>
@@ -98,7 +102,8 @@ const Footer = ({ data }) => (
             <div className={classes.socialIcons}>
               <ul>
                 <li>
-                  <a aria-label="San Pedro Presbyterian Church Facebook Page"
+                  <a
+                    aria-label="San Pedro Presbyterian Church Facebook Page"
                     href="https://www.facebook.com/SanPedroPresbyterianChurch"
                     target="_blank"
                     rel="noopener"
@@ -108,7 +113,7 @@ const Footer = ({ data }) => (
                 </li>
                 <li>
                   <a
-                  aria-label="San Pedro Presbyterian Church LinkedIn Page"
+                    aria-label="San Pedro Presbyterian Church LinkedIn Page"
                     href="https://www.linkedin.com/company/san-pedro-presbyterian-church/"
                     target="_blank"
                     rel="noopener"
@@ -118,7 +123,7 @@ const Footer = ({ data }) => (
                 </li>
                 <li>
                   <a
-                  aria-label="San Pedro Presbyterian Church YouTube Channel"
+                    aria-label="San Pedro Presbyterian Church YouTube Channel"
                     href="https://www.youtube.com/channel/UCvIdCpNuCMjS0JAkHvZqbkA"
                     target="_blank"
                     rel="noopener"

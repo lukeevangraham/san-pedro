@@ -7,7 +7,7 @@ import { getStrapiMedia } from "../../../lib/media";
 import Image from "next/image";
 import CustomLink from "../../elements/custom-link";
 
-import classes from "./TestimonialsGroup.module.css";
+import classes from "./TestimonialsGroup.module.scss";
 
 const TestimonialsGroup = ({ data }) => {
   // Only show one testimonial at a time

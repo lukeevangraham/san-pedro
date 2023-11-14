@@ -1,0 +1,90 @@
+@import "../../../styles/abstracts/variables";
+
+.section {
+    text-align: center;
+  }
+  
+  .description {
+    margin-bottom: 1rem;
+    font-weight: 200;
+  }
+  
+  .testimonyWrap {
+    /* margin-top: 1rem; */
+    display: flex;
+    background-image: linear-gradient(
+      to bottom right,
+      rgb(255, 255, 255),
+      rgb(219, 219, 219)
+    );
+    box-shadow: 0 0 40px rgb(82, 82, 82);
+    border-radius: 7px;
+    overflow: hidden;
+    text-align: left;
+  }
+  
+  .testimonyNonImage {
+    display: flex;
+    flex-direction: column;
+    padding: 2.25rem;
+  }
+  
+  .testLogo {
+    margin-bottom: 1rem;
+    width: 100px;
+    height: 100px;
+    position: relative;
+  }
+  
+  .testimonyText {
+    font-style: italic;
+    margin-bottom: 1rem;
+  }
+  
+  .authorName {
+    font-weight: 600;
+  }
+  
+  .smallText {
+    font-size: 80%;
+  }
+  
+  .bigImageWrap {
+    width: 320px;
+    height: 464px;
+    position: relative;
+    flex-shrink: 0;
+  }
+  
+  .paginationBlock {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  
+  .paginationButton {
+    height: 0.75rem;
+    width: 0.75rem;
+    border-radius: 50%;
+    border: none;
+    margin: 0 0.1rem;
+  }
+  
+  .unselectedTest {
+    background-color: gray;
+  }
+  
+  .selectedTest {
+    background-color: $color-primary;
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .testimonyWrap {
+      flex-direction: column;
+    }
+    .bigImageWrap {
+      width: 100%;
+      height: 350px;
+    }
+  }
+  

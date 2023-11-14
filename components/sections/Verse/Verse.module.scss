@@ -1,0 +1,41 @@
+@import "../../../styles/abstracts/variables";
+
+.whiteBg {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    padding: 155px 0 134px 0;
+  }
+  
+  .container {
+    text-align: center;
+    position: relative;
+  }
+  
+  .verseWrapper {
+    opacity: 0.14;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+  }
+  
+  .text {
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 130%;
+    font-family: "Cardo", serif;
+    font-style: italic;
+    color: rgb(24, 24, 24);
+    line-height: 1.4;
+  }
+  
+  .reference {
+    font-family: "Source Sans Pro", sans-serif;
+    font-style: normal;
+    color: $color-primary;
+    font-size: 90%;
+  }
+  
