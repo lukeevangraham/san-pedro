@@ -1,0 +1,95 @@
+@import "../../../styles/abstracts/variables";
+
+.Toolbar {
+    /* background-color: rgba(20, 90, 20, 0); */
+    /* padding: 0 20px; */
+    height: 111px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 98;
+    position: relative;
+  }
+  
+  .innerToolbar {
+    /* background-color: transparent; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    flex-grow: 2;
+    /* padding: 0; */
+  }
+  
+  .Sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* padding: 0 2%; */
+    background-color: rgba(255, 255, 255, 0.973);
+    box-shadow: 0 2px 2px rgb(204, 204, 204);
+    z-index: 99;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    animation: moveDown 0.5s ease-in-out;
+    ;
+  }
+  
+  /* .Sticky .Logo { */
+  
+  /* height: 50px; */
+  
+  /* margin-top: 7px; */
+  
+  /* } */
+  
+  .Logo {
+    /* margin-top: 28px; */
+    /* height: 100%; */
+    /* position: relative; */
+    /* padding-bottom: 70%; */
+    position: relative;
+    /* height: 74px; */
+    flex-grow: 1;
+    /* padding: 20px; */
+    /* display: flex; */
+    /* align-items: center; */
+  }
+  
+  .notHome {
+    background: linear-gradient(to bottom right, $color-quaternary, $color-primary);
+  }
+  
+  .toolbarRight {
+    display: flex;
+    align-items: center;
+  }
+  
+  @keyframes moveDown {
+    from {
+      transform: translateY(-5rem);
+    }
+    to {
+      transform: translateY(0rem);
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .DesktopOnly {
+      display: none;
+    }
+    .Toolbar {
+      height: 98px;
+    }
+    /* .Logo {
+      margin-top: 8px;
+    } */
+  }
+  
+  /* @media only screen and (max-width: 850px) {
+    .Sticky {
+      padding: 0 4%;
+    }
+  } */

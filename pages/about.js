@@ -7,7 +7,7 @@ import { fetchAPI, siteAddress } from "../lib/api";
 import Zoom from "react-reveal/Zoom";
 import Fade from "react-reveal/Fade";
 
-import classes from "../styles/about.module.css";
+import classes from "../styles/about.module.scss";
 import { getStrapiMedia } from "../lib/media";
 
 export async function getStaticProps() {

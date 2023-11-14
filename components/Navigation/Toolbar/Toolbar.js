@@ -6,7 +6,8 @@ import Button from "../../UI/Button/Button";
 import NavigationItems from "../NavigationItems/NavigationItems";
 import DrawerToggle from "../SideDrawer/DrawerToggle/DrawerToggle";
 import classNames from "classnames";
-import classes from "./Toolbar.module.css";
+
+import classes from "./Toolbar.module.scss";
 
 const Toolbar = (props) => {
   let attachedClasses = [classes.innerToolbar, "row"];
