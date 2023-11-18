@@ -11,6 +11,8 @@ import SideDrawer from "../../components/Navigation/SideDrawer/SideDrawer";
 import Footer from "../../components/Footer/Footer";
 import Sections from "../../components/sections/sections";
 import HomeHero from "../../components/sections/HomeHero/HomeHero";
+import HomeHeroB from "../../components/sections/HomeHero/HomeHeroB/HomeHeroB";
+import HomeHeroC from "../../components/sections/HomeHero/HomeHeroC/HomeHeroC";
 
 const Layout = (props) => {
   const { navbar, notificationBanner, footer } = props.global;
@@ -44,12 +46,24 @@ const Layout = (props) => {
           <div className={classes.homeHeader}>
             <div className={classes.Fixed}>
               {props.videoTest ? (
-                <video autoPlay loop muted className={classes.heroBgVideo} playsInline>
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  className={classes.heroBgVideo}
+                  playsInline
+                >
                   <source src="https://res.cloudinary.com/diqgdacjy/video/upload/v1699661747/sanPedro/coverr_flicking_through_bible_pages_3558_1080p_21225c5ae5.mp4" />
                 </video>
               ) : props.homeData.homeHero.picture.provider_metadata
                   .resource_type === "video" ? (
-                <video autoPlay loop muted className={classes.heroBgVideo} playsInline>
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  className={classes.heroBgVideo}
+                  playsInline
+                >
                   <source src={props.homeData.homeHero.picture.url} />
                 </video>
               ) : (
@@ -74,7 +88,13 @@ const Layout = (props) => {
               sections={[props.homeData.contentSections[0]]}
               home
             /> */}
-            <HomeHero data={props.homeData.homeHero} />
+            {props.home === "b" ? (
+              <HomeHeroB data={props.homeData.homeHero} />
+            ) : props.home === "c" ? (
+              <HomeHeroC data={props.homeData.homeHero} />
+            ) : (
+              <HomeHero data={props.homeData.homeHero} />
+            )}
           </div>
         </Waypoint>
       ) : (
