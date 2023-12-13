@@ -40,7 +40,7 @@ export default function Home(props) {
 
   return (
     <>
-      <Layout global={props.global} home="c" homeData={props.homeData} test>
+      <Layout global={props.global} home="c" homeData={props.homeData} c>
         {/* <Head>
         <link rel="icon" href={getStrapiMedia(props.global.favicon.url)} />
       </Head> */}
@@ -67,7 +67,7 @@ export default function Home(props) {
 
         <h1 style={{ display: "none" }}>A church for San Antonio</h1>
 
-        <HomePage data={props.homeData} />
+        <HomePage data={props.homeData} heroConceptC />
         {/* {renderSections} */}
 
         {/* <main className={styles.main}>

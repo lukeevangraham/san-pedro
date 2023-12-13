@@ -1,5 +1,9 @@
 .wrapper {
-  background-image: linear-gradient(to bottom right, rgb(221, 221, 221), rgb(235, 235, 235));
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(221, 221, 221),
+    rgb(235, 235, 235)
+  );
   height: 138px;
   border-radius: 5px;
   margin: -69px 3rem 0 3rem;
@@ -8,6 +12,16 @@
   align-items: center;
   justify-content: flex-end;
   padding: 0 1rem;
+}
+
+.clearBG {
+/* padding: 2%; */
+background-color: #fff;
+/* margin: -69px 0 0 0; */
+}
+
+.marginModifier {
+  margin: 0;
 }
 
 .firstColumn {

@@ -6,7 +6,7 @@ import DateBox from "../../Events/DateBox/DateBox";
 import TopInfo from "../../Events/TopInfo/TopInfo";
 import classes from "./TopCountdown.module.css";
 
-const TopCountdown = ({ event }) => {
+const TopCountdown = ({ event, heroConceptC }) => {
   const [days, setDays] = useState(0);
   const [hours, setHours] = useState(0);
   const [mins, setMins] = useState(0);
@@ -24,8 +24,6 @@ const TopCountdown = ({ event }) => {
   );
 
   const newDateToCountTo = new Date(momentDateToCountTo.toISOString(true));
-
-
 
   const dateBeforeConversionToJs = combineDateAndTime(event).split(reg);
 
@@ -57,8 +55,14 @@ const TopCountdown = ({ event }) => {
   }, []);
 
   return (
-    <div className="row">
-      <div className={classes.wrapper}>
+    <div className={heroConceptC ? ` ${classes.clearBG}` : `row`}>
+      <div
+        className={
+          heroConceptC
+            ? `${classes.wrapper} ${classes.marginModifier}`
+            : classes.wrapper
+        }
+      >
         <div className={classes.firstColumn}>
           <div className={classes.dateBoxWrapper}>
             <DateBox event={event} fromHome />

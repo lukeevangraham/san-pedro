@@ -14,7 +14,7 @@ import Flip from "react-reveal/Flip";
 import Zoom from "react-reveal/Zoom";
 import moment from "moment-timezone";
 
-const HomePage = ({ data }) => {
+const HomePage = ({ data, heroConceptC }) => {
   let videoUrl = data.topVideoEmbed.split(`src="`);
 
   // GETTING RID OF EVENTS THAT HAPPENED AND DON'T REPEAT
@@ -34,7 +34,11 @@ const HomePage = ({ data }) => {
 
   return (
     <>
-      <TopCountdown event={data.topEvent} />
+      {heroConceptC ? (
+        <TopCountdown event={data.topEvent} heroConceptC />
+      ) : (
+        <TopCountdown event={data.topEvent} />
+      )}
 
       <section className={[classes.second, classes.whiteBg].join(" ")}>
         <h2>{data.introTitle}</h2>

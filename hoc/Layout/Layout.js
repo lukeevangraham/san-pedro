@@ -43,18 +43,16 @@ const Layout = (props) => {
           onLeave={() => setMakeNavSticky(true)}
           onEnter={() => setMakeNavSticky(false)}
         >
-          <div className={classes.homeHeader}>
+          <div
+            className={
+              props.home === "c"
+                ? `${classes.homeHeader} ${classes.homeHeader__C}`
+                : classes.homeHeader
+            }
+          >
             <div className={classes.Fixed}>
-              {props.videoTest ? (
-                <video
-                  autoPlay
-                  loop
-                  muted
-                  className={classes.heroBgVideo}
-                  playsInline
-                >
-                  <source src="https://res.cloudinary.com/diqgdacjy/video/upload/v1699661747/sanPedro/coverr_flicking_through_bible_pages_3558_1080p_21225c5ae5.mp4" />
-                </video>
+              {props.c ? (
+                <div></div>
               ) : props.homeData.homeHero.picture.provider_metadata
                   .resource_type === "video" ? (
                 <video
@@ -82,7 +80,7 @@ const Layout = (props) => {
               sticky={makeNavSticky}
               drawerToggleClicked={sideDrawerToggleHandler}
               navData={navbar}
-              home={true}
+              home={props.c ? false : true}
             />
             {/* <Sections
               sections={[props.homeData.contentSections[0]]}
@@ -91,7 +89,7 @@ const Layout = (props) => {
             {props.home === "b" ? (
               <HomeHeroB data={props.homeData.homeHero} />
             ) : props.home === "c" ? (
-              <HomeHeroC data={props.homeData.homeHero} />
+              <HomeHeroC data={props.homeData.homeHero} logoURL={props.global.footer.logo} />
             ) : (
               <HomeHero data={props.homeData.homeHero} />
             )}
@@ -103,19 +101,19 @@ const Layout = (props) => {
             sticky={makeNavSticky}
             drawerToggleClicked={sideDrawerToggleHandler}
             navData={navbar}
-          />
+            />
           <Waypoint
             topOffset={makeNavSticky ? 0 : "65px"}
             onLeave={() => setMakeNavSticky(true)}
             onEnter={() => setMakeNavSticky(false)}
-          ></Waypoint>
+            ></Waypoint>
         </div>
       )}
       <SideDrawer
         open={showSideDrawer}
         closed={sideDrawerClosedHandler}
         navData={navbar}
-      />
+        />
       <main
         className={
           makeNavSticky && !props.home
