@@ -104,7 +104,7 @@ const Footer = ({ data }) => (
                 <li>
                   <a
                     aria-label="San Pedro Presbyterian Church Facebook Page"
-                    href="https://www.facebook.com/SanPedroPresbyterianChurch"
+                    href="https://www.facebook.com/sanpedropc"
                     target="_blank"
                     rel="noopener"
                   >

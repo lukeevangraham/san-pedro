@@ -150,7 +150,7 @@ const Contact = ({ contact, global }) => {
                   <div className={classes.iconBg}>
                     <IoMail />
                   </div>
-                  <div>sppchurch@sppcsa.com</div>
+                  <div>office@sanpedropc.org</div>
                 </li>
                 <li>
                   <div className={classes.iconBg}>
